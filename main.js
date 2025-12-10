@@ -76,12 +76,13 @@ if (scrollTopBtn) {
     });
 }
 
-/* Helper to normalize categories coming from influencers-data.js
-   Handles things like:
-   - "Comedy", "COMEDY"
-   - "Sports", "Fitness", "Sports & Fitness"
-   - "Gaming", "Technology", "Gaming & Technology"
-   - Already mapped keys like "SPORTS_FITNESS"
+/*
+ Helper to normalize categories coming from influencers-data.js
+ Handles things like:
+ - "Comedy", "COMEDY"
+ - "Sports", "Fitness", "Sports & Fitness"
+ - "Gaming", "Technology", "Gaming & Technology"
+ - Already mapped keys like "SPORTS_FITNESS"
 */
 
 function normalizeCategory(value) {
@@ -132,7 +133,7 @@ function normalizeCategory(value) {
     }
 
     if (hasAny("tv host", "tv hostess", "anchor", "actress", "actor", "celebrity",
-               "singer", "artist", "musician", "band")) {
+        "singer", "artist", "musician", "band")) {
         return "CELEBRITIES";
     }
 
@@ -141,7 +142,7 @@ function normalizeCategory(value) {
     }
 
     if (hasAny("entertainment", "entertainer", "digital creator", "content creator",
-               "media", "show", "radio host")) {
+        "media", "show", "radio host")) {
         return "ENTERTAINMENT";
     }
 
@@ -247,8 +248,9 @@ function createCard(inf) {
     return article;
 }
 
-/* Render influencers into the grids
-   Uses normalizeCategory so it is resilient to whatever the Excel or Python produced.
+/*
+ Render influencers into the grids
+ Uses normalizeCategory so it is resilient to whatever the Excel or Python produced.
 */
 
 (function renderInfluencers() {
@@ -274,17 +276,15 @@ function createCard(inf) {
         });
     });
 
-  document.querySelectorAll(".cards-grid[data-category]").forEach(grid => {
-    const catAttr = grid.getAttribute("data-category") || "";
-    const catKey = normalizeCategory(catAttr);   // <- normalize the grid value too
-    const list = byCategory[catKey] || [];
-    list.forEach(inf => {
-        const card = createCard(inf);
-        grid.appendChild(card);
+    document.querySelectorAll(".cards-grid[data-category]").forEach(grid => {
+        const catAttr = grid.getAttribute("data-category") || "";
+        const catKey = normalizeCategory(catAttr);
+        const list = byCategory[catKey] || [];
+        list.forEach(inf => {
+            const card = createCard(inf);
+            grid.appendChild(card);
+        });
     });
-});
-
-
 })();
 
 /* Tag based filtering inside each category */
