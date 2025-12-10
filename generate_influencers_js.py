@@ -5,10 +5,18 @@ import os
 import pandas as pd
 
 
-# Adjust file names if needed
-EXCEL_FILE = "Influencers .xlsx"  # rename here if your file name is different
+EXCEL_FILE = "Influencers .xlsx"   # adjust if the file name changes
 SHEET_NAME = "Sheet3"
 OUTPUT_JS = "influencers-data.js"
+
+# Hard coded list of creators to ignore
+# Use the exact text from the "Content Creator " column in Excel
+IGNORED_HANDLES = {
+    # "@valiahtz_",
+    # "@gingerbread_bae",
+    # "@elina_kalitzaki"
+
+}
 
 
 def normalize_text(s):
@@ -17,45 +25,20 @@ def normalize_text(s):
     return s.strip()
 
 
-def build_tags(category_raw):
-    """Return a list of tag labels for the card based on the Category column."""
-    if not isinstance(category_raw, str):
+def parse_manual_tags(raw):
+    """
+    Read the Tags column.
+    Expected format in Excel: "TV, Radio, Stage"
+    Returns: ["TV", "Radio", "Stage"]
+    """
+    if not isinstance(raw, str):
         return []
 
-    cat = category_raw.strip()
-    base = cat.replace(" / ", "/")
-    parts = [p.strip() for p in base.split("/") if p.strip()]
-
-    tags = []
-    for p in parts:
-        pl = p.lower()
-        if "lifestyle" in pl:
-            tags.append("Lifestyle")
-        elif "beauty" in pl:
-            tags.append("Beauty")
-        elif "fashion" in pl:
-            tags.append("Fashion")
-        elif "parent" in pl:
-            tags.append("Parenting")
-        elif "make up" in pl or "makeup" in pl:
-            tags.append("Makeup")
-        elif "tv host" in pl or "tv hostess" in pl:
-            tags.append("TV Host")
-        elif "actress" in pl:
-            tags.append("Actress")
-        elif "celebrity" in pl:
-            tags.append("Celebrity")
-        elif "digital creator" in pl:
-            tags.append("Digital Creator")
-        elif "content creator" in pl:
-            tags.append("Content Creator")
-        else:
-            tags.append(p.strip())
-
-    # deduplicate while keeping order
+    parts = [p.strip() for p in raw.replace(";", ",").split(",")]
+    tags = [p for p in parts if p]
     out = []
     for t in tags:
-        if t and t not in out:
+        if t not in out:
             out.append(t)
     return out
 
@@ -63,54 +46,56 @@ def build_tags(category_raw):
 def map_top_category(category_raw):
     """
     Map the Excel Category string to one of the fixed site categories:
-    ENT, COMEDY, SPORTS_FITNESS, BEAUTY_FASHION, GAMING_TECHNOLOGY,
-    COOKING, PARENTING, CELEBRITIES, LIFESTYLE.
-    Works even if Category is just 'Sports', 'Fitness', 'Gaming', 'Technology', etc.
+    ENTERTAINMENT, COMEDY, SPORTS_FITNESS, BEAUTY_FASHION,
+    GAMING_TECHNOLOGY, COOKING, PARENTING, CELEBRITIES, LIFESTYLE.
     """
     if not isinstance(category_raw, str):
         return "LIFESTYLE"
 
-    cat_lower = category_raw.strip().lower()
+    cat_lower = category_raw.lower()
 
-    def has_any(*words):
-        return any(w in cat_lower for w in words)
-
-    # Parenting first, since "family lifestyle" could exist
-    if has_any("parent", "mom", "mum", "dad", "family", "kids", "baby"):
+    if "parent" in cat_lower:
         return "PARENTING"
 
-    # Beauty / fashion
-    if has_any("beauty", "fashion", "make up", "makeup", "hair", "nails"):
+    if "beauty" in cat_lower or "fashion" in cat_lower or "make up" in cat_lower or "makeup" in cat_lower:
         return "BEAUTY_FASHION"
 
-    # Sports and fitness
-    if has_any("sport", "sports", "fitness", "fit ", "gym", "athlete", "trainer", "coach"):
+    if "sport" in cat_lower or "fitness" in cat_lower or "athlete" in cat_lower:
         return "SPORTS_FITNESS"
 
-    # Gaming / technology
-    if has_any("gaming", "gamer", "game", "stream", "twitch", "esport", "tech", "technology"):
+    if "gamer" in cat_lower or "gaming" in cat_lower or "stream" in cat_lower or "tech" in cat_lower:
         return "GAMING_TECHNOLOGY"
 
-    # Cooking / food
-    if has_any("chef", "cook", "cooking", "recipe", "food", "restaurant", "baker", "baking"):
+    if "chef" in cat_lower or "cook" in cat_lower or "recipe" in cat_lower or "food" in cat_lower:
         return "COOKING"
 
-    # Celebrities, high profile
-    if has_any("tv host", "tv hostess", "anchor", "actress", "actor", "celebrity",
-               "singer", "artist", "musician", "band"):
+    if (
+        "tv host" in cat_lower
+        or "tv hostess" in cat_lower
+        or "actress" in cat_lower
+        or "celebrity" in cat_lower
+        or "singer" in cat_lower
+    ):
         return "CELEBRITIES"
 
-    # Comedy
-    if has_any("comed", "stand up", "stand-up", "sketch", "satire"):
+    if "comed" in cat_lower:
         return "COMEDY"
 
-    # Entertainment / generic creators
-    if has_any("entertainment", "entertainer", "digital creator", "content creator",
-               "media", "show", "radio host"):
+    if (
+        "entertainment" in cat_lower
+        or "digital creator" in cat_lower
+        or "content creator" in cat_lower
+    ):
         return "ENTERTAINMENT"
 
-    # Default bucket
     return "LIFESTYLE"
+
+
+def is_row_ignored(row, col_handle):
+    """Return True if this row should be skipped based on the IGNORED_HANDLES set."""
+    handle_raw = row.get(col_handle)
+    handle_norm = normalize_text(handle_raw) or ""
+    return handle_norm in IGNORED_HANDLES
 
 
 def main():
@@ -119,7 +104,7 @@ def main():
 
     df = pd.read_excel(EXCEL_FILE, sheet_name=SHEET_NAME)
 
-    # Use exact column names from your sheet
+    # Exact column names from your sheet
     col_total = "Total Followers "
     col_sort = "Sort"
     col_handle = "Content Creator "
@@ -127,10 +112,15 @@ def main():
     col_tiktok = "Tiktok "
     col_youtube = "Youtube "
     col_category = "Category "
+    col_tags = "Tags"   # manual tags column
 
     influencers = []
 
     for idx, row in df.iterrows():
+        # skip if in hard coded ignore list
+        if is_row_ignored(row, col_handle):
+            continue
+
         handle_raw = row.get(col_handle)
         handle = normalize_text(handle_raw)
         if not handle:
@@ -148,8 +138,9 @@ def main():
             followers_sort = 0
 
         cat_raw = row.get(col_category)
-        tags = build_tags(cat_raw)
         top_category = map_top_category(cat_raw)
+
+        manual_tags = parse_manual_tags(row.get(col_tags))
 
         insta = normalize_text(row.get(col_instagram))
         tiktok = normalize_text(row.get(col_tiktok))
@@ -160,7 +151,8 @@ def main():
             "followersDisplay": followers_display,
             "followersSort": followers_sort,
             "topCategory": top_category,
-            "tags": tags,
+            "tags": manual_tags,        # chips shown on the card
+            "filterTags": manual_tags,  # used by main.js for filtering
             "imageSeed": handle,
             "links": {
                 "instagram": insta or "",
@@ -178,7 +170,7 @@ def main():
     with open(OUTPUT_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
 
-    print(f"Written {len(influencers)} influencers to {OUTPUT_JS}")
+    print(f"Written {len(influencers)} influencers to " + OUTPUT_JS)
 
 
 if __name__ == "__main__":

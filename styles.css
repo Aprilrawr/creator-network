@@ -198,39 +198,39 @@ section.category {
 /* local parallax images */
 
 .parallax-entertainment {
-    background-image: url("/CatParallax/entertainment.png");
+    background-image: url("CatParallax/entertainment.png");
 }
 
 .parallax-comedy {
-    background-image: url("/CatParallax/comedy.png");
+    background-image: url("CatParallax/comedy.png");
 }
 
 .parallax-sports {
-    background-image: url("/CatParallax/SPORTS.png");
+    background-image: url("CatParallax/SPORTS.png");
 }
 
 .parallax-beauty {
-    background-image: url("/CatParallax/BEAUTY.png");
+    background-image: url("CatParallax/BEAUTY.png");
 }
 
 .parallax-gaming {
-    background-image: url("/CatParallax/GAMING.png");
+    background-image: url("CatParallax/GAMING.png");
 }
 
 .parallax-cooking {
-    background-image: url("/CatParallax/COOKING.png");
+    background-image: url("CatParallax/COOKING.png");
 }
 
 .parallax-parenting {
-    background-image: url("/CatParallax/PARENTING.png");
+    background-image: url("CatParallax/PARENTING.png");
 }
 
 .parallax-celebrities {
-    background-image: url("/CatParallax/CELEBRITIES.png");
+    background-image: url("CatParallax/CELEBRITIES.png");
 }
 
 .parallax-lifestyle {
-    background-image: url("/CatParallax/LIFESTYLE.png");
+    background-image: url("CatParallax/LIFESTYLE.png");
 }
 
 /* block that holds text and cards */

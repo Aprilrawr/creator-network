@@ -1,5 +1,20 @@
 window.INFLUENCERS = [
   {
+    "handle": "rania.n",
+    "followersDisplay": "500k",
+    "followersSort": 500000,
+    "topCategory": "COOKING",
+    "tags": [
+      "Cooking"
+    ],
+    "imageSeed": "rania.n",
+    "links": {
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  {
     "handle": "j.touni",
     "followersDisplay": "1,9M",
     "followersSort": 1900000,
