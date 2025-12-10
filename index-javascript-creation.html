@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Influencer Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts and icons -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <!-- Font Awesome 6 (for real TikTok icon) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-main: #050816;
+            --card-red: #990033;
+            --card-petrol: #003947;
+            --text-main: #0f172a;
+            --muted: #6b7280;
+
+            /* tag colors, placeholders for now */
+            --tag-actor-bg: #22c55e;
+            --tag-actor-text: #ffffff;
+            --tag-host-bg: #ec4899;
+            --tag-host-text: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: #f9fafb;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page {
+            display: flex;
+        }
+
+        /* Vertical rail on the left */
+
+        .category-rail {
+            position: fixed;
+            inset-block: 0;
+            left: 0;
+            width: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding-block: 24px;
+            z-index: 20;
+        }
+
+        .cat-pill {
+            width: 50px;
+            border-radius: 3px;
+            background: #111;
+            transition: all 0.25s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cat-pill.inactive {
+            height: 16px;
+        }
+
+        .cat-pill.active {
+            height: calc(100vh - 80px);
+            max-height: 780px;
+            background: linear-gradient(to bottom, #0f172a, #1f2937, #7f1d1d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                    0 0 0 1px rgba(15, 23, 42, 0.7),
+                    0 16px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .cat-pill-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: 800;
+            font-size: 2.5em;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+            text-transform: uppercase;
+            transform: rotate(180deg);
+        }
+
+        /* Main content wrapper */
+
+        .content {
+            margin-left: 64px;
+            width: calc(100% - 64px);
+        }
+
+        section.category {
+            position: relative;
+        }
+
+        /* Parallax hero per category */
+
+        .parallax-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 320px;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .parallax-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top left, rgba(15, 23, 42, 0.35), transparent),
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.95));
+        }
+
+        .parallax-title-wrap {
+            position: relative;
+            padding: 2rem 1.5rem 3.5rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .parallax-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        /* your local parallax images */
+
+        .parallax-entertainment {
+            background-image: url("/CatParallax/entertainment.png");
+        }
+
+        .parallax-comedy {
+            background-image: url("/CatParallax/comedy.png");
+        }
+
+        .parallax-sports {
+            background-image: url("/CatParallax/SPORTS.png");
+        }
+
+        .parallax-beauty {
+            background-image: url("/CatParallax/BEAUTY.png");
+        }
+
+        .parallax-gaming {
+            background-image: url("/CatParallax/GAMING.png");
+        }
+
+        .parallax-cooking {
+            background-image: url("/CatParallax/COOKING.png");
+        }
+
+        .parallax-parenting {
+            background-image: url("/CatParallax/PARENTING.png");
+        }
+
+        .parallax-celebrities {
+            background-image: url("/CatParallax/CELEBRITIES.png");
+        }
+
+        .parallax-lifestyle {
+            background-image: url("/CatParallax/LIFESTYLE.png");
+        }
+
+        /* White block that holds text and cards */
+
+        .category-body {
+            background: #1c1c1d;
+            color: var(--text-main);
+            border-radius: 32px 32px 0 0;
+            margin-top: -32px;
+            box-shadow: 0 -6px 20px rgba(15, 23, 42, 0.35);
+        }
+
+        .category-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+        }
+
+        .category-subtitle {
+            font-size: 0.95rem;
+            max-width: 620px;
+            margin: 0.8rem auto 1.6rem;
+            color: #4b5563;
+        }
+
+        .category-tag-row {
+            margin-bottom: 2rem;
+            display: inline-flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tag-pill {
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            font-size: 0.8rem;
+            color: #374151;
+            background: #e5e7eb;
+        }
+
+        /* Influencer cards grid */
+
+        .cards-grid {
+            margin-top: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 1.35rem;
+            align-items: stretch;
+        }
+
+        @media (max-width: 1100px) {
+            .cards-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .cards-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        /* Card base */
+
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 260px;
+            height: 340px;
+            margin: 0 auto;
+            border-radius: 30px;
+            background: #111827;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+            transform-origin: center center;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
+            z-index: 3;
+        }
+
+        .card-image {
+            flex: 1 1 auto;
+            background: #111111;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-footer {
+            flex: 0 0 auto;
+            background: linear-gradient(to bottom, #2f2234, var(--card-petrol));
+            padding: 0.9rem 1rem 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .handle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .followers-pill {
+            padding: 0.35rem 1.4rem;
+            background: #ffffff;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #04111c;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            border: 2px solid #e11d48;
+        }
+
+        /* Tags at top */
+
+        .card-tags {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            opacity: 0;
+            pointer-events: none;
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .card:hover .card-tags {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: auto;
+        }
+
+        .card-tag-chip {
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        /* Social icons */
+
+        .sci {
+            display: flex;
+            justify-content: center;
+            gap: 0.9rem;
+            list-style: none;
+            padding: 0;
+            margin-top: 0.3rem;
+        }
+
+        .sci li {
+            transform: translateY(16px);
+            opacity: 0;
+            transition:
+                transform 0.25s ease,
+                opacity 0.25s ease;
+            transition-delay: calc(0.04s * var(--i));
+        }
+
+        .card:hover .sci li {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .sci a {
+            font-size: 1.05rem;
+            color: #e5e7eb;
+        }
+
+        .sci a:hover {
+            color: #ffffff;
+        }
+
+        /* Jump to top button */
+
+        .scroll-top-btn {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            background: radial-gradient(circle at top, #3b82f6, #0f172a);
+            color: #f9fafb;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition:
+                    opacity 0.2s ease,
+                    transform 0.2s ease,
+                    visibility 0.2s ease;
+            z-index: 40;
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 540px) {
+            .scroll-top-btn {
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+
+        /* Responsive rail width */
+
+        @media (max-width: 768px) {
+            .category-rail {
+                width: 52px;
+            }
+
+            .content {
+                margin-left: 52px;
+                width: calc(100% - 52px);
+            }
+
+            .cat-pill-label {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .category-rail {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Vertical category rail -->
+    <aside class="category-rail" aria-label="Category navigation">
+        <div class="cat-pill active" data-target="entertainment" data-label="ENTERTAINMENT">
+            <span class="cat-pill-label">ENTERTAINMENT</span>
+        </div>
+        <div class="cat-pill inactive" data-target="comedy" data-label="COMEDY"></div>
+        <div class="cat-pill inactive" data-target="sports-fitness" data-label="SPORTS & FITNESS"></div>
+        <div class="cat-pill inactive" data-target="beauty-fashion" data-label="BEAUTY & FASHION"></div>
+        <div class="cat-pill inactive" data-target="gaming-technology" data-label="GAMING & TECHNOLOGY"></div>
+        <div class="cat-pill inactive" data-target="cooking" data-label="COOKING"></div>
+        <div class="cat-pill inactive" data-target="parenting" data-label="PARENTING"></div>
+        <div class="cat-pill inactive" data-target="celebrities" data-label="CELEBRITIES"></div>
+        <div class="cat-pill inactive" data-target="lifestyle" data-label="LIFESTYLE"></div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+
+        <!-- ENTERTAINMENT -->
+        <section id="entertainment" class="category">
+            <div class="parallax-hero parallax-entertainment">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Entertainment</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        TV hosts, radio personalities, performers and creators that live in the spotlight.
+                        Ideal for high impact visibility and broad audience campaigns.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">TV</span>
+                        <span class="tag-pill">Radio</span>
+                        <span class="tag-pill">Stage</span>
+                    </div>
+                    <div class="cards-grid" data-category="ENTERTAINMENT"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMEDY -->
+        <section id="comedy" class="category">
+            <div class="parallax-hero parallax-comedy">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Comedy</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Stand up comedians and comedy creators who drive strong engagement through humor.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Sketch</span>
+                        <span class="tag-pill">Stand up</span>
+                        <span class="tag-pill">Satire</span>
+                    </div>
+                    <div class="cards-grid" data-category="COMEDY"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPORTS & FITNESS -->
+        <section id="sports-fitness" class="category">
+            <div class="parallax-hero parallax-sports">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Sports &amp; Fitness</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Athletes, trainers and wellness creators that focus on performance and health.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Athletes</span>
+                        <span class="tag-pill">Coaches</span>
+                        <span class="tag-pill">Wellness</span>
+                    </div>
+                    <div class="cards-grid" data-category="SPORTS_FITNESS"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEAUTY & FASHION -->
+        <section id="beauty-fashion" class="category">
+            <div class="parallax-hero parallax-beauty">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Beauty &amp; Fashion</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Make up artists, hair experts and style creators, ideal for beauty and fashion launches.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Makeup</span>
+                        <span class="tag-pill">Skincare</span>
+                        <span class="tag-pill">Outfits</span>
+                    </div>
+                    <div class="cards-grid" data-category="BEAUTY_FASHION"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMING & TECHNOLOGY -->
+        <section id="gaming-technology" class="category">
+            <div class="parallax-hero parallax-gaming">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Gaming &amp; Technology</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Streamers, tech reviewers and gaming creators for hardware and software brands.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Streaming</span>
+                        <span class="tag-pill">Tech reviews</span>
+                        <span class="tag-pill">Esports</span>
+                    </div>
+                    <div class="cards-grid" data-category="GAMING_TECHNOLOGY"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COOKING -->
+        <section id="cooking" class="category">
+            <div class="parallax-hero parallax-cooking">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Cooking</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Chefs, home cooks and food creators, ideal for FMCG and hospitality campaigns.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Recipes</span>
+                        <span class="tag-pill">Restaurant</span>
+                        <span class="tag-pill">Home cooking</span>
+                    </div>
+                    <div class="cards-grid" data-category="COOKING"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARENTING -->
+        <section id="parenting" class="category">
+            <div class="parallax-hero parallax-parenting">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Parenting</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Families and parents sharing real life experiences, ideal for baby and education brands.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Family</span>
+                        <span class="tag-pill">Baby</span>
+                        <span class="tag-pill">Education</span>
+                    </div>
+                    <div class="cards-grid" data-category="PARENTING"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CELEBRITIES -->
+        <section id="celebrities" class="category">
+            <div class="parallax-hero parallax-celebrities">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Celebrities</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        High profile names with strong media presence, ideal for flagship campaigns.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">TV stars</span>
+                        <span class="tag-pill">Music</span>
+                        <span class="tag-pill">Film</span>
+                    </div>
+                    <div class="cards-grid" data-category="CELEBRITIES"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIFESTYLE -->
+        <section id="lifestyle" class="category">
+            <div class="parallax-hero parallax-lifestyle">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Lifestyle</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Everyday creators who cover travel, daily routines and inspiration across categories.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill">Travel</span>
+                        <span class="tag-pill">Home</span>
+                        <span class="tag-pill">Daily life</span>
+                    </div>
+                    <div class="cards-grid" data-category="LIFESTYLE"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<button class="scroll-top-btn" type="button">Jump to top</button>
+
+<!-- Data file generated from Excel, optional for now -->
+<script src="influencers-data.js"></script>
+
+<script>
+    // Fallback sample data so you see cards even without influencers-data.js
+    if (!window.INFLUENCERS) {
+        window.INFLUENCERS = [
+            {
+                handle: "alex_rivera",
+                followersDisplay: "420k",
+                followersSort: 420000,
+                topCategory: "ENTERTAINMENT",
+                tags: ["Actor", "Host"],
+                imageSeed: "alex_rivera",
+                links: {
+                    instagram: "#",
+                    tiktok: "#",
+                    youtube: "#"
+                }
+            },
+            {
+                handle: "maria_costa",
+                followersDisplay: "1,2M",
+                followersSort: 1200000,
+                topCategory: "ENTERTAINMENT",
+                tags: ["Singer"],
+                imageSeed: "maria_costa",
+                links: {
+                    instagram: "#",
+                    tiktok: "",
+                    youtube: "#"
+                }
+            },
+            {
+                handle: "leo_james",
+                followersDisplay: "310k",
+                followersSort: 310000,
+                topCategory: "COMEDY",
+                tags: ["Comedian"],
+                imageSeed: "leo_james",
+                links: {
+                    instagram: "#",
+                    tiktok: "#",
+                    youtube: ""
+                }
+            },
+            {
+                handle: "nina_lopez",
+                followersDisplay: "675k",
+                followersSort: 675000,
+                topCategory: "CELEBRITIES",
+                tags: ["Reality TV"],
+                imageSeed: "nina_lopez",
+                links: {
+                    instagram: "#",
+                    tiktok: "",
+                    youtube: "#"
+                }
+            },
+            {
+                handle: "studio_echo",
+                followersDisplay: "195k",
+                followersSort: 195000,
+                topCategory: "LIFESTYLE",
+                tags: ["Podcast"],
+                imageSeed: "studio_echo",
+                links: {
+                    instagram: "#",
+                    tiktok: "",
+                    youtube: "#"
+                }
+            }
+        ];
+    }
+
+    // Activate rail pills based on scroll
+    const sections = document.querySelectorAll("section.category");
+    const pills = document.querySelectorAll(".cat-pill");
+    const scrollTopBtn = document.querySelector(".scroll-top-btn");
+
+    const setActiveCategory = (id) => {
+        pills.forEach(pill => {
+            const target = pill.getAttribute("data-target");
+            if (target === id) {
+                pill.classList.add("active");
+                pill.classList.remove("inactive");
+
+                if (!pill.querySelector(".cat-pill-label")) {
+                    const label = document.createElement("span");
+                    label.className = "cat-pill-label";
+                    const labelText = pill.getAttribute("data-label") || id.replace("-", " ").toUpperCase();
+                    label.textContent = labelText;
+                    pill.appendChild(label);
+                }
+            } else {
+                pill.classList.remove("active");
+                pill.classList.add("inactive");
+                const label = pill.querySelector(".cat-pill-label");
+                if (label) {
+                    pill.removeChild(label);
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    setActiveCategory(id);
+                }
+            });
+        },
+        {
+            threshold: 0.55
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+    pills.forEach(pill => {
+        pill.addEventListener("click", () => {
+            const targetId = pill.getAttribute("data-target");
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+
+    const handleScroll = () => {
+        if (!scrollTopBtn) {
+            return;
+        }
+
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("visible");
+        } else {
+            scrollTopBtn.classList.remove("visible");
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    // Card rendering from window.INFLUENCERS
+
+    function createCard(inf) {
+        const article = document.createElement("article");
+        article.className = "card";
+
+        // Tags
+        const tagsDiv = document.createElement("div");
+        tagsDiv.className = "card-tags";
+        (inf.tags || []).forEach(tag => {
+            const span = document.createElement("span");
+            span.className = "card-tag-chip";
+            span.textContent = tag;
+            tagsDiv.appendChild(span);
+        });
+        article.appendChild(tagsDiv);
+
+        // Image
+        const imageWrap = document.createElement("div");
+        imageWrap.className = "card-image";
+        const img = document.createElement("img");
+        const seed = inf.imageSeed || inf.handle || Math.random().toString(36).slice(2);
+        img.src = "https://picsum.photos/seed/" + encodeURIComponent(seed) + "/400/260";
+        const handleForAlt = inf.handle && !inf.handle.startsWith("@")
+            ? "@" + inf.handle
+            : (inf.handle || "influencer");
+        img.alt = handleForAlt + " photo";
+        imageWrap.appendChild(img);
+        article.appendChild(imageWrap);
+
+        // Footer
+        const footer = document.createElement("div");
+        footer.className = "card-footer";
+
+        const handleP = document.createElement("p");
+        handleP.className = "handle";
+        if (inf.handle) {
+            handleP.textContent = inf.handle.startsWith("@") ? inf.handle : "@" + inf.handle;
+        } else {
+            handleP.textContent = "";
+        }
+        footer.appendChild(handleP);
+
+        const followersDiv = document.createElement("div");
+        followersDiv.className = "followers-pill";
+        followersDiv.textContent = inf.followersDisplay || "";
+        footer.appendChild(followersDiv);
+
+        const ul = document.createElement("ul");
+        ul.className = "sci";
+
+        const platforms = [
+            { key: "instagram", icon: "fa-brands fa-instagram" },
+            { key: "tiktok", icon: "fa-brands fa-tiktok" },
+            { key: "youtube", icon: "fa-brands fa-youtube" }
+        ];
+
+        let i = 1;
+        if (inf.links) {
+            platforms.forEach(p => {
+                const url = inf.links[p.key];
+                if (url) {
+                    const li = document.createElement("li");
+                    li.style.setProperty("--i", String(i));
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.target = "_blank";
+                    a.rel = "noopener";
+                    const icon = document.createElement("i");
+                    icon.className = p.icon;
+                    icon.setAttribute("aria-hidden", "true");
+                    a.appendChild(icon);
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                    i += 1;
+                }
+            });
+        }
+
+        if (ul.children.length > 0) {
+            footer.appendChild(ul);
+        }
+
+        article.appendChild(footer);
+        return article;
+    }
+
+    (function renderInfluencers() {
+        if (!window.INFLUENCERS || !Array.isArray(window.INFLUENCERS)) {
+            return;
+        }
+
+        const byCategory = {};
+
+        window.INFLUENCERS.forEach(inf => {
+            const cat = inf.topCategory || "LIFESTYLE";
+            if (!byCategory[cat]) {
+                byCategory[cat] = [];
+            }
+            byCategory[cat].push(inf);
+        });
+
+        Object.keys(byCategory).forEach(cat => {
+            byCategory[cat].sort((a, b) => {
+                const sa = typeof a.followersSort === "number" ? a.followersSort : 0;
+                const sb = typeof b.followersSort === "number" ? b.followersSort : 0;
+                return sb - sa;
+            });
+        });
+
+        document.querySelectorAll(".cards-grid[data-category]").forEach(grid => {
+            const catKey = grid.getAttribute("data-category");
+            const list = byCategory[catKey] || [];
+            list.forEach(inf => {
+                const card = createCard(inf);
+                grid.appendChild(card);
+            });
+        });
+    })();
+</script>
+</body>
+</html>

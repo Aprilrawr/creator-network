@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Influencer Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts and icons -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        :root {
+            --bg-main: #050816;
+            --card-red: #990033;
+            --card-petrol: #003947;
+            --text-main: #0f172a;
+            --muted: #6b7280;
+
+            /* role tag colors (card chips) */
+            --tag-actor-bg: #22c55e;
+            --tag-actor-text: #ffffff;
+            --tag-host-bg: #ec4899;
+            --tag-host-text: #ffffff;
+
+            /* filter tag colors (category pills), placeholders for now */
+            --tag-tv-bg: #0ea5e9;
+            --tag-tv-text: #ffffff;
+            --tag-radio-bg: #f97316;
+            --tag-radio-text: #111827;
+            --tag-stage-bg: #a855f7;
+            --tag-stage-text: #ffffff;
+
+            --tag-sketch-bg: #22c55e;
+            --tag-sketch-text: #ffffff;
+            --tag-standup-bg: #ef4444;
+            --tag-standup-text: #ffffff;
+            --tag-satire-bg: #eab308;
+            --tag-satire-text: #111827;
+
+            --tag-athletes-bg: #22c55e;
+            --tag-athletes-text: #ffffff;
+            --tag-coaches-bg: #06b6d4;
+            --tag-coaches-text: #ffffff;
+            --tag-wellness-bg: #8b5cf6;
+            --tag-wellness-text: #ffffff;
+
+            --tag-makeup-bg: #f472b6;
+            --tag-makeup-text: #111827;
+            --tag-skincare-bg: #6ee7b7;
+            --tag-skincare-text: #064e3b;
+            --tag-outfits-bg: #facc15;
+            --tag-outfits-text: #111827;
+
+            --tag-streaming-bg: #3b82f6;
+            --tag-streaming-text: #ffffff;
+            --tag-reviews-bg: #0ea5e9;
+            --tag-reviews-text: #ffffff;
+            --tag-esports-bg: #a855f7;
+            --tag-esports-text: #ffffff;
+
+            --tag-recipes-bg: #22c55e;
+            --tag-recipes-text: #ffffff;
+            --tag-restaurant-bg: #f97316;
+            --tag-restaurant-text: #111827;
+            --tag-home-cooking-bg: #ef4444;
+            --tag-home-cooking-text: #ffffff;
+
+            --tag-family-bg: #22c55e;
+            --tag-family-text: #ffffff;
+            --tag-baby-bg: #fb7185;
+            --tag-baby-text: #ffffff;
+            --tag-education-bg: #38bdf8;
+            --tag-education-text: #0f172a;
+
+            --tag-tv-stars-bg: #f97316;
+            --tag-tv-stars-text: #111827;
+            --tag-music-bg: #6366f1;
+            --tag-music-text: #ffffff;
+            --tag-film-bg: #22c55e;
+            --tag-film-text: #ffffff;
+
+            --tag-travel-bg: #3b82f6;
+            --tag-travel-text: #ffffff;
+            --tag-home-bg: #a855f7;
+            --tag-home-text: #ffffff;
+            --tag-daily-life-bg: #f59e0b;
+            --tag-daily-life-text: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg-main);
+            color: #f9fafb;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page {
+            display: flex;
+        }
+
+        /* Vertical rail on the left */
+
+        .category-rail {
+            position: fixed;
+            inset-block: 0;
+            left: 0;
+            width: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding-block: 24px;
+            z-index: 20;
+        }
+
+        .cat-pill {
+            width: 50px;
+            border-radius: 3px;
+            background: #111;
+            transition: all 0.25s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cat-pill.inactive {
+            height: 16px;
+        }
+
+        .cat-pill.active {
+            height: calc(100vh - 80px);
+            max-height: 780px;
+            background: linear-gradient(to bottom, #0f172a, #1f2937, #7f1d1d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                    0 0 0 1px rgba(15, 23, 42, 0.7),
+                    0 16px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .cat-pill-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: 800;
+            font-size: 2.5em;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+            text-transform: uppercase;
+            transform: rotate(180deg);
+        }
+
+        /* Main content wrapper */
+
+        .content {
+            margin-left: 64px;
+            width: calc(100% - 64px);
+        }
+
+        section.category {
+            position: relative;
+        }
+
+        /* Parallax hero per category */
+
+        .parallax-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 320px;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .parallax-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.35), transparent),
+                        linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.95));
+        }
+
+        .parallax-title-wrap {
+            position: relative;
+            padding: 2rem 1.5rem 3.5rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .parallax-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        /* one image per category, placeholder stock images for now */
+        .parallax-entertainment {
+            background-image: url("/CatParallax/entertainment.png");
+        }
+
+        .parallax-comedy {
+            background-image: url("/CatParallax/comedy.png");
+        }
+
+        .parallax-sports {
+            background-image: url("/CatParallax/SPORTS.png");
+        }
+
+        .parallax-beauty {
+            background-image: url("/CatParallax/BEAUTY.png");
+        }
+
+        .parallax-gaming {
+            background-image: url("/CatParallax/GAMING.png");
+        }
+
+        .parallax-cooking {
+            background-image: url("/CatParallax/COOKING.png");
+        }
+
+        .parallax-parenting {
+            background-image: url("/CatParallax/PARENTING.png");
+        }
+
+        .parallax-celebrities {
+            background-image: url("/CatParallax/CELEBRITIES.png");
+        }
+
+        .parallax-lifestyle {
+            background-image: url("/CatParallax/LIFESTYLE.png");
+        }
+
+        /* Block that holds text and cards */
+
+        .category-body {
+            background: #1c1c1d;
+            color: var(--text-main);
+            border-radius: 32px 32px 0 0;
+            margin-top: -32px;
+            box-shadow: 0 -6px 20px rgba(15, 23, 42, 0.35);
+        }
+
+        .category-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+        }
+
+        .category-subtitle {
+            font-size: 0.95rem;
+            max-width: 620px;
+            margin: 0.8rem auto 1.6rem;
+            color: #e5e7eb;
+        }
+
+        .category-tag-row {
+            margin-bottom: 2rem;
+            display: inline-flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tag-pill {
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            font-size: 0.8rem;
+            background: #e5e7eb;
+            color: #374151;
+            cursor: pointer;
+            transition:
+                background-color 0.15s ease,
+                color 0.15s ease,
+                box-shadow 0.15s ease,
+                transform 0.15s ease;
+        }
+
+        .tag-pill[data-tag] {
+            border-color: transparent;
+        }
+
+        /* per tag colors, using variables */
+        .tag-pill[data-tag="tv"] {
+            background: var(--tag-tv-bg);
+            color: var(--tag-tv-text);
+        }
+
+        .tag-pill[data-tag="radio"] {
+            background: var(--tag-radio-bg);
+            color: var(--tag-radio-text);
+        }
+
+        .tag-pill[data-tag="stage"] {
+            background: var(--tag-stage-bg);
+            color: var(--tag-stage-text);
+        }
+
+        .tag-pill[data-tag="sketch"] {
+            background: var(--tag-sketch-bg);
+            color: var(--tag-sketch-text);
+        }
+
+        .tag-pill[data-tag="standup"] {
+            background: var(--tag-standup-bg);
+            color: var(--tag-standup-text);
+        }
+
+        .tag-pill[data-tag="satire"] {
+            background: var(--tag-satire-bg);
+            color: var(--tag-satire-text);
+        }
+
+        .tag-pill[data-tag="athletes"] {
+            background: var(--tag-athletes-bg);
+            color: var(--tag-athletes-text);
+        }
+
+        .tag-pill[data-tag="coaches"] {
+            background: var(--tag-coaches-bg);
+            color: var(--tag-coaches-text);
+        }
+
+        .tag-pill[data-tag="wellness"] {
+            background: var(--tag-wellness-bg);
+            color: var(--tag-wellness-text);
+        }
+
+        .tag-pill[data-tag="makeup"] {
+            background: var(--tag-makeup-bg);
+            color: var(--tag-makeup-text);
+        }
+
+        .tag-pill[data-tag="skincare"] {
+            background: var(--tag-skincare-bg);
+            color: var(--tag-skincare-text);
+        }
+
+        .tag-pill[data-tag="outfits"] {
+            background: var(--tag-outfits-bg);
+            color: var(--tag-outfits-text);
+        }
+
+        .tag-pill[data-tag="streaming"] {
+            background: var(--tag-streaming-bg);
+            color: var(--tag-streaming-text);
+        }
+
+        .tag-pill[data-tag="reviews"] {
+            background: var(--tag-reviews-bg);
+            color: var(--tag-reviews-text);
+        }
+
+        .tag-pill[data-tag="esports"] {
+            background: var(--tag-esports-bg);
+            color: var(--tag-esports-text);
+        }
+
+        .tag-pill[data-tag="recipes"] {
+            background: var(--tag-recipes-bg);
+            color: var(--tag-recipes-text);
+        }
+
+        .tag-pill[data-tag="restaurant"] {
+            background: var(--tag-restaurant-bg);
+            color: var(--tag-restaurant-text);
+        }
+
+        .tag-pill[data-tag="home-cooking"] {
+            background: var(--tag-home-cooking-bg);
+            color: var(--tag-home-cooking-text);
+        }
+
+        .tag-pill[data-tag="family"] {
+            background: var(--tag-family-bg);
+            color: var(--tag-family-text);
+        }
+
+        .tag-pill[data-tag="baby"] {
+            background: var(--tag-baby-bg);
+            color: var(--tag-baby-text);
+        }
+
+        .tag-pill[data-tag="education"] {
+            background: var(--tag-education-bg);
+            color: var(--tag-education-text);
+        }
+
+        .tag-pill[data-tag="tv-stars"] {
+            background: var(--tag-tv-stars-bg);
+            color: var(--tag-tv-stars-text);
+        }
+
+        .tag-pill[data-tag="music"] {
+            background: var(--tag-music-bg);
+            color: var(--tag-music-text);
+        }
+
+        .tag-pill[data-tag="film"] {
+            background: var(--tag-film-bg);
+            color: var(--tag-film-text);
+        }
+
+        .tag-pill[data-tag="travel"] {
+            background: var(--tag-travel-bg);
+            color: var(--tag-travel-text);
+        }
+
+        .tag-pill[data-tag="home"] {
+            background: var(--tag-home-bg);
+            color: var(--tag-home-text);
+        }
+
+        .tag-pill[data-tag="daily-life"] {
+            background: var(--tag-daily-life-bg);
+            color: var(--tag-daily-life-text);
+        }
+
+        .tag-pill.active {
+            box-shadow:
+                0 0 0 2px rgba(15, 23, 42, 0.75),
+                0 0 0 4px rgba(148, 163, 184, 0.8);
+            transform: translateY(-1px);
+        }
+
+        /* Influencer cards grid */
+
+        .cards-grid {
+            margin-top: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 1.35rem;
+            align-items: stretch;
+        }
+
+        @media (max-width: 1100px) {
+            .cards-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .cards-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        /* Card base: hybrid layout */
+
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 260px;
+            height: 340px;
+            margin: 0 auto;
+            border-radius: 30px;
+            background: #111827;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                opacity 0.2s ease;
+            transform-origin: center center;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
+            z-index: 3;
+        }
+
+        .card-image {
+            flex: 1 1 auto;
+            background: #111111;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-footer {
+            flex: 0 0 auto;
+            background: linear-gradient(to bottom, #2f2234, var(--card-petrol));
+            padding: 0.9rem 1rem 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .handle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+      /* followers pill with gradient border */
+        .followers-pill {
+            padding: 0.35rem 1.4rem;
+            border-radius: 999px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #04111c;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+            border: 2px solid transparent;
+            background-image:
+                linear-gradient(#ffffff, #ffffff),
+                linear-gradient(to right, var(--card-red), var(--card-petrol));
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+
+
+        /* Tags at top */
+
+        .card-tags {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            opacity: 0;
+            pointer-events: none;
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .card:hover .card-tags {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: auto;
+        }
+
+        .card-tag-chip {
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .card-tag-chip.actor {
+            background: var(--tag-actor-bg);
+            color: var(--tag-actor-text);
+        }
+
+        .card-tag-chip.host {
+            background: var(--tag-host-bg);
+            color: var(--tag-host-text);
+        }
+
+        /* Social icons inside footer */
+
+        .sci {
+            display: flex;
+            justify-content: center;
+            gap: 0.9rem;
+            list-style: none;
+            padding: 0;
+            margin-top: 0.3rem;
+        }
+
+        .sci li {
+            transform: translateY(16px);
+            opacity: 0;
+            transition:
+                transform 0.25s ease,
+                opacity 0.25s ease;
+            transition-delay: calc(0.04s * var(--i));
+        }
+
+        .card:hover .sci li {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .sci a {
+            font-size: 1.05rem;
+            color: #e5e7eb;
+        }
+
+        .sci a:hover {
+            color: #ffffff;
+        }
+
+        .card.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            display: none;
+        }
+
+        /* Mobile tweaks */
+
+        @media (max-width: 720px) {
+            .card {
+                max-width: 320px;
+                height: 360px;
+                border-radius: 24px;
+            }
+        }
+
+        /* Jump to top button */
+
+        .scroll-top-btn {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            padding: 0.65rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            background: radial-gradient(circle at top, #3b82f6, #0f172a);
+            color: #f9fafb;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition:
+                    opacity 0.2s ease,
+                    transform 0.2s ease,
+                    visibility 0.2s ease;
+            z-index: 40;
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 540px) {
+            .scroll-top-btn {
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+
+        /* Responsive rail width */
+
+        @media (max-width: 768px) {
+            .category-rail {
+                width: 52px;
+            }
+
+            .content {
+                margin-left: 52px;
+                width: calc(100% - 52px);
+            }
+
+            .cat-pill-label {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .category-rail {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Vertical category rail -->
+    <aside class="category-rail" aria-label="Category navigation">
+        <div class="cat-pill active" data-target="entertainment" data-label="ENTERTAINMENT">
+            <span class="cat-pill-label">ENTERTAINMENT</span>
+        </div>
+        <div class="cat-pill inactive" data-target="comedy" data-label="COMEDY"></div>
+        <div class="cat-pill inactive" data-target="sports-fitness" data-label="SPORTS & FITNESS"></div>
+        <div class="cat-pill inactive" data-target="beauty-fashion" data-label="BEAUTY & FASHION"></div>
+        <div class="cat-pill inactive" data-target="gaming-technology" data-label="GAMING & TECHNOLOGY"></div>
+        <div class="cat-pill inactive" data-target="cooking" data-label="COOKING"></div>
+        <div class="cat-pill inactive" data-target="parenting" data-label="PARENTING"></div>
+        <div class="cat-pill inactive" data-target="celebrities" data-label="CELEBRITIES"></div>
+        <div class="cat-pill inactive" data-target="lifestyle" data-label="LIFESTYLE"></div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+
+        <!-- ENTERTAINMENT -->
+        <section id="entertainment" class="category">
+            <div class="parallax-hero parallax-entertainment">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Entertainment</h2>
+                </div>
+            </div>
+
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        TV hosts, radio personalities, performers and creators that live in the spotlight.
+                        Ideal for high impact visibility and broad audience campaigns.
+                    </p>
+
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="tv">TV</span>
+                        <span class="tag-pill" data-tag="radio">Radio</span>
+                        <span class="tag-pill" data-tag="stage">Stage</span>
+                    </div>
+
+                    <div class="cards-grid">
+                        <!-- Card 1 -->
+                        <article class="card" data-tags="tv,stage">
+                            <div class="card-tags">
+                                <span class="card-tag-chip actor">Actor</span>
+                                <span class="card-tag-chip host">TV Host</span>
+                            </div>
+
+                            <div class="card-image">
+                                <img src="https://unsplash.it/400/260?image=1050" alt="Influencer photo">
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="handle">@alex_rivera</p>
+                                <div class="followers-pill">420k</div>
+                                <ul class="sci">
+                                    <li style="--i:1">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:2">
+                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:3">
+                                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card" data-tags="tv,music">
+                            <div class="card-tags">
+                                <span class="card-tag-chip actor">Singer</span>
+                                <span class="card-tag-chip host">TV Host</span>
+                            </div>
+
+                            <div class="card-image">
+                                <img src="https://unsplash.it/400/260?image=1005" alt="Influencer photo">
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="handle">@maria_costa</p>
+                                <div class="followers-pill">1.2M</div>
+                                <ul class="sci">
+                                    <li style="--i:1">
+                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:2">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:3">
+                                        <a href="#"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card" data-tags="tv,stage">
+                            <div class="card-tags">
+                                <span class="card-tag-chip actor">Comedian</span>
+                                <span class="card-tag-chip host">Panelist</span>
+                            </div>
+
+                            <div class="card-image">
+                                <img src="https://unsplash.it/400/260?image=1004" alt="Influencer photo">
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="handle">@leo_james</p>
+                                <div class="followers-pill">310k</div>
+                                <ul class="sci">
+                                    <li style="--i:1">
+                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:2">
+                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:3">
+                                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card" data-tags="tv,stage">
+                            <div class="card-tags">
+                                <span class="card-tag-chip actor">Reality TV</span>
+                                <span class="card-tag-chip host">Lifestyle</span>
+                            </div>
+
+                            <div class="card-image">
+                                <img src="https://unsplash.it/400/260?image=1011" alt="Influencer photo">
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="handle">@nina_lopez</p>
+                                <div class="followers-pill">675k</div>
+                                <ul class="sci">
+                                    <li style="--i:1">
+                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:2">
+                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:3">
+                                        <a href="#"><i class="fa fa-music" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="card" data-tags="radio,tv">
+                            <div class="card-tags">
+                                <span class="card-tag-chip actor">Podcast</span>
+                                <span class="card-tag-chip host">Host</span>
+                            </div>
+
+                            <div class="card-image">
+                                <img src="https://unsplash.it/400/260?image=999" alt="Influencer photo">
+                            </div>
+
+                            <div class="card-footer">
+                                <p class="handle">@studio_echo</p>
+                                <div class="followers-pill">195k</div>
+                                <ul class="sci">
+                                    <li style="--i:1">
+                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:2">
+                                        <a href="#"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li style="--i:3">
+                                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The rest of the categories only have heroes and tags for now -->
+
+        <section id="comedy" class="category">
+            <div class="parallax-hero parallax-comedy">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Comedy</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Stand up comedians and comedy creators who drive strong engagement through humor.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="sketch">Sketch</span>
+                        <span class="tag-pill" data-tag="standup">Stand up</span>
+                        <span class="tag-pill" data-tag="satire">Satire</span>
+                    </div>
+                    <!-- cards-grid will go here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="sports-fitness" class="category">
+            <div class="parallax-hero parallax-sports">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Sports &amp; Fitness</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Athletes, trainers and wellness creators that focus on performance and health.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="athletes">Athletes</span>
+                        <span class="tag-pill" data-tag="coaches">Coaches</span>
+                        <span class="tag-pill" data-tag="wellness">Wellness</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beauty-fashion" class="category">
+            <div class="parallax-hero parallax-beauty">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Beauty &amp; Fashion</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Make up artists, hair experts and style creators, ideal for beauty and fashion launches.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="makeup">Makeup</span>
+                        <span class="tag-pill" data-tag="skincare">Skincare</span>
+                        <span class="tag-pill" data-tag="outfits">Outfits</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gaming-technology" class="category">
+            <div class="parallax-hero parallax-gaming">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Gaming &amp; Technology</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Streamers, tech reviewers and gaming creators for hardware and software brands.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="streaming">Streaming</span>
+                        <span class="tag-pill" data-tag="reviews">Tech reviews</span>
+                        <span class="tag-pill" data-tag="esports">Esports</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cooking" class="category">
+            <div class="parallax-hero parallax-cooking">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Cooking</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Chefs, home cooks and food creators, ideal for FMCG and hospitality campaigns.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="recipes">Recipes</span>
+                        <span class="tag-pill" data-tag="restaurant">Restaurant</span>
+                        <span class="tag-pill" data-tag="home-cooking">Home cooking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="parenting" class="category">
+            <div class="parallax-hero parallax-parenting">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Parenting</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Families and parents sharing real life experiences, ideal for baby and education brands.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="family">Family</span>
+                        <span class="tag-pill" data-tag="baby">Baby</span>
+                        <span class="tag-pill" data-tag="education">Education</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="celebrities" class="category">
+            <div class="parallax-hero parallax-celebrities">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Celebrities</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        High profile names with strong media presence, ideal for flagship campaigns.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="tv-stars">TV stars</span>
+                        <span class="tag-pill" data-tag="music">Music</span>
+                        <span class="tag-pill" data-tag="film">Film</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lifestyle" class="category">
+            <div class="parallax-hero parallax-lifestyle">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-title-wrap">
+                    <h2 class="parallax-title">Lifestyle</h2>
+                </div>
+            </div>
+            <div class="category-body">
+                <div class="category-inner">
+                    <p class="category-subtitle">
+                        Everyday creators who cover travel, daily routines and inspiration across categories.
+                    </p>
+                    <div class="category-tag-row">
+                        <span class="tag-pill" data-tag="travel">Travel</span>
+                        <span class="tag-pill" data-tag="home">Home</span>
+                        <span class="tag-pill" data-tag="daily-life">Daily life</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<button class="scroll-top-btn" type="button">Jump to top</button>
+
+<script>
+    const sections = document.querySelectorAll("section.category");
+    const pills = document.querySelectorAll(".cat-pill");
+    const scrollTopBtn = document.querySelector(".scroll-top-btn");
+
+    const setActiveCategory = (id) => {
+        pills.forEach(pill => {
+            const target = pill.getAttribute("data-target");
+            if (target === id) {
+                pill.classList.add("active");
+                pill.classList.remove("inactive");
+
+                if (!pill.querySelector(".cat-pill-label")) {
+                    const label = document.createElement("span");
+                    label.className = "cat-pill-label";
+                    const labelText = pill.getAttribute("data-label") || id.replace("-", " ").toUpperCase();
+                    label.textContent = labelText;
+                    pill.appendChild(label);
+                }
+            } else {
+                pill.classList.remove("active");
+                pill.classList.add("inactive");
+                const label = pill.querySelector(".cat-pill-label");
+                if (label) {
+                    pill.removeChild(label);
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    setActiveCategory(id);
+                }
+            });
+        },
+        {
+            threshold: 0.55
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+    pills.forEach(pill => {
+        pill.addEventListener("click", () => {
+            const targetId = pill.getAttribute("data-target");
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+
+    /* Tag based filtering per category */
+
+    sections.forEach(section => {
+        const tagPills = section.querySelectorAll(".tag-pill[data-tag]");
+        const cards = section.querySelectorAll(".cards-grid .card");
+        if (!tagPills.length || !cards.length) {
+            return;
+        }
+
+        tagPills.forEach(pill => {
+            pill.addEventListener("click", () => {
+                const tag = pill.dataset.tag;
+                const isActive = pill.classList.contains("active");
+
+                tagPills.forEach(p => p.classList.remove("active"));
+                cards.forEach(card => card.classList.remove("is-hidden"));
+
+                if (!isActive) {
+                    pill.classList.add("active");
+
+                    cards.forEach(card => {
+                        const cardTags = (card.dataset.tags || "")
+                            .split(",")
+                            .map(t => t.trim())
+                            .filter(t => t.length > 0);
+
+                        if (!cardTags.includes(tag)) {
+                            card.classList.add("is-hidden");
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+    const handleScroll = () => {
+        if (!scrollTopBtn) {
+            return;
+        }
+
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("visible");
+        } else {
+            scrollTopBtn.classList.remove("visible");
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+</script>
+</body>
+</html>
