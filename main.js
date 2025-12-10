@@ -78,6 +78,7 @@ if (scrollTopBtn) {
 
 /*
  Helper to normalize categories coming from influencers-data.js
+
  Handles things like:
  - "Comedy", "COMEDY"
  - "Sports", "Fitness", "Sports & Fitness"
@@ -133,7 +134,7 @@ function normalizeCategory(value) {
     }
 
     if (hasAny("tv host", "tv hostess", "anchor", "actress", "actor", "celebrity",
-        "singer", "artist", "musician", "band")) {
+               "singer", "artist", "musician", "band")) {
         return "CELEBRITIES";
     }
 
@@ -142,7 +143,7 @@ function normalizeCategory(value) {
     }
 
     if (hasAny("entertainment", "entertainer", "digital creator", "content creator",
-        "media", "show", "radio host")) {
+               "media", "show", "radio host")) {
         return "ENTERTAINMENT";
     }
 
@@ -182,12 +183,26 @@ function createCard(inf) {
     const imageWrap = document.createElement("div");
     imageWrap.className = "card-image";
     const img = document.createElement("img");
-    const seed = inf.imageSeed || inf.handle || Math.random().toString(36).slice(2);
-    img.src = "https://picsum.photos/seed/" + encodeURIComponent(seed) + "/400/260";
+
+    let imageSrc = "";
+
+    // use real photo if provided from Excel
+    if (inf.photoUrl && typeof inf.photoUrl === "string" && inf.photoUrl.trim().length > 5) {
+        imageSrc = inf.photoUrl.trim();
+    } else {
+        // fallback placeholder
+        const seed = inf.imageSeed || inf.handle || Math.random().toString(36).slice(2);
+        imageSrc = "https://picsum.photos/seed/" + encodeURIComponent(seed) + "/400/260";
+    }
+
+    img.src = imageSrc;
+    img.loading = "lazy";
+
     const handleForAlt = inf.handle && !inf.handle.startsWith("@")
         ? "@" + inf.handle
         : (inf.handle || "influencer");
     img.alt = handleForAlt + " photo";
+
     imageWrap.appendChild(img);
     article.appendChild(imageWrap);
 
@@ -302,6 +317,7 @@ sections.forEach(section => {
             const tag = pill.dataset.tag;
             const isActive = pill.classList.contains("active");
 
+            // reset everything
             tagPills.forEach(p => p.classList.remove("active"));
             cards.forEach(card => card.classList.remove("is-hidden"));
 

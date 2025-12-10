@@ -12,10 +12,8 @@ OUTPUT_JS = "influencers-data.js"
 # Hard coded list of creators to ignore
 # Use the exact text from the "Content Creator " column in Excel
 IGNORED_HANDLES = {
-    # "@valiahtz_",
-    # "@gingerbread_bae",
-    # "@elina_kalitzaki"
-
+    # "Name Surname",
+    # "Another Creator",
 }
 
 
@@ -112,7 +110,8 @@ def main():
     col_tiktok = "Tiktok "
     col_youtube = "Youtube "
     col_category = "Category "
-    col_tags = "Tags"   # manual tags column
+    col_tags = "Tags"     # manual tags column
+    col_photo = "Photo"   # photo column from Excel (change to "Photo " if your header has a trailing space)
 
     influencers = []
 
@@ -146,6 +145,8 @@ def main():
         tiktok = normalize_text(row.get(col_tiktok))
         youtube = normalize_text(row.get(col_youtube))
 
+        photo_raw = normalize_text(row.get(col_photo))
+
         inf = {
             "handle": handle,  # without @, renderer adds @ for display
             "followersDisplay": followers_display,
@@ -153,7 +154,8 @@ def main():
             "topCategory": top_category,
             "tags": manual_tags,        # chips shown on the card
             "filterTags": manual_tags,  # used by main.js for filtering
-            "imageSeed": handle,
+            "imageSeed": handle,        # fallback seed
+            "photoUrl": photo_raw or "",  # new field for real photo link
             "links": {
                 "instagram": insta or "",
                 "tiktok": tiktok or "",

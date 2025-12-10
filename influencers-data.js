@@ -1,13 +1,93 @@
 window.INFLUENCERS = [
   {
-    "handle": "rania.n",
-    "followersDisplay": "500k",
-    "followersSort": 500000,
+    "handle": "tech_test",
+    "followersDisplay": "5M",
+    "followersSort": 5000000,
+    "topCategory": "GAMING_TECHNOLOGY",
+    "tags": [
+      "Reviewer"
+    ],
+    "filterTags": [
+      "Reviewer"
+    ],
+    "imageSeed": "tech_test",
+    "photoUrl": "assets/creators/stefan-stefancik-QXevDflbl8A-unsplash.jpg",
+    "links": {
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  {
+    "handle": "sports_test",
+    "followersDisplay": "5M",
+    "followersSort": 5000000,
+    "topCategory": "SPORTS_FITNESS",
+    "tags": [
+      "MMA Figher"
+    ],
+    "filterTags": [
+      "MMA Figher"
+    ],
+    "imageSeed": "sports_test",
+    "photoUrl": "assets/creators/jurica-koletic-7YVZYZeITc8-unsplash.jpg",
+    "links": {
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  {
+    "handle": "fitness_test",
+    "followersDisplay": "5M",
+    "followersSort": 5000000,
+    "topCategory": "SPORTS_FITNESS",
+    "tags": [
+      "Trainer"
+    ],
+    "filterTags": [
+      "Trainer"
+    ],
+    "imageSeed": "fitness_test",
+    "photoUrl": "assets/creators/aiony-haust-3TLl_97HNJo-unsplash.jpg",
+    "links": {
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  {
+    "handle": "gaming_test",
+    "followersDisplay": "5M",
+    "followersSort": 5000000,
+    "topCategory": "GAMING_TECHNOLOGY",
+    "tags": [
+      "Streamer"
+    ],
+    "filterTags": [
+      "Streamer"
+    ],
+    "imageSeed": "gaming_test",
+    "photoUrl": "assets/creators/michael-dam-mEZ3PoFGs_k-unsplash.jpg",
+    "links": {
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  },
+  {
+    "handle": "cooking_test",
+    "followersDisplay": "5M",
+    "followersSort": 5000000,
     "topCategory": "COOKING",
     "tags": [
-      "Cooking"
+      "Deserts"
     ],
-    "imageSeed": "rania.n",
+    "filterTags": [
+      "Deserts"
+    ],
+    "imageSeed": "cooking_test",
+    "photoUrl": "assets/creators/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
     "links": {
       "instagram": "",
       "tiktok": "",
@@ -20,9 +100,15 @@ window.INFLUENCERS = [
     "followersSort": 1900000,
     "topCategory": "LIFESTYLE",
     "tags": [
-      "Lifestyle"
+      "Travel",
+      "Food"
+    ],
+    "filterTags": [
+      "Travel",
+      "Food"
     ],
     "imageSeed": "j.touni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/j.touni/",
       "tiktok": "https://www.tiktok.com/@j.touni?",
@@ -37,7 +123,11 @@ window.INFLUENCERS = [
     "tags": [
       "Actress"
     ],
+    "filterTags": [
+      "Actress"
+    ],
     "imageSeed": "vasolaskaraki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasolaskaraki/",
       "tiktok": "https://www.tiktok.com/@vasolaskarakiofficial1?lang=en",
@@ -50,9 +140,13 @@ window.INFLUENCERS = [
     "followersSort": 909000,
     "topCategory": "CELEBRITIES",
     "tags": [
-      "Celebrity"
+      "Actress"
+    ],
+    "filterTags": [
+      "Actress"
     ],
     "imageSeed": "chrismpo",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/chrismpo/",
       "tiktok": "https://www.tiktok.com/@iamchrismpo",
@@ -64,10 +158,10 @@ window.INFLUENCERS = [
     "followersDisplay": "824K",
     "followersSort": 824000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stauroula_theoxari",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stauroula_theoxari/",
       "tiktok": "https://www.tiktok.com/@stauroulatheoxari?lang=en",
@@ -82,7 +176,11 @@ window.INFLUENCERS = [
     "tags": [
       "TV Host"
     ],
+    "filterTags": [
+      "TV Host"
+    ],
     "imageSeed": "stam_tsimtsili",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stam_tsimtsili/",
       "tiktok": "",
@@ -94,10 +192,10 @@ window.INFLUENCERS = [
     "followersDisplay": "740K",
     "followersSort": 740000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zeta_makripoulia_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zeta_makripoulia_official/",
       "tiktok": "",
@@ -109,10 +207,10 @@ window.INFLUENCERS = [
     "followersDisplay": "684K",
     "followersSort": 684000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofia_moutidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofia_moutidou/",
       "tiktok": "https://www.tiktok.com/@sofiamoutidouu?lang=en",
@@ -124,10 +222,10 @@ window.INFLUENCERS = [
     "followersDisplay": "655K",
     "followersSort": 655000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fiveminutemumchannel",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fiveminutemumchannel/",
       "tiktok": "",
@@ -139,10 +237,10 @@ window.INFLUENCERS = [
     "followersDisplay": "648Κ",
     "followersSort": 648000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elena_mariposa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elena_mariposa/",
       "tiktok": "https://www.tiktok.com/@elena_mariposa_",
@@ -154,10 +252,10 @@ window.INFLUENCERS = [
     "followersDisplay": "639K",
     "followersSort": 639000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ilianapapageorgiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ilianapapageorgiou/",
       "tiktok": "https://www.tiktok.com/@iliana.papageorgiou",
@@ -169,10 +267,10 @@ window.INFLUENCERS = [
     "followersDisplay": "633K",
     "followersSort": 633000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dimitris_alexandrou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dimitris_alexandrou/",
       "tiktok": "https://www.tiktok.com/@dimitris_alexandrou",
@@ -184,10 +282,10 @@ window.INFLUENCERS = [
     "followersDisplay": "622K",
     "followersSort": 622000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "smaragda_karidi_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/smaragda_karidi_official/",
       "tiktok": "https://www.tiktok.com/@smaragdakaridi?lang=en",
@@ -199,10 +297,10 @@ window.INFLUENCERS = [
     "followersDisplay": "621K",
     "followersSort": 621000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariakorinthiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariakorinthiou/",
       "tiktok": "",
@@ -214,10 +312,10 @@ window.INFLUENCERS = [
     "followersDisplay": "612K",
     "followersSort": 612000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_mtsl",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_mtsl/",
       "tiktok": "https://www.tiktok.com/@maria_mitsola?lang=en",
@@ -229,10 +327,10 @@ window.INFLUENCERS = [
     "followersDisplay": "595K",
     "followersSort": 595000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marakiiliaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marakiiliaki/",
       "tiktok": "https://www.tiktok.com/@mariailiaki",
@@ -244,10 +342,10 @@ window.INFLUENCERS = [
     "followersDisplay": "570K",
     "followersSort": 570000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annamavridis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annamavridis/",
       "tiktok": "",
@@ -259,10 +357,10 @@ window.INFLUENCERS = [
     "followersDisplay": "562Κ",
     "followersSort": 562000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "danouuz",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/danouuz/",
       "tiktok": "https://www.tiktok.com/@danouuz",
@@ -274,10 +372,10 @@ window.INFLUENCERS = [
     "followersDisplay": "518K",
     "followersSort": 518000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerina_geronikolou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerina_geronikolou/",
       "tiktok": "",
@@ -289,10 +387,10 @@ window.INFLUENCERS = [
     "followersDisplay": "514K",
     "followersSort": 514000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nonoram",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nonoram/",
       "tiktok": "",
@@ -304,10 +402,10 @@ window.INFLUENCERS = [
     "followersDisplay": "510K",
     "followersSort": 510000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "greg.corpidis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/greg.corpidis/?hl=en",
       "tiktok": "https://www.tiktok.com/@greg.corpidis",
@@ -319,10 +417,10 @@ window.INFLUENCERS = [
     "followersDisplay": "510K",
     "followersSort": 510000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "natalia_germanou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/natalia_germanou/?hl=el",
       "tiktok": "",
@@ -334,10 +432,10 @@ window.INFLUENCERS = [
     "followersDisplay": "507K",
     "followersSort": 507000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kmetaxa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kmetaxa/",
       "tiktok": "https://www.tiktok.com/@kmetaxa?lang=en",
@@ -349,10 +447,10 @@ window.INFLUENCERS = [
     "followersDisplay": "500K",
     "followersSort": 500000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasia_tsilimpiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasia_tsilimpiou/",
       "tiktok": "https://www.tiktok.com/@anastasia.tsilimpiou",
@@ -364,10 +462,10 @@ window.INFLUENCERS = [
     "followersDisplay": "474K",
     "followersSort": 474000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eugeniasamara",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eugeniasamara/",
       "tiktok": "https://www.tiktok.com/@eugeniasamara",
@@ -379,10 +477,10 @@ window.INFLUENCERS = [
     "followersDisplay": "466K",
     "followersSort": 466000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioannatri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioannatri/?hl=el",
       "tiktok": "https://www.tiktok.com/@joannatri",
@@ -394,10 +492,10 @@ window.INFLUENCERS = [
     "followersDisplay": "463K",
     "followersSort": 463000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marialena.rou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marialena.rou/",
       "tiktok": "https://www.tiktok.com/@marialena.rou?lang=en",
@@ -409,10 +507,10 @@ window.INFLUENCERS = [
     "followersDisplay": "450K",
     "followersSort": 450000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "danai_barka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/danai_barka/",
       "tiktok": "https://www.tiktok.com/@danaibarka__",
@@ -424,10 +522,10 @@ window.INFLUENCERS = [
     "followersDisplay": "450K",
     "followersSort": 450000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "its.psi._",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/its.psi._/",
       "tiktok": "https://www.tiktok.com/@its.psi?",
@@ -439,10 +537,10 @@ window.INFLUENCERS = [
     "followersDisplay": "448K",
     "followersSort": 448000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "manousaki.aggeliki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/manousaki.aggeliki/?hl=el",
       "tiktok": "https://www.tiktok.com/@aggelikimanousaki?lang=en",
@@ -454,10 +552,10 @@ window.INFLUENCERS = [
     "followersDisplay": "442K",
     "followersSort": 442000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "tzwr.tzina_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/_tzwr.tzina_/",
       "tiktok": "https://www.tiktok.com/@_tzwr.tzina_",
@@ -469,10 +567,10 @@ window.INFLUENCERS = [
     "followersDisplay": "437K",
     "followersSort": 437000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elinapapila",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elinapapila/",
       "tiktok": "https://www.tiktok.com/@elinapapila",
@@ -484,10 +582,10 @@ window.INFLUENCERS = [
     "followersDisplay": "433K",
     "followersSort": 433000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sakiskats",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sakiskats/",
       "tiktok": "https://www.tiktok.com/@sakiskatsoulis?lang=en",
@@ -499,10 +597,10 @@ window.INFLUENCERS = [
     "followersDisplay": "431K",
     "followersSort": 431000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariabacodimou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariabacodimou/",
       "tiktok": "https://www.tiktok.com/@mariabacodimou",
@@ -514,10 +612,10 @@ window.INFLUENCERS = [
     "followersDisplay": "407K",
     "followersSort": 407000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "konstantinasoultati",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/konstantinasoultati/",
       "tiktok": "https://www.tiktok.com/@konstantinasoultati?lang=en",
@@ -529,10 +627,10 @@ window.INFLUENCERS = [
     "followersDisplay": "404K",
     "followersSort": 404000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katy.supergirl",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katy.supergirl/",
       "tiktok": "https://www.tiktok.com/@katy.supergirl?",
@@ -544,10 +642,10 @@ window.INFLUENCERS = [
     "followersDisplay": "398K",
     "followersSort": 398000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lauranarjes",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lauranarjes/",
       "tiktok": "",
@@ -559,10 +657,10 @@ window.INFLUENCERS = [
     "followersDisplay": "397K",
     "followersSort": 397000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evi.daeliofficial",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evi.daeliofficial/",
       "tiktok": "https://www.tiktok.com/@evidaeliofficial?",
@@ -574,10 +672,10 @@ window.INFLUENCERS = [
     "followersDisplay": "395K",
     "followersSort": 395000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marasamartzi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marasamartzi/",
       "tiktok": "https://www.tiktok.com/@marasamartziofficial",
@@ -589,10 +687,10 @@ window.INFLUENCERS = [
     "followersDisplay": "391K",
     "followersSort": 391000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "giogiota",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/giogiota/",
       "tiktok": "https://www.tiktok.com/@giodreveli",
@@ -604,10 +702,10 @@ window.INFLUENCERS = [
     "followersDisplay": "390K",
     "followersSort": 390000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zarifious",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zarifious/?hl=el",
       "tiktok": "",
@@ -619,10 +717,10 @@ window.INFLUENCERS = [
     "followersDisplay": "382K",
     "followersSort": 382000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofianaspinoula",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofianaspinoula/",
       "tiktok": "https://www.tiktok.com/@sofianaspinoula?lang=en",
@@ -634,10 +732,10 @@ window.INFLUENCERS = [
     "followersDisplay": "372K",
     "followersSort": 372000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evagelia_siriopoulou_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evagelia_siriopoulou_official/#",
       "tiktok": "https://www.tiktok.com/@evagelia_siriopou",
@@ -649,10 +747,10 @@ window.INFLUENCERS = [
     "followersDisplay": "366K",
     "followersSort": 366000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerina_papoutsaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerina_papoutsaki/",
       "tiktok": "https://www.tiktok.com/@katerina_papoutsaki",
@@ -664,10 +762,10 @@ window.INFLUENCERS = [
     "followersDisplay": "361K",
     "followersSort": 361000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "george_asimakopoulos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/george_asimakopoulos/",
       "tiktok": "https://www.tiktok.com/@george_asimakopoulos",
@@ -679,10 +777,10 @@ window.INFLUENCERS = [
     "followersDisplay": "345K",
     "followersSort": 345000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "siavoskou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/siavoskou/",
       "tiktok": "https://www.tiktok.com/@siavoskou",
@@ -694,10 +792,10 @@ window.INFLUENCERS = [
     "followersDisplay": "340K",
     "followersSort": 340000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "betty_maggira",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/betty_maggira/",
       "tiktok": "https://www.tiktok.com/@bettymaggira",
@@ -709,10 +807,10 @@ window.INFLUENCERS = [
     "followersDisplay": "340K",
     "followersSort": 340000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vaitsou_eleni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vaitsou_eleni/",
       "tiktok": "https://www.tiktok.com/@elenivaitsou?lang=en",
@@ -724,10 +822,10 @@ window.INFLUENCERS = [
     "followersDisplay": "335K",
     "followersSort": 335000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nikolettaralli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nikolettaralli/",
       "tiktok": "https://www.tiktok.com/@nikolettaralli",
@@ -739,10 +837,10 @@ window.INFLUENCERS = [
     "followersDisplay": "330K",
     "followersSort": 330000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zoe.pre",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zoe.pre/",
       "tiktok": "https://www.tiktok.com/@zoepreofficial?lang=en",
@@ -754,10 +852,10 @@ window.INFLUENCERS = [
     "followersDisplay": "327K",
     "followersSort": 327000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "popi_pagoude",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/popi_pagoude/",
       "tiktok": "https://www.tiktok.com/@popipagoudi?lang=en",
@@ -769,10 +867,10 @@ window.INFLUENCERS = [
     "followersDisplay": "305K",
     "followersSort": 305000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marykokkali",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marykokkali/",
       "tiktok": "https://www.tiktok.com/@marykokkali?lang=en",
@@ -784,10 +882,10 @@ window.INFLUENCERS = [
     "followersDisplay": "300K",
     "followersSort": 300000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ifigenia_tzola",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ifigenia_tzola/?hl=el",
       "tiktok": "https://www.tiktok.com/@ifigeniatzola",
@@ -799,10 +897,10 @@ window.INFLUENCERS = [
     "followersDisplay": "300K",
     "followersSort": 300000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vicky_kavoura",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vicky_kavoura/?hl=el",
       "tiktok": "https://www.tiktok.com/@vicky_kavoura?lang=en",
@@ -814,10 +912,10 @@ window.INFLUENCERS = [
     "followersDisplay": "293K",
     "followersSort": 293000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "imaleskou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/imaleskou/",
       "tiktok": "https://www.tiktok.com/@imaleskou",
@@ -829,10 +927,10 @@ window.INFLUENCERS = [
     "followersDisplay": "292Κ",
     "followersSort": 292000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nefelimeg",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nefelimeg/",
       "tiktok": "https://www.tiktok.com/@nefmeg?lang=el-GR",
@@ -844,10 +942,10 @@ window.INFLUENCERS = [
     "followersDisplay": "292K",
     "followersSort": 292000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "paliospirou.joanna",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/paliospirou.joanna/",
       "tiktok": "https://www.tiktok.com/@ioannapaliospirou",
@@ -859,10 +957,10 @@ window.INFLUENCERS = [
     "followersDisplay": "287K",
     "followersSort": 287000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "larou1",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/larou1/",
       "tiktok": "https://www.tiktok.com/@roula.stamatopoulou",
@@ -874,10 +972,10 @@ window.INFLUENCERS = [
     "followersDisplay": "286K",
     "followersSort": 286000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nicolascostastyle",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nicolascostastyle/",
       "tiktok": "https://www.tiktok.com/@nicolascostastyle",
@@ -889,10 +987,10 @@ window.INFLUENCERS = [
     "followersDisplay": "281K",
     "followersSort": 281000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "madogasteratou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/madogasteratou/",
       "tiktok": "",
@@ -904,10 +1002,10 @@ window.INFLUENCERS = [
     "followersDisplay": "278K",
     "followersSort": 278000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "despinakampouri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/despinakampouri/",
       "tiktok": "https://www.tiktok.com/@despinakampouri_",
@@ -919,10 +1017,10 @@ window.INFLUENCERS = [
     "followersDisplay": "278K",
     "followersSort": 278000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "souzana",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/souzana/",
       "tiktok": "https://www.tiktok.com/@souzanasbeauty?lang=en",
@@ -934,10 +1032,10 @@ window.INFLUENCERS = [
     "followersDisplay": "272K",
     "followersSort": 272000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elena_asimakopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elena_asimakopoulou/",
       "tiktok": "https://www.tiktok.com/@elena_asimakopoulou",
@@ -949,10 +1047,10 @@ window.INFLUENCERS = [
     "followersDisplay": "263Κ",
     "followersSort": 263000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "clairedim",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/clairedim/",
       "tiktok": "",
@@ -964,10 +1062,10 @@ window.INFLUENCERS = [
     "followersDisplay": "260K",
     "followersSort": 260000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "yvonini",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/yvonini/",
       "tiktok": "https://www.tiktok.com/@yvonini",
@@ -979,11 +1077,10 @@ window.INFLUENCERS = [
     "followersDisplay": "259K",
     "followersSort": 259000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "donnaanastasia_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/donnaanastasia_official/",
       "tiktok": "",
@@ -995,10 +1092,10 @@ window.INFLUENCERS = [
     "followersDisplay": "257K",
     "followersSort": 257000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "asiminaigglezou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/asiminaigglezou/",
       "tiktok": "https://www.tiktok.com/@asiminaigglezou",
@@ -1010,10 +1107,10 @@ window.INFLUENCERS = [
     "followersDisplay": "255K",
     "followersSort": 255000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jennybalatsinou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jennybalatsinou/",
       "tiktok": "https://www.tiktok.com/@jennybalatsinou",
@@ -1025,10 +1122,10 @@ window.INFLUENCERS = [
     "followersDisplay": "255K",
     "followersSort": 255000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "melitajenny",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/melitajenny/",
       "tiktok": "https://www.tiktok.com/@manekenjenny?lang=en",
@@ -1040,10 +1137,10 @@ window.INFLUENCERS = [
     "followersDisplay": "254Κ",
     "followersSort": 254000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "christyiero",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/christyiero/",
       "tiktok": "https://www.tiktok.com/@christyiero",
@@ -1055,10 +1152,10 @@ window.INFLUENCERS = [
     "followersDisplay": "250K",
     "followersSort": 250000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zetadouka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zetadouka/",
       "tiktok": "",
@@ -1070,11 +1167,10 @@ window.INFLUENCERS = [
     "followersDisplay": "248K",
     "followersSort": 248000,
     "topCategory": "PARENTING",
-    "tags": [
-      "Beauty",
-      "Parenting"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anabrand",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anabrand/",
       "tiktok": "https://www.tiktok.com/@anita..brand",
@@ -1086,10 +1182,10 @@ window.INFLUENCERS = [
     "followersDisplay": "246K",
     "followersSort": 246000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dimitra__nika",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dimitra__nika/",
       "tiktok": "https://www.tiktok.com/@dimitra__nika",
@@ -1101,10 +1197,10 @@ window.INFLUENCERS = [
     "followersDisplay": "241K",
     "followersSort": 241000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasia_terzi1",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasia_terzi1/",
       "tiktok": "https://www.tiktok.com/@anastasia_terzi1",
@@ -1116,10 +1212,10 @@ window.INFLUENCERS = [
     "followersDisplay": "240K",
     "followersSort": 240000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "roulastamatopouloucom",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/roulastamatopouloucom/",
       "tiktok": "https://www.tiktok.com/@roula.stamatopoulou?lang=en",
@@ -1131,10 +1227,10 @@ window.INFLUENCERS = [
     "followersDisplay": "240K",
     "followersSort": 240000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vickystavropoulouofficial",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vickystavropoulouofficial/?hl=en",
       "tiktok": "",
@@ -1146,10 +1242,10 @@ window.INFLUENCERS = [
     "followersDisplay": "240K",
     "followersSort": 240000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "voulgaraki_el",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/voulgaraki_el/",
       "tiktok": "https://www.tiktok.com/@voulgarakieleni",
@@ -1161,10 +1257,10 @@ window.INFLUENCERS = [
     "followersDisplay": "239K",
     "followersSort": 239000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annamaria_iliadou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annamaria_iliadou/",
       "tiktok": "https://www.tiktok.com/@annamaria_iliadou",
@@ -1176,10 +1272,10 @@ window.INFLUENCERS = [
     "followersDisplay": "238K",
     "followersSort": 238000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "athina_xrisantidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/athina_xrisantidou/",
       "tiktok": "https://www.tiktok.com/@athinaxrisantidou",
@@ -1191,10 +1287,10 @@ window.INFLUENCERS = [
     "followersDisplay": "237K",
     "followersSort": 237000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mirketa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mirketa/",
       "tiktok": "https://www.tiktok.com/@mirketavidali?lang=en",
@@ -1206,10 +1302,10 @@ window.INFLUENCERS = [
     "followersDisplay": "235K",
     "followersSort": 235000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stella.mizeraki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stella.mizeraki/",
       "tiktok": "https://www.tiktok.com/@stellamizeraki",
@@ -1221,10 +1317,10 @@ window.INFLUENCERS = [
     "followersDisplay": "234K",
     "followersSort": 234000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jamie.kaf",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jamie.kaf/",
       "tiktok": "https://www.tiktok.com/@jamie.kaf",
@@ -1236,10 +1332,10 @@ window.INFLUENCERS = [
     "followersDisplay": "233K",
     "followersSort": 233000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kelly_kellina_real",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kelly_kellina_real/",
       "tiktok": "https://www.tiktok.com/@kellyliodou",
@@ -1251,10 +1347,10 @@ window.INFLUENCERS = [
     "followersDisplay": "230K",
     "followersSort": 230000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "olgafarmaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/olgafarmaki/?hl=el",
       "tiktok": "",
@@ -1266,10 +1362,10 @@ window.INFLUENCERS = [
     "followersDisplay": "228K",
     "followersSort": 228000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "didi.afroditi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/didi.afroditi/?hl=en",
       "tiktok": "https://www.tiktok.com/@dididoestiktok",
@@ -1281,10 +1377,10 @@ window.INFLUENCERS = [
     "followersDisplay": "226K",
     "followersSort": 226000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annaprelevic",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annaprelevic/",
       "tiktok": "https://www.tiktok.com/@annaprelevic",
@@ -1296,10 +1392,10 @@ window.INFLUENCERS = [
     "followersDisplay": "224K",
     "followersSort": 224000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_kavogianni_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_kavogianni_official/?hl=el",
       "tiktok": "",
@@ -1311,10 +1407,10 @@ window.INFLUENCERS = [
     "followersDisplay": "222K",
     "followersSort": 222000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "djpitsi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/djpitsi/?hl=el",
       "tiktok": "https://www.tiktok.com/@iamdjpitsi",
@@ -1326,10 +1422,10 @@ window.INFLUENCERS = [
     "followersDisplay": "221K",
     "followersSort": 221000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "antzelina_haldeda",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/antzelina_haldeda/",
       "tiktok": "https://www.tiktok.com/@antzelina_haldeda_",
@@ -1341,11 +1437,10 @@ window.INFLUENCERS = [
     "followersDisplay": "221K",
     "followersSort": 221000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "charlotte_nikitopoulos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/charlotte_nikitopoulos/",
       "tiktok": "https://www.tiktok.com/@charlotte_nikitopoulos",
@@ -1357,10 +1452,10 @@ window.INFLUENCERS = [
     "followersDisplay": "220K",
     "followersSort": 220000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elianoula",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elianoula/",
       "tiktok": "https://www.tiktok.com/@elianoula",
@@ -1372,10 +1467,10 @@ window.INFLUENCERS = [
     "followersDisplay": "218K",
     "followersSort": 218000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stylemeligan",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stylemeligan/",
       "tiktok": "https://www.tiktok.com/@stellameligan?lang=en",
@@ -1387,10 +1482,10 @@ window.INFLUENCERS = [
     "followersDisplay": "217K",
     "followersSort": 217000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "toniasotiropoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/toniasotiropoulou/",
       "tiktok": "",
@@ -1402,10 +1497,10 @@ window.INFLUENCERS = [
     "followersDisplay": "212K",
     "followersSort": 212000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioannapilichou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioannapilichou/",
       "tiktok": "https://www.tiktok.com/@ioannapilichou",
@@ -1417,10 +1512,10 @@ window.INFLUENCERS = [
     "followersDisplay": "208K",
     "followersSort": 208000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "matinanikolaou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/matinanikolaou/",
       "tiktok": "",
@@ -1432,11 +1527,10 @@ window.INFLUENCERS = [
     "followersDisplay": "207K",
     "followersSort": 207000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "niki_papadopoyloy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/niki_papadopoyloy/",
       "tiktok": "https://www.tiktok.com/@nikipapadopoyloy?lang=en",
@@ -1448,10 +1542,10 @@ window.INFLUENCERS = [
     "followersDisplay": "205K",
     "followersSort": 205000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "shopranoblog",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/shopranoblog/",
       "tiktok": "https://www.tiktok.com/@shopranoblog?lang=ko-KR",
@@ -1463,10 +1557,10 @@ window.INFLUENCERS = [
     "followersDisplay": "201K",
     "followersSort": 201000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aggelikidaliani",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aggelikidaliani/",
       "tiktok": "https://www.tiktok.com/@aggelikidaliani",
@@ -1478,10 +1572,10 @@ window.INFLUENCERS = [
     "followersDisplay": "191K",
     "followersSort": 191000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "taylorforelizabeth",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/taylorforelizabeth/",
       "tiktok": "https://www.tiktok.com/@taylorforelizabeth",
@@ -1493,10 +1587,10 @@ window.INFLUENCERS = [
     "followersDisplay": "190K",
     "followersSort": 190000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vikyhatzivasiliou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vikyhatzivasiliou/",
       "tiktok": "",
@@ -1508,10 +1602,10 @@ window.INFLUENCERS = [
     "followersDisplay": "184Κ",
     "followersSort": 184000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenagalifa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenagalifa/",
       "tiktok": "https://www.tiktok.com/@elenagalifa",
@@ -1523,10 +1617,10 @@ window.INFLUENCERS = [
     "followersDisplay": "184K",
     "followersSort": 184000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nafsika_pan",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nafsika_pan/?hl=en",
       "tiktok": "https://www.tiktok.com/@nafsika_p",
@@ -1538,10 +1632,10 @@ window.INFLUENCERS = [
     "followersDisplay": "183K",
     "followersSort": 183000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lorenianna",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lorenianna/",
       "tiktok": "https://www.tiktok.com/@annaloreni",
@@ -1553,10 +1647,10 @@ window.INFLUENCERS = [
     "followersDisplay": "183K",
     "followersSort": 183000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stelioshantampakis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stelioshantampakis/",
       "tiktok": "",
@@ -1568,10 +1662,10 @@ window.INFLUENCERS = [
     "followersDisplay": "182K",
     "followersSort": 182000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annarovatsou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annarovatsou/",
       "tiktok": "https://www.tiktok.com/@annarovatsou",
@@ -1583,10 +1677,10 @@ window.INFLUENCERS = [
     "followersDisplay": "182K",
     "followersSort": 182000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "harapappa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/harapappa/",
       "tiktok": "https://www.tiktok.com/@hara_pappa",
@@ -1598,10 +1692,10 @@ window.INFLUENCERS = [
     "followersDisplay": "181K",
     "followersSort": 181000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maryvitinaros",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maryvitinaros/",
       "tiktok": "https://www.tiktok.com/@maryvitinaros?lang=en",
@@ -1613,10 +1707,10 @@ window.INFLUENCERS = [
     "followersDisplay": "181K",
     "followersSort": 181000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "regina_makedou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/regina_makedou/",
       "tiktok": "https://www.tiktok.com/@reginamakedou",
@@ -1628,10 +1722,10 @@ window.INFLUENCERS = [
     "followersDisplay": "181K",
     "followersSort": 181000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "spirosmartikas",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/spirosmartikas/",
       "tiktok": "https://www.tiktok.com/@spiros_martikas",
@@ -1643,10 +1737,10 @@ window.INFLUENCERS = [
     "followersDisplay": "180K",
     "followersSort": 180000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenasaias",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenasaias/",
       "tiktok": "https://www.tiktok.com/@elenasaias",
@@ -1658,10 +1752,10 @@ window.INFLUENCERS = [
     "followersDisplay": "180K",
     "followersSort": 180000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nadiaboule",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nadiaboule/",
       "tiktok": "https://www.tiktok.com/@nadiaboule?lang=en",
@@ -1673,10 +1767,10 @@ window.INFLUENCERS = [
     "followersDisplay": "179K",
     "followersSort": 179000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "missmadden",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/missmadden/",
       "tiktok": "https://www.tiktok.com/@missmadden_?lang=en",
@@ -1688,10 +1782,10 @@ window.INFLUENCERS = [
     "followersDisplay": "178K",
     "followersSort": 178000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "giorgoskavvalos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/giorgoskavvalos/",
       "tiktok": "https://www.tiktok.com/@giorgoskavvaloss",
@@ -1703,10 +1797,10 @@ window.INFLUENCERS = [
     "followersDisplay": "175K",
     "followersSort": 175000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nancyparadeisanou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nancyparadeisanou/",
       "tiktok": "https://www.tiktok.com/@nancyparadeisanou?lang=en",
@@ -1718,10 +1812,10 @@ window.INFLUENCERS = [
     "followersDisplay": "174K",
     "followersSort": 174000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Blogger"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aggelim2",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aggelim2/",
       "tiktok": "https://www.tiktok.com/@mariaaggeli_",
@@ -1733,10 +1827,10 @@ window.INFLUENCERS = [
     "followersDisplay": "174K",
     "followersSort": 174000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofipasxali",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofipasxali/",
       "tiktok": "https://www.tiktok.com/@sofipasxali7",
@@ -1748,10 +1842,10 @@ window.INFLUENCERS = [
     "followersDisplay": "172K",
     "followersSort": 172000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "electra_asteri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/electra_asteri/",
       "tiktok": "https://www.tiktok.com/@electraasteri",
@@ -1763,10 +1857,10 @@ window.INFLUENCERS = [
     "followersDisplay": "170K",
     "followersSort": 170000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kwnstaelena",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kwnstaelena/",
       "tiktok": "https://www.tiktok.com/@kwnstaelena",
@@ -1778,10 +1872,10 @@ window.INFLUENCERS = [
     "followersDisplay": "169K",
     "followersSort": 169000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariatzani_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariatzani_/",
       "tiktok": "",
@@ -1793,10 +1887,10 @@ window.INFLUENCERS = [
     "followersDisplay": "167K",
     "followersSort": 167000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evelina_papoulia_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evelina_papoulia_official/",
       "tiktok": "",
@@ -1808,10 +1902,10 @@ window.INFLUENCERS = [
     "followersDisplay": "166K",
     "followersSort": 166000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pinelopiplaka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pinelopiplaka/",
       "tiktok": "https://www.tiktok.com/@pinelopiplaka",
@@ -1823,10 +1917,10 @@ window.INFLUENCERS = [
     "followersDisplay": "165K",
     "followersSort": 165000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "florindu",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/florindu/?hl=el",
       "tiktok": "",
@@ -1838,10 +1932,10 @@ window.INFLUENCERS = [
     "followersDisplay": "163Κ",
     "followersSort": 163000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioannakoulouri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioannakoulouri",
       "tiktok": "https://www.tiktok.com/@ioanna.koulourii",
@@ -1853,10 +1947,10 @@ window.INFLUENCERS = [
     "followersDisplay": "161K",
     "followersSort": 161000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "antoniaavdimioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/antoniaavdimioti/",
       "tiktok": "https://www.tiktok.com/@antoniaavdimioti",
@@ -1868,11 +1962,10 @@ window.INFLUENCERS = [
     "followersDisplay": "160K",
     "followersSort": 160000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "laouioanna",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/laouioanna/",
       "tiktok": "https://www.tiktok.com/@ioannalaou?is_from_webapp=1&sender_device=pc",
@@ -1884,10 +1977,10 @@ window.INFLUENCERS = [
     "followersDisplay": "160K",
     "followersSort": 160000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "xaritiniiliadou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/xaritiniiliadou/",
       "tiktok": "https://www.tiktok.com/@xaritiniiliadou?lang=en",
@@ -1899,10 +1992,10 @@ window.INFLUENCERS = [
     "followersDisplay": "157K",
     "followersSort": 157000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jennytheona",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jennytheona/",
       "tiktok": "",
@@ -1914,10 +2007,10 @@ window.INFLUENCERS = [
     "followersDisplay": "156K",
     "followersSort": 156000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "at.andreas",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/at.andreas/",
       "tiktok": "https://www.tiktok.com/@at.andreas",
@@ -1929,10 +2022,10 @@ window.INFLUENCERS = [
     "followersDisplay": "155K",
     "followersSort": 155000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "garufalia_s",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/garufalia_s/?hl=en",
       "tiktok": "https://www.tiktok.com/@garufalia_?fbclid=PAZXh0bgNhZW0CMTEAAae4baRspALsvaHDMi5W0zCnXoTGF8lvidVCRilrdsVEoBKlLY4ispWRKr9blQ_aem_CmSTRUCmQa1XFZPLoLRlrg",
@@ -1944,10 +2037,10 @@ window.INFLUENCERS = [
     "followersDisplay": "155K",
     "followersSort": 155000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "giorgosmanikas",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/giorgosmanikas/",
       "tiktok": "https://www.tiktok.com/@manikasgeorge",
@@ -1959,10 +2052,10 @@ window.INFLUENCERS = [
     "followersDisplay": "155K",
     "followersSort": 155000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_antwna",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_antwna/",
       "tiktok": "https://www.tiktok.com/@maria_antwna",
@@ -1974,10 +2067,10 @@ window.INFLUENCERS = [
     "followersDisplay": "155K",
     "followersSort": 155000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marialenagavalia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marialenagavalia/",
       "tiktok": "https://www.tiktok.com/@marialenagavalia",
@@ -1989,10 +2082,10 @@ window.INFLUENCERS = [
     "followersDisplay": "153K",
     "followersSort": 153000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sidiroo",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sidiroo/",
       "tiktok": "https://www.tiktok.com/@sidiroo?lang=en",
@@ -2004,10 +2097,10 @@ window.INFLUENCERS = [
     "followersDisplay": "151K",
     "followersSort": 151000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "despoina_papamihail",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/despoina_papamihail/",
       "tiktok": "https://www.tiktok.com/@despoinapapamihail",
@@ -2019,10 +2112,10 @@ window.INFLUENCERS = [
     "followersDisplay": "151K",
     "followersSort": 151000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "emmanouela_make_up_artist",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/emmanouela_make_up_artist/",
       "tiktok": "https://www.tiktok.com/@emmanouela_makeup_artist",
@@ -2034,10 +2127,10 @@ window.INFLUENCERS = [
     "followersDisplay": "150K",
     "followersSort": 150000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerina_agalia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerina_agalia/",
       "tiktok": "https://www.tiktok.com/@katerinaagalia",
@@ -2049,11 +2142,10 @@ window.INFLUENCERS = [
     "followersDisplay": "150K",
     "followersSort": 150000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kweenkatyatar",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kweenkatyatar/?hl=en#",
       "tiktok": "https://www.tiktok.com/@kween.katyatar",
@@ -2065,10 +2157,10 @@ window.INFLUENCERS = [
     "followersDisplay": "150K",
     "followersSort": 150000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stergiani_l",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stergiani_l/",
       "tiktok": "https://www.tiktok.com/@stergiani_l",
@@ -2080,10 +2172,10 @@ window.INFLUENCERS = [
     "followersDisplay": "148K",
     "followersSort": 148000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "n.kakkava",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/n.kakkava/",
       "tiktok": "https://www.tiktok.com/@natali.kakkava",
@@ -2095,10 +2187,10 @@ window.INFLUENCERS = [
     "followersDisplay": "145K",
     "followersSort": 145000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maritina_andrioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maritina_andrioti/?hl=en",
       "tiktok": "https://www.tiktok.com/@maritina_andrioti?lang=en",
@@ -2110,11 +2202,10 @@ window.INFLUENCERS = [
     "followersDisplay": "141K",
     "followersSort": 141000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "itsthemicornbitchh",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/itsthemicornbitchh/?hl=en",
       "tiktok": "https://www.tiktok.com/@themicorn69?lang=el-GR",
@@ -2126,10 +2217,10 @@ window.INFLUENCERS = [
     "followersDisplay": "141K",
     "followersSort": 141000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "paraskevi_kerasioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/paraskevi_kerasioti/",
       "tiktok": "https://www.tiktok.com/@paraskevi.kerasioti?lang=en",
@@ -2141,10 +2232,10 @@ window.INFLUENCERS = [
     "followersDisplay": "140K",
     "followersSort": 140000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "travelstoriesfromyworld",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/travelstoriesfromyworld/",
       "tiktok": "https://www.tiktok.com/@travelstoriesfromyworld",
@@ -2156,10 +2247,10 @@ window.INFLUENCERS = [
     "followersDisplay": "140K",
     "followersSort": 140000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "valeria_kouroupi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/valeria_kouroupi/",
       "tiktok": "https://www.tiktok.com/@valeria_kouroupi?lang=en",
@@ -2171,10 +2262,10 @@ window.INFLUENCERS = [
     "followersDisplay": "139K",
     "followersSort": 139000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zina_koutselini",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zina_koutselini/",
       "tiktok": "https://www.tiktok.com/@zina.koutselini",
@@ -2186,10 +2277,10 @@ window.INFLUENCERS = [
     "followersDisplay": "138K",
     "followersSort": 138000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "loukia_sioupi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/loukia_sioupi/",
       "tiktok": "https://www.tiktok.com/@loukiasioupi?lang=en",
@@ -2201,10 +2292,10 @@ window.INFLUENCERS = [
     "followersDisplay": "136K",
     "followersSort": 136000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "angela_gerekou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/angela_gerekou/",
       "tiktok": "",
@@ -2216,10 +2307,10 @@ window.INFLUENCERS = [
     "followersDisplay": "135K",
     "followersSort": 135000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aristealeda",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aristealeda/",
       "tiktok": "https://www.tiktok.com/@aristea_ledakallinikou",
@@ -2231,10 +2322,10 @@ window.INFLUENCERS = [
     "followersDisplay": "135K",
     "followersSort": 135000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "spiridoulaandrioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/spiridoulaandrioti/?hl=en",
       "tiktok": "https://www.tiktok.com/@spiridoulaandrioti?lang=en",
@@ -2246,10 +2337,10 @@ window.INFLUENCERS = [
     "followersDisplay": "134K",
     "followersSort": 134000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerinavisseri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerinavisseri/",
       "tiktok": "https://www.tiktok.com/@katerinavisseri",
@@ -2261,10 +2352,10 @@ window.INFLUENCERS = [
     "followersDisplay": "134K",
     "followersSort": 134000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariapapadatou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariapapadatou/",
       "tiktok": "https://www.tiktok.com/@maria_papadatou?lang=en",
@@ -2276,10 +2367,10 @@ window.INFLUENCERS = [
     "followersDisplay": "132Κ",
     "followersSort": 132000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "christina_hillafameli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/christina_hillafameli/",
       "tiktok": "",
@@ -2291,10 +2382,10 @@ window.INFLUENCERS = [
     "followersDisplay": "132K",
     "followersSort": 132000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Entertainment"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerinavrana",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerinavrana/",
       "tiktok": "https://www.tiktok.com/@vranarama",
@@ -2306,10 +2397,10 @@ window.INFLUENCERS = [
     "followersDisplay": "132K",
     "followersSort": 132000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "penelope_stylopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/penelope_stylopoulou/",
       "tiktok": "https://www.tiktok.com/@pennystylelive",
@@ -2321,10 +2412,10 @@ window.INFLUENCERS = [
     "followersDisplay": "131K",
     "followersSort": 131000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aggelos_kalfas",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aggelos_kalfas/",
       "tiktok": "https://www.tiktok.com/@aggelos_kalfas",
@@ -2336,10 +2427,10 @@ window.INFLUENCERS = [
     "followersDisplay": "131K",
     "followersSort": 131000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iamandreasjason",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iamandreasjason/",
       "tiktok": "https://www.tiktok.com/@iamandreasjason",
@@ -2351,10 +2442,10 @@ window.INFLUENCERS = [
     "followersDisplay": "130K",
     "followersSort": 130000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "cesteliz",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/cesteliz/",
       "tiktok": "https://www.tiktok.com/@cesteliz?",
@@ -2366,10 +2457,10 @@ window.INFLUENCERS = [
     "followersDisplay": "129K",
     "followersSort": 129000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dimitra_matsouka_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dimitra_matsouka_official/",
       "tiktok": "",
@@ -2381,10 +2472,10 @@ window.INFLUENCERS = [
     "followersDisplay": "128K",
     "followersSort": 128000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "margie_lazarou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/margie_lazarou/?hl=el",
       "tiktok": "https://www.tiktok.com/@margielazarou",
@@ -2396,10 +2487,10 @@ window.INFLUENCERS = [
     "followersDisplay": "128K",
     "followersSort": 128000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sophie_koskina",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sophie_koskina/",
       "tiktok": "",
@@ -2411,10 +2502,10 @@ window.INFLUENCERS = [
     "followersDisplay": "126K",
     "followersSort": 126000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iamarsenios",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iamarsenios/",
       "tiktok": "https://www.tiktok.com/@iamarsenios",
@@ -2426,10 +2517,10 @@ window.INFLUENCERS = [
     "followersDisplay": "126K",
     "followersSort": 126000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "rafaela_psarrou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/rafaela_psarrou/",
       "tiktok": "https://www.tiktok.com/@rafaela.psarrou",
@@ -2441,10 +2532,10 @@ window.INFLUENCERS = [
     "followersDisplay": "125K",
     "followersSort": 125000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nicolekarra_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nicolekarra_official/",
       "tiktok": "https://www.tiktok.com/@nicolekarra_official?lang=en",
@@ -2456,10 +2547,10 @@ window.INFLUENCERS = [
     "followersDisplay": "124K",
     "followersSort": 124000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "e_papavasileiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/e_papavasileiou/",
       "tiktok": "",
@@ -2471,10 +2562,10 @@ window.INFLUENCERS = [
     "followersDisplay": "123K",
     "followersSort": 123000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elena_donta_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elena_donta_/",
       "tiktok": "https://www.tiktok.com/@elenadonta",
@@ -2486,10 +2577,10 @@ window.INFLUENCERS = [
     "followersDisplay": "123K",
     "followersSort": 123000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioannaasimakopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioannaasimakopoulou/",
       "tiktok": "https://www.tiktok.com/@ioannaasimakopouloy",
@@ -2501,10 +2592,10 @@ window.INFLUENCERS = [
     "followersDisplay": "123K",
     "followersSort": 123000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mina.arnaouti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mina.arnaouti/",
       "tiktok": "",
@@ -2516,10 +2607,10 @@ window.INFLUENCERS = [
     "followersDisplay": "123K",
     "followersSort": 123000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofia_peridi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofia_peridi/",
       "tiktok": "https://www.tiktok.com/@sofia_peridi?lang=en",
@@ -2531,10 +2622,10 @@ window.INFLUENCERS = [
     "followersDisplay": "122K",
     "followersSort": 122000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annita.pania",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annita.pania/",
       "tiktok": "https://www.tiktok.com/@annitapania",
@@ -2546,10 +2637,10 @@ window.INFLUENCERS = [
     "followersDisplay": "122K",
     "followersSort": 122000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "barbara_larmou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/barbara_larmou/",
       "tiktok": "",
@@ -2561,10 +2652,10 @@ window.INFLUENCERS = [
     "followersDisplay": "122K",
     "followersSort": 122000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "juliakollia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/juliakollia/",
       "tiktok": "https://www.tiktok.com/@julia_kollia",
@@ -2576,10 +2667,10 @@ window.INFLUENCERS = [
     "followersDisplay": "121K",
     "followersSort": 121000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "teaprelevic",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/teaprelevic/",
       "tiktok": "https://www.tiktok.com/@teaprelevic?lang=en",
@@ -2591,10 +2682,10 @@ window.INFLUENCERS = [
     "followersDisplay": "121K",
     "followersSort": 121000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vasilakospanagiotis12",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasilakospanagiotis12/",
       "tiktok": "",
@@ -2606,10 +2697,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "basiliki_makri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/basiliki_makri/",
       "tiktok": "https://www.tiktok.com/@basiliki_makri",
@@ -2621,10 +2712,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "danaipoliti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/danaipoliti/",
       "tiktok": "https://www.tiktok.com/@danaipoliti_",
@@ -2636,10 +2727,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dimitravmk",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dimitravmk/",
       "tiktok": "https://www.tiktok.com/@dimitravmk",
@@ -2651,10 +2742,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "istrate._",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/_.istrate._/",
       "tiktok": "https://www.tiktok.com/@_istratee_",
@@ -2666,10 +2757,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lamproskonstantaras",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lamproskonstantaras/",
       "tiktok": "https://www.tiktok.com/@lamproskonstantaras",
@@ -2681,10 +2772,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pournarasofficial",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pournarasofficial/",
       "tiktok": "https://www.tiktok.com/@pournarakos?lang=en",
@@ -2696,10 +2787,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sergio.tafa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sergio.tafa/",
       "tiktok": "https://www.tiktok.com/@official.lineupvi",
@@ -2711,10 +2802,10 @@ window.INFLUENCERS = [
     "followersDisplay": "120K",
     "followersSort": 120000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vivianpan_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vivianpan_/?igshid=YmMyMTA2M2Y",
       "tiktok": "https://www.tiktok.com/@vivianpan_",
@@ -2726,10 +2817,10 @@ window.INFLUENCERS = [
     "followersDisplay": "119K",
     "followersSort": 119000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eleftheriakonst",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eleftheriakonst/",
       "tiktok": "https://www.tiktok.com/@eleftheriaconstan?",
@@ -2741,10 +2832,10 @@ window.INFLUENCERS = [
     "followersDisplay": "119Κ",
     "followersSort": 119000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "natasha_velianiti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/natasha_velianiti/",
       "tiktok": "https://www.tiktok.com/@natashavelianiti",
@@ -2756,10 +2847,10 @@ window.INFLUENCERS = [
     "followersDisplay": "118K",
     "followersSort": 118000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "desp__ina",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/desp__ina/",
       "tiktok": "",
@@ -2771,10 +2862,10 @@ window.INFLUENCERS = [
     "followersDisplay": "118K",
     "followersSort": 118000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nancyzabetoglou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nancyzabetoglou/",
       "tiktok": "",
@@ -2786,10 +2877,10 @@ window.INFLUENCERS = [
     "followersDisplay": "117Κ",
     "followersSort": 117000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "chrysa_kyratzi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/chrysa_kyratzi/",
       "tiktok": "https://www.tiktok.com/@chrysakyratzi",
@@ -2801,10 +2892,10 @@ window.INFLUENCERS = [
     "followersDisplay": "117K",
     "followersSort": 117000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_alexoglou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_alexoglou/",
       "tiktok": "https://www.tiktok.com/@alexoglou",
@@ -2816,10 +2907,10 @@ window.INFLUENCERS = [
     "followersDisplay": "117K",
     "followersSort": 117000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marika.kitsou.official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marika.kitsou.official/",
       "tiktok": "https://www.tiktok.com/@marika.kitsou.official?lang=en",
@@ -2831,10 +2922,10 @@ window.INFLUENCERS = [
     "followersDisplay": "116K",
     "followersSort": 116000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fanidrakopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fanidrakopoulou/",
       "tiktok": "https://www.tiktok.com/@fanidrakopoulou",
@@ -2846,10 +2937,10 @@ window.INFLUENCERS = [
     "followersDisplay": "116K",
     "followersSort": 116000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "Julia Karagiannh",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/julia_karagiannh.official/",
       "tiktok": "https://www.tiktok.com/@juliakaragiannhofficial",
@@ -2861,10 +2952,10 @@ window.INFLUENCERS = [
     "followersDisplay": "116K",
     "followersSort": 116000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lamproskonstantaras",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lamproskonstantaras/",
       "tiktok": "https://www.tiktok.com/@lamproskonstantaras",
@@ -2876,11 +2967,10 @@ window.INFLUENCERS = [
     "followersDisplay": "116K",
     "followersSort": 116000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "olga_ntalla",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/olga_ntalla/",
       "tiktok": "https://www.tiktok.com/@olgantalla?lang=en",
@@ -2892,10 +2982,10 @@ window.INFLUENCERS = [
     "followersDisplay": "115Κ",
     "followersSort": 115000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenapanagiwtou_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenapanagiwtou_/",
       "tiktok": "https://www.tiktok.com/@elenapanagiwtou2",
@@ -2907,10 +2997,10 @@ window.INFLUENCERS = [
     "followersDisplay": "115K",
     "followersSort": 115000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerina_didaskalou_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerina_didaskalou_official/",
       "tiktok": "",
@@ -2922,10 +3012,10 @@ window.INFLUENCERS = [
     "followersDisplay": "115K",
     "followersSort": 115000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "rodanthekaparouofficial",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/rodanthekaparouofficial/",
       "tiktok": "",
@@ -2937,10 +3027,10 @@ window.INFLUENCERS = [
     "followersDisplay": "115K",
     "followersSort": 115000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofiana.avr",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofiana.avr/",
       "tiktok": "",
@@ -2952,10 +3042,10 @@ window.INFLUENCERS = [
     "followersDisplay": "113K",
     "followersSort": 113000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerinap.makeup",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerinap.makeup/",
       "tiktok": "https://www.tiktok.com/@katerina29pap",
@@ -2967,10 +3057,10 @@ window.INFLUENCERS = [
     "followersDisplay": "113K",
     "followersSort": 113000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nadia_rapti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nadia_rapti/",
       "tiktok": "https://www.tiktok.com/@nadiaraptiofficial",
@@ -2982,10 +3072,10 @@ window.INFLUENCERS = [
     "followersDisplay": "112K",
     "followersSort": 112000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eutuxialazarou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eutuxialazarou/",
       "tiktok": "https://www.tiktok.com/@eutuxialazarou",
@@ -2997,10 +3087,10 @@ window.INFLUENCERS = [
     "followersDisplay": "111K",
     "followersSort": 111000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerinatsavalou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerinatsavalou/",
       "tiktok": "https://www.tiktok.com/@ktsavalou",
@@ -3012,10 +3102,10 @@ window.INFLUENCERS = [
     "followersDisplay": "111K",
     "followersSort": 111000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Makeup"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pantelis_toutountzis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pantelis_toutountzis/",
       "tiktok": "https://www.tiktok.com/@pantelistoutountzis?lang=en",
@@ -3027,10 +3117,10 @@ window.INFLUENCERS = [
     "followersDisplay": "111K",
     "followersSort": 111000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sophiasidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sophiasidi/",
       "tiktok": "https://www.tiktok.com/@sophiasidi?lang=en",
@@ -3042,10 +3132,10 @@ window.INFLUENCERS = [
     "followersDisplay": "111K",
     "followersSort": 111000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vassiliki_troufakou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vassiliki_troufakou/",
       "tiktok": "",
@@ -3057,10 +3147,10 @@ window.INFLUENCERS = [
     "followersDisplay": "110K",
     "followersSort": 110000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annatsakouridou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annatsakouridou/",
       "tiktok": "https://www.tiktok.com/@tsakouridouanna",
@@ -3072,10 +3162,10 @@ window.INFLUENCERS = [
     "followersDisplay": "110K",
     "followersSort": 110000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fotinipetrogianni_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fotinipetrogianni_/",
       "tiktok": "https://www.tiktok.com/@fotinipetrogianni",
@@ -3087,10 +3177,10 @@ window.INFLUENCERS = [
     "followersDisplay": "110K",
     "followersSort": 110000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pinelopi.anastasiadou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pinelopi.anastasiadou/",
       "tiktok": "https://www.tiktok.com/@pinelopianastasiadou?lang=en",
@@ -3102,10 +3192,10 @@ window.INFLUENCERS = [
     "followersDisplay": "110K",
     "followersSort": 110000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ypapantivasila",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ypapantivasila/",
       "tiktok": "https://www.tiktok.com/@ypapanti_vasila?lang=en",
@@ -3117,10 +3207,10 @@ window.INFLUENCERS = [
     "followersDisplay": "108K",
     "followersSort": 108000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "despina_georgiadu",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/despina_georgiadu/",
       "tiktok": "https://www.tiktok.com/@despina_georgiadu",
@@ -3132,10 +3222,10 @@ window.INFLUENCERS = [
     "followersDisplay": "108K",
     "followersSort": 108000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_konstandaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_konstandaki/",
       "tiktok": "",
@@ -3147,10 +3237,10 @@ window.INFLUENCERS = [
     "followersDisplay": "108K",
     "followersSort": 108000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "melina_dal",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/melina_dal/",
       "tiktok": "https://www.tiktok.com/@melinadalda?lang=en",
@@ -3162,10 +3252,10 @@ window.INFLUENCERS = [
     "followersDisplay": "108K",
     "followersSort": 108000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nefeligeorgala",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nefeligeorgala/",
       "tiktok": "",
@@ -3177,10 +3267,10 @@ window.INFLUENCERS = [
     "followersDisplay": "108K",
     "followersSort": 108000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stefanos.milatos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stefanos.milatos/",
       "tiktok": "https://www.tiktok.com/@stevemilatos",
@@ -3192,10 +3282,10 @@ window.INFLUENCERS = [
     "followersDisplay": "107K",
     "followersSort": 107000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "athina_vaticanou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/athina_vaticanou/",
       "tiktok": "https://www.tiktok.com/@athina_vaticanou",
@@ -3207,10 +3297,10 @@ window.INFLUENCERS = [
     "followersDisplay": "107K",
     "followersSort": 107000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariakalavria",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariakalavria/",
       "tiktok": "https://www.tiktok.com/@mariakalavria",
@@ -3222,10 +3312,10 @@ window.INFLUENCERS = [
     "followersDisplay": "107K",
     "followersSort": 107000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nataliadragoumi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nataliadragoumi/",
       "tiktok": "https://www.tiktok.com/@natalia.dragoumi",
@@ -3237,10 +3327,10 @@ window.INFLUENCERS = [
     "followersDisplay": "106Κ",
     "followersSort": 106000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "christinapapadellis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/christinapapadellis/",
       "tiktok": "https://www.tiktok.com/@christinapapadellis",
@@ -3252,10 +3342,10 @@ window.INFLUENCERS = [
     "followersDisplay": "105K",
     "followersSort": 105000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Makeup"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alkmini_dim",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alkmini_dim/",
       "tiktok": "https://www.tiktok.com/@alkminidimv",
@@ -3267,10 +3357,10 @@ window.INFLUENCERS = [
     "followersDisplay": "105K",
     "followersSort": 105000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "natasa_mak_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/natasa_mak_official/",
       "tiktok": "https://www.tiktok.com/@natasamakrodimitri?_t=ZN-8uI2wSIcF3m&_r=1",
@@ -3282,10 +3372,10 @@ window.INFLUENCERS = [
     "followersDisplay": "104K",
     "followersSort": 104000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ifi_pier",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ifi_pier/",
       "tiktok": "https://www.tiktok.com/@ifigeniapieridou",
@@ -3297,10 +3387,10 @@ window.INFLUENCERS = [
     "followersDisplay": "102Κ",
     "followersSort": 102000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenapaulidou1",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenapaulidou1/",
       "tiktok": "https://www.tiktok.com/@elenapaulidou1",
@@ -3312,10 +3402,10 @@ window.INFLUENCERS = [
     "followersDisplay": "102K",
     "followersSort": 102000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elisavet_konstantinidou_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elisavet_konstantinidou_/?hl=el",
       "tiktok": "",
@@ -3327,10 +3417,10 @@ window.INFLUENCERS = [
     "followersDisplay": "102K",
     "followersSort": 102000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "morfoulaiakovidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/morfoulaiakovidou/",
       "tiktok": "https://www.tiktok.com/@morfoulaiakovidou",
@@ -3342,10 +3432,10 @@ window.INFLUENCERS = [
     "followersDisplay": "101K",
     "followersSort": 101000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "antigonekouloukakos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/antigonekouloukakos/",
       "tiktok": "",
@@ -3357,11 +3447,10 @@ window.INFLUENCERS = [
     "followersDisplay": "101K",
     "followersSort": 101000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "thisissivylla",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/thisissivylla/",
       "tiktok": "",
@@ -3373,10 +3462,10 @@ window.INFLUENCERS = [
     "followersDisplay": "100Κ",
     "followersSort": 100000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "chrysapapa_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/chrysapapa_official/",
       "tiktok": "",
@@ -3388,10 +3477,10 @@ window.INFLUENCERS = [
     "followersDisplay": "100K",
     "followersSort": 100000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "myrtoalikaki_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/myrtoalikaki_official/#",
       "tiktok": "",
@@ -3403,10 +3492,10 @@ window.INFLUENCERS = [
     "followersDisplay": "100K",
     "followersSort": 100000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nikos mpatzis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nikos_bartzis/?hl=en",
       "tiktok": "https://www.tiktok.com/@nikosbartzis?lang=en",
@@ -3418,10 +3507,10 @@ window.INFLUENCERS = [
     "followersDisplay": "100K",
     "followersSort": 100000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pavlos_papadopoulos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pavlos_papadopoulos/?hl=el",
       "tiktok": "",
@@ -3433,10 +3522,10 @@ window.INFLUENCERS = [
     "followersDisplay": "100K",
     "followersSort": 100000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vasilikivon",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasilikivon/",
       "tiktok": "https://www.tiktok.com/@vasilikivon",
@@ -3448,10 +3537,10 @@ window.INFLUENCERS = [
     "followersDisplay": "100K",
     "followersSort": 100000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "viktoria_ath",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/viktoria_ath/",
       "tiktok": "https://www.tiktok.com/@viktoria__ath?lang=en",
@@ -3463,10 +3552,10 @@ window.INFLUENCERS = [
     "followersDisplay": "99K",
     "followersSort": 99000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasiogr",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasiogr/",
       "tiktok": "https://www.tiktok.com/@anastasiogr",
@@ -3478,10 +3567,10 @@ window.INFLUENCERS = [
     "followersDisplay": "99K",
     "followersSort": 99000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annoula_erg",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annoula_erg/",
       "tiktok": "",
@@ -3493,10 +3582,10 @@ window.INFLUENCERS = [
     "followersDisplay": "99K",
     "followersSort": 99000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "danae.michalaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/danae_michalaki",
       "tiktok": "",
@@ -3508,11 +3597,10 @@ window.INFLUENCERS = [
     "followersDisplay": "99K",
     "followersSort": 99000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mikaela_prs",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mikaela_prs/",
       "tiktok": "https://www.tiktok.com/@mikaela_prs",
@@ -3524,11 +3612,10 @@ window.INFLUENCERS = [
     "followersDisplay": "98K",
     "followersSort": 98000,
     "topCategory": "PARENTING",
-    "tags": [
-      "Fashion",
-      "Parenting"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasia_tsamparli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasia_tsamparli/",
       "tiktok": "https://www.tiktok.com/@anastasia_tsamparli",
@@ -3540,10 +3627,10 @@ window.INFLUENCERS = [
     "followersDisplay": "98K",
     "followersSort": 98000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iwanna_sarri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iwanna_sarri/",
       "tiktok": "https://www.tiktok.com/@iwanna_sarri",
@@ -3555,11 +3642,10 @@ window.INFLUENCERS = [
     "followersDisplay": "98K",
     "followersSort": 98000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "niki.g18",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/niki.g18/",
       "tiktok": "https://www.tiktok.com/@niki.g18",
@@ -3571,10 +3657,10 @@ window.INFLUENCERS = [
     "followersDisplay": "98K",
     "followersSort": 98000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ramonavladi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ramonavladi/",
       "tiktok": "https://www.tiktok.com/@ramona.vladi",
@@ -3586,10 +3672,10 @@ window.INFLUENCERS = [
     "followersDisplay": "97K",
     "followersSort": 97000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dimivouza",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dimivouza/",
       "tiktok": "https://www.tiktok.com/@dimivv",
@@ -3601,10 +3687,10 @@ window.INFLUENCERS = [
     "followersDisplay": "97K",
     "followersSort": 97000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "emiliavodos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/emiliavodos/",
       "tiktok": "https://www.tiktok.com/@richedupwithaimmy",
@@ -3616,11 +3702,10 @@ window.INFLUENCERS = [
     "followersDisplay": "97K",
     "followersSort": 97000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evelinafraggi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evelinafraggi/",
       "tiktok": "https://www.tiktok.com/@evelinafraggi",
@@ -3632,10 +3717,10 @@ window.INFLUENCERS = [
     "followersDisplay": "97K",
     "followersSort": 97000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "exidaveloninatasa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/exidaveloninatasa/",
       "tiktok": "",
@@ -3647,10 +3732,10 @@ window.INFLUENCERS = [
     "followersDisplay": "97K",
     "followersSort": 97000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nakopoulouvaso",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nakopoulouvaso/",
       "tiktok": "",
@@ -3662,10 +3747,10 @@ window.INFLUENCERS = [
     "followersDisplay": "96K",
     "followersSort": 96000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariannatoumasatou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariannatoumasatou/",
       "tiktok": "",
@@ -3677,10 +3762,10 @@ window.INFLUENCERS = [
     "followersDisplay": "96K",
     "followersSort": 96000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stavroulachrysaeidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stavroulachrysaeidi/?hl=el",
       "tiktok": "https://www.tiktok.com/@stavroula_chrysaeidi?lang=en",
@@ -3692,10 +3777,10 @@ window.INFLUENCERS = [
     "followersDisplay": "95K",
     "followersSort": 95000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "andie.alison",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/andie.alison",
       "tiktok": "https://www.tiktok.com/@andiee.alison",
@@ -3707,10 +3792,10 @@ window.INFLUENCERS = [
     "followersDisplay": "95K",
     "followersSort": 95000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dionysiakoukiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dionysiakoukiou/",
       "tiktok": "https://www.tiktok.com/@dionysiakoukiou",
@@ -3722,10 +3807,10 @@ window.INFLUENCERS = [
     "followersDisplay": "95K",
     "followersSort": 95000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kostasstergiou_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kostasstergiou_/",
       "tiktok": "",
@@ -3737,10 +3822,10 @@ window.INFLUENCERS = [
     "followersDisplay": "95K",
     "followersSort": 95000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pennystylepoesy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pennystylepoesy/",
       "tiktok": "https://www.tiktok.com/@pennystylepoesy",
@@ -3752,10 +3837,10 @@ window.INFLUENCERS = [
     "followersDisplay": "95K",
     "followersSort": 95000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofia.leontitsi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofia.leontitsi/",
       "tiktok": "https://www.tiktok.com/@sofia.leontitsi",
@@ -3767,10 +3852,10 @@ window.INFLUENCERS = [
     "followersDisplay": "95K",
     "followersSort": 95000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vicky_valer1a",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vicky_valer1a/",
       "tiktok": "",
@@ -3782,10 +3867,10 @@ window.INFLUENCERS = [
     "followersDisplay": "94K",
     "followersSort": 94000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nana_petraki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nana_petraki/",
       "tiktok": "https://www.tiktok.com/@nanapetraki",
@@ -3797,10 +3882,10 @@ window.INFLUENCERS = [
     "followersDisplay": "92Κ",
     "followersSort": 92000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alexandra.valera7",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alexandra.valera7/",
       "tiktok": "",
@@ -3812,10 +3897,10 @@ window.INFLUENCERS = [
     "followersDisplay": "92K",
     "followersSort": 92000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "konstantina_alexiou94",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/konstantina_alexiou94/",
       "tiktok": "",
@@ -3827,10 +3912,10 @@ window.INFLUENCERS = [
     "followersDisplay": "92K",
     "followersSort": 92000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marianafpliotou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marianafpliotou/",
       "tiktok": "",
@@ -3842,11 +3927,10 @@ window.INFLUENCERS = [
     "followersDisplay": "92K",
     "followersSort": 92000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pandwrampardi___",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pandwrampardi___/",
       "tiktok": "https://www.tiktok.com/@pandwra_mpardi",
@@ -3858,10 +3942,10 @@ window.INFLUENCERS = [
     "followersDisplay": "92K",
     "followersSort": 92000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vicky_koulianoy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vicky_koulianoy/",
       "tiktok": "",
@@ -3873,10 +3957,10 @@ window.INFLUENCERS = [
     "followersDisplay": "91K",
     "followersSort": 91000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioanna_tzani__",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioanna_tzani__/",
       "tiktok": "https://www.tiktok.com/@ioanna_tzani_",
@@ -3888,10 +3972,10 @@ window.INFLUENCERS = [
     "followersDisplay": "91K",
     "followersSort": 91000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lolistys",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lolistys/",
       "tiktok": "",
@@ -3903,10 +3987,10 @@ window.INFLUENCERS = [
     "followersDisplay": "91K",
     "followersSort": 91000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_politopoulou_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_politopoulou_/",
       "tiktok": "",
@@ -3918,10 +4002,10 @@ window.INFLUENCERS = [
     "followersDisplay": "91K",
     "followersSort": 91000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "panagiwtakarapiperh",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/panagiwtakarapiperh/",
       "tiktok": "",
@@ -3933,10 +4017,10 @@ window.INFLUENCERS = [
     "followersDisplay": "90K",
     "followersSort": 90000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "gknikos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/gknikos/?hl=en",
       "tiktok": "https://www.tiktok.com/@gknikos",
@@ -3948,10 +4032,10 @@ window.INFLUENCERS = [
     "followersDisplay": "89K",
     "followersSort": 89000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annutella_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/_annutella_/",
       "tiktok": "https://www.tiktok.com/@annutella",
@@ -3963,10 +4047,10 @@ window.INFLUENCERS = [
     "followersDisplay": "88K",
     "followersSort": 88000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evdokia.roumelioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evdokia.roumelioti/",
       "tiktok": "",
@@ -3978,10 +4062,10 @@ window.INFLUENCERS = [
     "followersDisplay": "88K",
     "followersSort": 88000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "liana_chatz",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/liana_chatz/",
       "tiktok": "https://www.tiktok.com/@liana_chatziprimou",
@@ -3993,10 +4077,10 @@ window.INFLUENCERS = [
     "followersDisplay": "88K",
     "followersSort": 88000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "rania_bountouri_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/rania_bountouri_/",
       "tiktok": "https://www.tiktok.com/@raniabountouri",
@@ -4008,10 +4092,10 @@ window.INFLUENCERS = [
     "followersDisplay": "88K",
     "followersSort": 88000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "smaroooo",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/smaroooo/",
       "tiktok": "https://www.tiktok.com/@smaroooo?lang=en",
@@ -4023,10 +4107,10 @@ window.INFLUENCERS = [
     "followersDisplay": "86K",
     "followersSort": 86000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "annamariasoupioni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/annamariasoupioni/",
       "tiktok": "https://www.tiktok.com/@annamariasoupioni",
@@ -4038,10 +4122,10 @@ window.INFLUENCERS = [
     "followersDisplay": "86K",
     "followersSort": 86000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elkalia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elkalia/",
       "tiktok": "https://www.tiktok.com/@elkalia",
@@ -4053,10 +4137,10 @@ window.INFLUENCERS = [
     "followersDisplay": "86K",
     "followersSort": 86000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "myriella_kourenti_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/myriella_kourenti_official/",
       "tiktok": "https://www.tiktok.com/@myriellakourenti",
@@ -4068,10 +4152,10 @@ window.INFLUENCERS = [
     "followersDisplay": "86K",
     "followersSort": 86000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nadia_kodogeorgi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nadia_kodogeorgi/#",
       "tiktok": "",
@@ -4083,10 +4167,10 @@ window.INFLUENCERS = [
     "followersDisplay": "86K",
     "followersSort": 86000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "peggy_theologi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/peggy_theologi/",
       "tiktok": "https://www.tiktok.com/@peggytheologicyprus?lang=en",
@@ -4098,10 +4182,10 @@ window.INFLUENCERS = [
     "followersDisplay": "86K",
     "followersSort": 86000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vasso_kollida",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasso_kollida/",
       "tiktok": "https://www.tiktok.com/@vasokollida?lang=en",
@@ -4113,10 +4197,10 @@ window.INFLUENCERS = [
     "followersDisplay": "85K",
     "followersSort": 85000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasia_padousi_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasia_padousi_official/",
       "tiktok": "",
@@ -4128,10 +4212,10 @@ window.INFLUENCERS = [
     "followersDisplay": "85K",
     "followersSort": 85000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lady_theo17",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lady_theo17/",
       "tiktok": "https://www.tiktok.com/@zetatheodoropoulou",
@@ -4143,10 +4227,10 @@ window.INFLUENCERS = [
     "followersDisplay": "85K",
     "followersSort": 85000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "papaioannou_nasia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/papaioannou_nasia/",
       "tiktok": "https://www.tiktok.com/@nasiapapaioannou?lang=en",
@@ -4158,10 +4242,10 @@ window.INFLUENCERS = [
     "followersDisplay": "85K",
     "followersSort": 85000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "virginia_dikaioulia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/virginia_dikaioulia?igsh=MWxqdTMycGV3YTVnZw%3D%3D",
       "tiktok": "https://www.tiktok.com/@virginiadikaioulia?lang=en",
@@ -4173,10 +4257,10 @@ window.INFLUENCERS = [
     "followersDisplay": "84K",
     "followersSort": 84000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "edw4rd_stergiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/edw4rd_stergiou/",
       "tiktok": "https://www.tiktok.com/@edward_stergiou",
@@ -4188,10 +4272,10 @@ window.INFLUENCERS = [
     "followersDisplay": "82K",
     "followersSort": 82000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fotiniatheridou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fotiniatheridou/?hl=el#",
       "tiktok": "https://www.tiktok.com/@fotiniatheridou1",
@@ -4203,10 +4287,10 @@ window.INFLUENCERS = [
     "followersDisplay": "82K",
     "followersSort": 82000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pinelopi_ap",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pinelopi_ap/",
       "tiktok": "",
@@ -4218,10 +4302,10 @@ window.INFLUENCERS = [
     "followersDisplay": "82K",
     "followersSort": 82000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "schizas_stathis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/schizas_stathis/?hl=el",
       "tiktok": "",
@@ -4233,10 +4317,10 @@ window.INFLUENCERS = [
     "followersDisplay": "82K",
     "followersSort": 82000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "Velvetstormm",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/Velvetstormm",
       "tiktok": "https://www.tiktok.com/@velvetstorm_",
@@ -4248,10 +4332,10 @@ window.INFLUENCERS = [
     "followersDisplay": "81K",
     "followersSort": 81000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "danai_plantza",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/danai_plantza/",
       "tiktok": "",
@@ -4263,10 +4347,10 @@ window.INFLUENCERS = [
     "followersDisplay": "81K",
     "followersSort": 81000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "giwta_iwannidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/giwta_iwannidou/",
       "tiktok": "https://www.tiktok.com/@iwannidougiota",
@@ -4278,11 +4362,10 @@ window.INFLUENCERS = [
     "followersDisplay": "81K",
     "followersSort": 81000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marixana",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marixana/",
       "tiktok": "https://www.tiktok.com/@mariannageorgaki_",
@@ -4294,11 +4377,10 @@ window.INFLUENCERS = [
     "followersDisplay": "81K",
     "followersSort": 81000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "natali_thanou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/natali_thanou/",
       "tiktok": "https://www.tiktok.com/@natalithanou?lang=en",
@@ -4310,10 +4392,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alkistisdeliaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alkistisdeliaki/",
       "tiktok": "https://www.tiktok.com/@alkistisdeliaki",
@@ -4325,10 +4407,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "konstantinosfrantzis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/konstantinosfrantzis/",
       "tiktok": "https://www.tiktok.com/@konstantinosfrantzis",
@@ -4340,10 +4422,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marianna_mantesi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marianna_mantesi/?hl=en",
       "tiktok": "https://www.tiktok.com/@marianne_mantesi",
@@ -4355,10 +4437,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "naira_alexopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/naira_alexopoulou/",
       "tiktok": "https://www.tiktok.com/@nairaalexopoulou?lang=en",
@@ -4370,10 +4452,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ster_eleni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ster_eleni/",
       "tiktok": "",
@@ -4385,11 +4467,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vaso_petrou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vaso_petrou/",
       "tiktok": "https://www.tiktok.com/@vasopetrou",
@@ -4401,10 +4482,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "violettalouloudia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/violettalouloudia/",
       "tiktok": "https://www.tiktok.com/@violettalouloudia",
@@ -4416,10 +4497,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "xoulh_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/xoulh_",
       "tiktok": "https://www.tiktok.com/@xoulhh1?lang=en",
@@ -4431,10 +4512,10 @@ window.INFLUENCERS = [
     "followersDisplay": "80K",
     "followersSort": 80000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zoevla",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zoevla/",
       "tiktok": "https://www.tiktok.com/@zoevlachou?lang=en",
@@ -4446,10 +4527,10 @@ window.INFLUENCERS = [
     "followersDisplay": "79K",
     "followersSort": 79000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ellen_pierre",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ellen_pierre/",
       "tiktok": "",
@@ -4461,10 +4542,10 @@ window.INFLUENCERS = [
     "followersDisplay": "79K",
     "followersSort": 79000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "glykeria.tsolpidoy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/glykeria.tsolpidoy/",
       "tiktok": "https://www.tiktok.com/@_glitteria_",
@@ -4476,10 +4557,10 @@ window.INFLUENCERS = [
     "followersDisplay": "79K",
     "followersSort": 79000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jimko",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jimko/?fbclid=IwAR2s-5GBlBS8ko4Oj8X6Pz-UmC2mRuKM0ADmbTrtYXkPzu_FdFHyYIMtxQg",
       "tiktok": "https://www.tiktok.com/@jimko.trades",
@@ -4491,10 +4572,10 @@ window.INFLUENCERS = [
     "followersDisplay": "79K",
     "followersSort": 79000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofiabigina",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofiabigina/",
       "tiktok": "",
@@ -4506,10 +4587,10 @@ window.INFLUENCERS = [
     "followersDisplay": "78K",
     "followersSort": 78000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "megi.gram",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/megi.gram/",
       "tiktok": "https://www.tiktok.com/@megi.gram?lang=en",
@@ -4521,10 +4602,10 @@ window.INFLUENCERS = [
     "followersDisplay": "78K",
     "followersSort": 78000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nikolinanikolouzou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nikolinanikolouzou/",
       "tiktok": "https://www.tiktok.com/@nikolinanikolouzou",
@@ -4536,10 +4617,10 @@ window.INFLUENCERS = [
     "followersDisplay": "78K",
     "followersSort": 78000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vassilikimaleskou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vassilikimaleskou/",
       "tiktok": "",
@@ -4551,11 +4632,10 @@ window.INFLUENCERS = [
     "followersDisplay": "77K",
     "followersSort": 77000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elisavet.angel",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elisavet.angel/",
       "tiktok": "",
@@ -4567,10 +4647,10 @@ window.INFLUENCERS = [
     "followersDisplay": "77K",
     "followersSort": 77000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "hackygram",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/hackygram/",
       "tiktok": "https://www.tiktok.com/@hacky_stream",
@@ -4582,11 +4662,10 @@ window.INFLUENCERS = [
     "followersDisplay": "76Κ",
     "followersSort": 76000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "chrispavlakis_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/chrispavlakis_/",
       "tiktok": "https://www.tiktok.com/@christospavlakis",
@@ -4598,10 +4677,10 @@ window.INFLUENCERS = [
     "followersDisplay": "76K",
     "followersSort": 76000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "donmpas",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/donmpas/",
       "tiktok": "https://www.tiktok.com/@donmpas",
@@ -4613,10 +4692,10 @@ window.INFLUENCERS = [
     "followersDisplay": "76K",
     "followersSort": 76000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iamnikolais",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iamnikolais/",
       "tiktok": "https://www.tiktok.com/@iamnikolais",
@@ -4628,10 +4707,10 @@ window.INFLUENCERS = [
     "followersDisplay": "76K",
     "followersSort": 76000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jul_beautyleaks",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jul_beautyleaks/",
       "tiktok": "https://www.tiktok.com/@jul_beautyleaks",
@@ -4643,10 +4722,10 @@ window.INFLUENCERS = [
     "followersDisplay": "76K",
     "followersSort": 76000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kallimoukaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kallimoukaki/",
       "tiktok": "",
@@ -4658,10 +4737,10 @@ window.INFLUENCERS = [
     "followersDisplay": "75K",
     "followersSort": 75000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evgeniadimitropoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evgeniadimitropoulou/?hl=el#",
       "tiktok": "",
@@ -4673,10 +4752,10 @@ window.INFLUENCERS = [
     "followersDisplay": "75K",
     "followersSort": 75000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "gewrgia_kyrkou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/gewrgia_kyrkou/",
       "tiktok": "https://www.tiktok.com/@gewrgiakyrkou",
@@ -4688,10 +4767,10 @@ window.INFLUENCERS = [
     "followersDisplay": "75K",
     "followersSort": 75000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "liiachuzhdan",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/liiachuzhdan/?hl=el",
       "tiktok": "https://www.tiktok.com/@liiachuzhdan?lang=en",
@@ -4703,10 +4782,10 @@ window.INFLUENCERS = [
     "followersDisplay": "75K",
     "followersSort": 75000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marianna_mariannita",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marianna_mariannita/",
       "tiktok": "",
@@ -4718,10 +4797,10 @@ window.INFLUENCERS = [
     "followersDisplay": "75K",
     "followersSort": 75000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nicki.ilio",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nicki.ilio/",
       "tiktok": "https://www.tiktok.com/@nickiiliopoulou7?lang=en",
@@ -4733,10 +4812,10 @@ window.INFLUENCERS = [
     "followersDisplay": "75K",
     "followersSort": 75000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vlachouin",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vlachouin/",
       "tiktok": "https://www.tiktok.com/@vlachouin?lang=en",
@@ -4748,10 +4827,10 @@ window.INFLUENCERS = [
     "followersDisplay": "74Κ",
     "followersSort": 74000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "daphnianeofytou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/daphnianeofytou/",
       "tiktok": "https://www.tiktok.com/@daphnianeofytou",
@@ -4763,10 +4842,10 @@ window.INFLUENCERS = [
     "followersDisplay": "73K",
     "followersSort": 73000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fashionnative_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fashionnative_/",
       "tiktok": "https://www.tiktok.com/@fashionnative",
@@ -4778,10 +4857,10 @@ window.INFLUENCERS = [
     "followersDisplay": "73K",
     "followersSort": 73000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ismini_fab",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ismini_fab/",
       "tiktok": "https://www.tiktok.com/@ismini_fab",
@@ -4793,10 +4872,10 @@ window.INFLUENCERS = [
     "followersDisplay": "72K",
     "followersSort": 72000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lenia_papp",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lenia_papp/",
       "tiktok": "https://www.tiktok.com/@lenia_papp",
@@ -4808,10 +4887,10 @@ window.INFLUENCERS = [
     "followersDisplay": "72K",
     "followersSort": 72000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nikikartsona",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nikikartsona/",
       "tiktok": "",
@@ -4823,10 +4902,10 @@ window.INFLUENCERS = [
     "followersDisplay": "71K",
     "followersSort": 71000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "benaki_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/benaki_/",
       "tiktok": "",
@@ -4838,10 +4917,10 @@ window.INFLUENCERS = [
     "followersDisplay": "71K",
     "followersSort": 71000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "detsoutsa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/detsoutsa/",
       "tiktok": "https://www.tiktok.com/@detsoutsa",
@@ -4853,10 +4932,10 @@ window.INFLUENCERS = [
     "followersDisplay": "71K",
     "followersSort": 71000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "joyceevidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/joyceevidi/",
       "tiktok": "",
@@ -4868,10 +4947,10 @@ window.INFLUENCERS = [
     "followersDisplay": "71K",
     "followersSort": 71000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "tzioti_charis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/tzioti_charis/",
       "tiktok": "https://www.tiktok.com/@charis_tzioti",
@@ -4883,11 +4962,10 @@ window.INFLUENCERS = [
     "followersDisplay": "70K",
     "followersSort": 70000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "catherine_kikilia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/catherine_kikilia/",
       "tiktok": "https://www.tiktok.com/@catherine_kikilia",
@@ -4899,10 +4977,10 @@ window.INFLUENCERS = [
     "followersDisplay": "70K",
     "followersSort": 70000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marilita_lampropoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marilita_lampropoulou/?hl=el",
       "tiktok": "",
@@ -4914,11 +4992,10 @@ window.INFLUENCERS = [
     "followersDisplay": "68K",
     "followersSort": 68000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "is__mini",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/is__mini/",
       "tiktok": "https://www.tiktok.com/@is__mini",
@@ -4930,10 +5007,10 @@ window.INFLUENCERS = [
     "followersDisplay": "67K",
     "followersSort": 67000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "frossotsp",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/frossotsp/",
       "tiktok": "https://www.tiktok.com/@frosso_tsp?is_from_webapp=1&sender_device=pc",
@@ -4945,10 +5022,10 @@ window.INFLUENCERS = [
     "followersDisplay": "67K",
     "followersSort": 67000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria.michalopoulou_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria.michalopoulou_/",
       "tiktok": "https://www.tiktok.com/@maria.michalopoulou.gntm",
@@ -4960,10 +5037,10 @@ window.INFLUENCERS = [
     "followersDisplay": "67K",
     "followersSort": 67000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "silenafuksia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/silenafuksia/",
       "tiktok": "https://www.tiktok.com/@silenafuksia",
@@ -4975,10 +5052,10 @@ window.INFLUENCERS = [
     "followersDisplay": "67K",
     "followersSort": 67000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vasiliki_andritsou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasiliki_andritsou/",
       "tiktok": "",
@@ -4990,10 +5067,10 @@ window.INFLUENCERS = [
     "followersDisplay": "66K",
     "followersSort": 66000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alikikatsavou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alikikatsavou/",
       "tiktok": "https://www.tiktok.com/@aliki.katsavou",
@@ -5005,10 +5082,10 @@ window.INFLUENCERS = [
     "followersDisplay": "66K",
     "followersSort": 66000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jennybotsi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jennybotsi/",
       "tiktok": "",
@@ -5020,10 +5097,10 @@ window.INFLUENCERS = [
     "followersDisplay": "66K",
     "followersSort": 66000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "melina.nikolaidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/melina.nikolaidi/",
       "tiktok": "",
@@ -5035,10 +5112,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65Κ",
     "followersSort": 65000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "christina_saranti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/christina_saranti/",
       "tiktok": "https://www.tiktok.com/@christina_saranti",
@@ -5050,10 +5127,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65Κ",
     "followersSort": 65000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "chrysamichalopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/chrysamichalopoulou/",
       "tiktok": "https://www.tiktok.com/@chrysamichalopoulou",
@@ -5065,10 +5142,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65K",
     "followersSort": 65000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kamataki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kamataki/",
       "tiktok": "https://www.tiktok.com/@kamatakimaria",
@@ -5080,10 +5157,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65K",
     "followersSort": 65000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "leninapol_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/leninapol_official/",
       "tiktok": "https://www.tiktok.com/@leninapol",
@@ -5095,10 +5172,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65K",
     "followersSort": 65000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria__andriopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria__andriopoulou/",
       "tiktok": "https://www.tiktok.com/@mariaandriopoulou1",
@@ -5110,10 +5187,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65K",
     "followersSort": 65000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sia_kyrili",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sia_kyrili/",
       "tiktok": "https://www.tiktok.com/@sia_kyrili",
@@ -5125,10 +5202,10 @@ window.INFLUENCERS = [
     "followersDisplay": "65K",
     "followersSort": 65000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vivi_donta",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vivi_donta/",
       "tiktok": "https://www.tiktok.com/@vivi_donta",
@@ -5140,10 +5217,10 @@ window.INFLUENCERS = [
     "followersDisplay": "64K",
     "followersSort": 64000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "gina_alimonou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/gina_alimonou/",
       "tiktok": "",
@@ -5155,10 +5232,10 @@ window.INFLUENCERS = [
     "followersDisplay": "64K",
     "followersSort": 64000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "irene_trost",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/irene_trost/",
       "tiktok": "https://www.tiktok.com/@irene_trost",
@@ -5170,10 +5247,10 @@ window.INFLUENCERS = [
     "followersDisplay": "63K",
     "followersSort": 63000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ninalotsariofficial",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ninalotsariofficial/",
       "tiktok": "https://www.tiktok.com/@ninalotsari",
@@ -5185,10 +5262,10 @@ window.INFLUENCERS = [
     "followersDisplay": "62K",
     "followersSort": 62000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariafragkiadaki_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariafragkiadaki_/",
       "tiktok": "",
@@ -5200,10 +5277,10 @@ window.INFLUENCERS = [
     "followersDisplay": "62K",
     "followersSort": 62000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pavlidou.sofia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pavlidou.sofia/",
       "tiktok": "",
@@ -5215,10 +5292,10 @@ window.INFLUENCERS = [
     "followersDisplay": "61K",
     "followersSort": 61000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eleni.mpizimi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eleni.mpizimi/",
       "tiktok": "https://www.tiktok.com/@elenimpizimi",
@@ -5230,11 +5307,10 @@ window.INFLUENCERS = [
     "followersDisplay": "61K",
     "followersSort": 61000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mary.tsakiridou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mary.tsakiridou/",
       "tiktok": "",
@@ -5246,10 +5322,10 @@ window.INFLUENCERS = [
     "followersDisplay": "61K",
     "followersSort": 61000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vaggelis_mansaray",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vaggelis_mansaray/",
       "tiktok": "https://www.tiktok.com/@vaggelis_mansaray?lang=en",
@@ -5261,10 +5337,10 @@ window.INFLUENCERS = [
     "followersDisplay": "61K",
     "followersSort": 61000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vasiliki.fotiadou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasiliki.fotiadou/",
       "tiktok": "https://www.tiktok.com/@vasilikifotiadou?lang=en",
@@ -5276,10 +5352,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "afroditi_kasouta",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/afroditi_kasouta/",
       "tiktok": "https://www.tiktok.com/@afroditi_kasouta",
@@ -5291,10 +5367,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kaitikaratzapalamidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kaitikaratzapalamidi/",
       "tiktok": "",
@@ -5306,10 +5382,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kallste",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kallste/",
       "tiktok": "https://www.tiktok.com/@stelioskallitsis",
@@ -5321,10 +5397,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "matsouka_maria",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/matsouka_maria/",
       "tiktok": "",
@@ -5336,10 +5412,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "panagiotavlanti_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/panagiotavlanti_official/",
       "tiktok": "",
@@ -5351,10 +5427,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "xristinagiano",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/xristinagiano/",
       "tiktok": "https://www.tiktok.com/@xristinagiano?lang=en",
@@ -5366,10 +5442,10 @@ window.INFLUENCERS = [
     "followersDisplay": "60K",
     "followersSort": 60000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "xrysaxtz",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/xrysaxtz/",
       "tiktok": "https://www.tiktok.com/@xrysaxtz?lang=en",
@@ -5381,10 +5457,10 @@ window.INFLUENCERS = [
     "followersDisplay": "59K",
     "followersSort": 59000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marigiakarra",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marigiakarra/",
       "tiktok": "https://www.tiktok.com/@marigiakarra",
@@ -5396,10 +5472,10 @@ window.INFLUENCERS = [
     "followersDisplay": "58K",
     "followersSort": 58000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "athina_dim3",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/athina_dim3/",
       "tiktok": "https://www.tiktok.com/@_ania_dim3",
@@ -5411,10 +5487,10 @@ window.INFLUENCERS = [
     "followersDisplay": "58K",
     "followersSort": 58000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "harissintzakis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/harissintzakis/",
       "tiktok": "https://www.tiktok.com/@harissintzakis",
@@ -5426,10 +5502,10 @@ window.INFLUENCERS = [
     "followersDisplay": "57K",
     "followersSort": 57000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "politi_athina",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/politi_athina/",
       "tiktok": "",
@@ -5441,10 +5517,10 @@ window.INFLUENCERS = [
     "followersDisplay": "57K",
     "followersSort": 57000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "prosalentieva",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/prosalentieva/",
       "tiktok": "https://www.tiktok.com/@prosalenti",
@@ -5456,10 +5532,10 @@ window.INFLUENCERS = [
     "followersDisplay": "57K",
     "followersSort": 57000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zoi.asoumanaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zoi.asoumanaki/",
       "tiktok": "https://www.tiktok.com/@zoiasoumanaki",
@@ -5471,10 +5547,10 @@ window.INFLUENCERS = [
     "followersDisplay": "56K",
     "followersSort": 56000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ildakroni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ildakroni/",
       "tiktok": "https://www.tiktok.com/@ildakroni",
@@ -5486,10 +5562,10 @@ window.INFLUENCERS = [
     "followersDisplay": "56K",
     "followersSort": 56000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stefaniagoulioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stefaniagoulioti/?hl=el",
       "tiktok": "",
@@ -5501,10 +5577,10 @@ window.INFLUENCERS = [
     "followersDisplay": "56K",
     "followersSort": 56000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "yolanda.kalo",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/yolanda.kalo/",
       "tiktok": "https://www.tiktok.com/@yolanda.kalo",
@@ -5516,10 +5592,10 @@ window.INFLUENCERS = [
     "followersDisplay": "55K",
     "followersSort": 55000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "andriana_panayiotou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/andriana_panayiotou/",
       "tiktok": "https://www.tiktok.com/@andrianapanayiotou",
@@ -5531,10 +5607,10 @@ window.INFLUENCERS = [
     "followersDisplay": "55K",
     "followersSort": 55000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Digital Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "angelospetrou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/angelospetrou/",
       "tiktok": "https://www.tiktok.com/@angelospetrou",
@@ -5546,10 +5622,10 @@ window.INFLUENCERS = [
     "followersDisplay": "55K",
     "followersSort": 55000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kd_alexandros",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kd_alexandros/",
       "tiktok": "",
@@ -5561,10 +5637,10 @@ window.INFLUENCERS = [
     "followersDisplay": "55K",
     "followersSort": 55000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "klelia_pantazi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/klelia_pantazi/",
       "tiktok": "https://www.tiktok.com/@klelia_pantazi",
@@ -5576,10 +5652,10 @@ window.INFLUENCERS = [
     "followersDisplay": "55K",
     "followersSort": 55000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "pennybaltatzi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/pennybaltatzi/",
       "tiktok": "https://www.tiktok.com/@penny_baltatzi",
@@ -5591,10 +5667,10 @@ window.INFLUENCERS = [
     "followersDisplay": "54K",
     "followersSort": 54000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kikiaivazi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kikiaivazi/",
       "tiktok": "https://www.tiktok.com/@kiki_aivazi",
@@ -5606,10 +5682,10 @@ window.INFLUENCERS = [
     "followersDisplay": "53K",
     "followersSort": 53000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alkistis_giraud",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alkistis_giraud/?hl=el",
       "tiktok": "",
@@ -5621,10 +5697,10 @@ window.INFLUENCERS = [
     "followersDisplay": "53K",
     "followersSort": 53000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "antigoni_psichrami",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/antigoni_psichrami/",
       "tiktok": "https://www.tiktok.com/@antigoni_psichrami",
@@ -5636,10 +5712,10 @@ window.INFLUENCERS = [
     "followersDisplay": "53K",
     "followersSort": 53000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "beautymylife_gr",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/beautymylife_gr/",
       "tiktok": "https://www.tiktok.com/@beautymylife_gr",
@@ -5651,11 +5727,10 @@ window.INFLUENCERS = [
     "followersDisplay": "53K",
     "followersSort": 53000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mikaelafotiadi.mamamika",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mikaelafotiadi.mamamika/",
       "tiktok": "",
@@ -5667,10 +5742,10 @@ window.INFLUENCERS = [
     "followersDisplay": "53K",
     "followersSort": 53000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nikoleta__kuriakidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nikoleta__kuriakidou/",
       "tiktok": "https://www.tiktok.com/@nikoleta_kuriakidou?lang=en",
@@ -5682,10 +5757,10 @@ window.INFLUENCERS = [
     "followersDisplay": "52K",
     "followersSort": 52000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "silviadelikoura",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/silviadelikoura/?hl=el",
       "tiktok": "",
@@ -5697,10 +5772,10 @@ window.INFLUENCERS = [
     "followersDisplay": "52K",
     "followersSort": 52000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "toniadimitriou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/toniadimitriou/",
       "tiktok": "https://www.tiktok.com/@toniadimitriou17",
@@ -5712,11 +5787,10 @@ window.INFLUENCERS = [
     "followersDisplay": "51K",
     "followersSort": 51000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eliza_chatziioannou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eliza_chatziioannou/",
       "tiktok": "https://www.tiktok.com/@eliza_chatziioannou",
@@ -5728,10 +5802,10 @@ window.INFLUENCERS = [
     "followersDisplay": "51K",
     "followersSort": 51000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marievi__",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/__marievi__/",
       "tiktok": "https://www.tiktok.com/@__marievi__",
@@ -5743,10 +5817,10 @@ window.INFLUENCERS = [
     "followersDisplay": "50K",
     "followersSort": 50000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fiona_georgiadi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fiona_georgiadi/",
       "tiktok": "",
@@ -5758,10 +5832,10 @@ window.INFLUENCERS = [
     "followersDisplay": "50Κ",
     "followersSort": 50000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zoikronaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zoikronaki/",
       "tiktok": "https://www.tiktok.com/@zoikronaki",
@@ -5773,10 +5847,10 @@ window.INFLUENCERS = [
     "followersDisplay": "49K",
     "followersSort": 49000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aggelos xatzikyriakos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aggelos_chatzikyriakos/?hl=en",
       "tiktok": "https://www.tiktok.com/@aggelos_chatzikyriakos",
@@ -5788,10 +5862,10 @@ window.INFLUENCERS = [
     "followersDisplay": "49K",
     "followersSort": 49000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenikarakasi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenikarakasi/",
       "tiktok": "",
@@ -5803,11 +5877,10 @@ window.INFLUENCERS = [
     "followersDisplay": "49K",
     "followersSort": 49000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "imkuriaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/imkuriaki/",
       "tiktok": "https://www.tiktok.com/@imkuriaki?",
@@ -5819,10 +5892,10 @@ window.INFLUENCERS = [
     "followersDisplay": "48Κ",
     "followersSort": 48000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "cleopatra_black",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/cleopatra_black/",
       "tiktok": "https://www.tiktok.com/@cleopatra_black",
@@ -5834,10 +5907,10 @@ window.INFLUENCERS = [
     "followersDisplay": "48K",
     "followersSort": 48000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elligele",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elligele/",
       "tiktok": "https://www.tiktok.com/@elligele3",
@@ -5849,10 +5922,10 @@ window.INFLUENCERS = [
     "followersDisplay": "48K",
     "followersSort": 48000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "irene_ang_andre",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/irene_ang_andre/",
       "tiktok": "https://www.tiktok.com/@irene_ang_andre?",
@@ -5864,10 +5937,10 @@ window.INFLUENCERS = [
     "followersDisplay": "48K",
     "followersSort": 48000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ppantelitsa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ppantelitsa/",
       "tiktok": "https://www.tiktok.com/@ppantelitsa",
@@ -5879,10 +5952,10 @@ window.INFLUENCERS = [
     "followersDisplay": "47K",
     "followersSort": 47000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sandychatziioannou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sandychatziioannou/?hl=el",
       "tiktok": "https://www.tiktok.com/@sandychatziioannou?lang=en",
@@ -5894,11 +5967,10 @@ window.INFLUENCERS = [
     "followersDisplay": "46K",
     "followersSort": 46000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vassiapt",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vassiapt/",
       "tiktok": "https://www.tiktok.com/@vassiapit",
@@ -5910,10 +5982,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "despina___k",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/despina___k/",
       "tiktok": "",
@@ -5925,10 +5997,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariapapadop",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariapapadop/",
       "tiktok": "",
@@ -5940,10 +6012,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marilena radou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marilenaradou/?hl=el",
       "tiktok": "https://www.tiktok.com/@marilenaradou4?lang=en",
@@ -5955,10 +6027,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marilenaradou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marilenaradou/",
       "tiktok": "https://www.tiktok.com/@marilenaradou4",
@@ -5970,10 +6042,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "martha.lambiri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/martha.lambiri/?hl=el",
       "tiktok": "",
@@ -5985,10 +6057,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "niki_lami",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/niki_lami/",
       "tiktok": "https://www.tiktok.com/@niki_lami",
@@ -6000,10 +6072,10 @@ window.INFLUENCERS = [
     "followersDisplay": "45K",
     "followersSort": 45000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zeniouanna",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zeniouanna/",
       "tiktok": "https://www.tiktok.com/@annazeniou",
@@ -6015,11 +6087,10 @@ window.INFLUENCERS = [
     "followersDisplay": "44K",
     "followersSort": 44000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria.xrisafi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria.xrisafi/",
       "tiktok": "https://www.tiktok.com/@maria.xrisafi",
@@ -6031,10 +6102,10 @@ window.INFLUENCERS = [
     "followersDisplay": "44K",
     "followersSort": 44000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "rafaela_kousouni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/rafaela_kousouni/",
       "tiktok": "",
@@ -6046,10 +6117,10 @@ window.INFLUENCERS = [
     "followersDisplay": "43K",
     "followersSort": 43000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "super.foteini",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/super.foteini/",
       "tiktok": "https://www.tiktok.com/@super.foteini?lang=en",
@@ -6061,10 +6132,10 @@ window.INFLUENCERS = [
     "followersDisplay": "42K",
     "followersSort": 42000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "daniel_nurka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/daniel_nurka/",
       "tiktok": "https://www.tiktok.com/@danieln__",
@@ -6076,11 +6147,10 @@ window.INFLUENCERS = [
     "followersDisplay": "42K",
     "followersSort": 42000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "delidemie",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/delidemie/",
       "tiktok": "https://www.tiktok.com/@delidemie",
@@ -6092,10 +6162,10 @@ window.INFLUENCERS = [
     "followersDisplay": "42K",
     "followersSort": 42000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerina_kokkinaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerina_kokkinaki/",
       "tiktok": "https://www.tiktok.com/@katerina_kokkinaki",
@@ -6107,10 +6177,10 @@ window.INFLUENCERS = [
     "followersDisplay": "42K",
     "followersSort": 42000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katkat24",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katkat24/",
       "tiktok": "",
@@ -6122,11 +6192,10 @@ window.INFLUENCERS = [
     "followersDisplay": "42K",
     "followersSort": 42000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "magda_kaz4",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/magda_kaz4/",
       "tiktok": "https://www.tiktok.com/@magda_kaz4?lang=en",
@@ -6138,10 +6207,10 @@ window.INFLUENCERS = [
     "followersDisplay": "42K",
     "followersSort": 42000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ntinos_siahamis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ntinos_siahamis/",
       "tiktok": "https://www.tiktok.com/@ntinos_siahamis",
@@ -6153,10 +6222,10 @@ window.INFLUENCERS = [
     "followersDisplay": "41K",
     "followersSort": 41000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "smaragda_mkz",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/smaragda_mkz/",
       "tiktok": "https://www.tiktok.com/@smaragda_mkz",
@@ -6168,10 +6237,10 @@ window.INFLUENCERS = [
     "followersDisplay": "41K",
     "followersSort": 41000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stellakostopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stellakostopoulou/",
       "tiktok": "",
@@ -6183,10 +6252,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "athinaklimi_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/athinaklimi_/",
       "tiktok": "https://www.tiktok.com/@___klemens",
@@ -6198,10 +6267,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40Κ",
     "followersSort": 40000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "daphnekalyva",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/daphnekalyva/",
       "tiktok": "https://www.tiktok.com/@daphne92_",
@@ -6213,10 +6282,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eirhnh.prk",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eirhnh.prk/",
       "tiktok": "https://www.tiktok.com/@eirhnh.pou",
@@ -6228,10 +6297,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "erietta_manouri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/erietta_manouri/?hl=el#",
       "tiktok": "https://www.tiktok.com/@erietta_manouri",
@@ -6243,10 +6312,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fay_xyla",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fay_xyla/",
       "tiktok": "",
@@ -6258,11 +6327,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nasia.stt",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nasia.stt/",
       "tiktok": "https://www.tiktok.com/@nasia.stt?lang=en",
@@ -6274,10 +6342,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "rozana_koutsoukou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/rozana_koutsoukou/",
       "tiktok": "https://www.tiktok.com/@rozana.koutsoukou",
@@ -6289,10 +6357,10 @@ window.INFLUENCERS = [
     "followersDisplay": "40K",
     "followersSort": 40000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vassilioskostetsos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vassilioskostetsos/",
       "tiktok": "",
@@ -6304,10 +6372,10 @@ window.INFLUENCERS = [
     "followersDisplay": "39K",
     "followersSort": 39000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasia_siameti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasia_siameti/",
       "tiktok": "https://www.tiktok.com/@anastasia_siameti",
@@ -6319,10 +6387,10 @@ window.INFLUENCERS = [
     "followersDisplay": "39Κ",
     "followersSort": 39000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "christina_stefanidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/christina_stefanidi/?hl=en",
       "tiktok": "",
@@ -6334,10 +6402,10 @@ window.INFLUENCERS = [
     "followersDisplay": "39K",
     "followersSort": 39000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marianna__vasileiou__",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marianna__vasileiou__/",
       "tiktok": "https://www.tiktok.com/@marianna___vasileiou?lang=en",
@@ -6349,10 +6417,10 @@ window.INFLUENCERS = [
     "followersDisplay": "39K",
     "followersSort": 39000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofia.panagou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofia.panagou/",
       "tiktok": "",
@@ -6364,10 +6432,10 @@ window.INFLUENCERS = [
     "followersDisplay": "38K",
     "followersSort": 38000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasiagkouskou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasiagkouskou/",
       "tiktok": "https://www.tiktok.com/@anastasiagkouskou_",
@@ -6379,10 +6447,10 @@ window.INFLUENCERS = [
     "followersDisplay": "38Κ",
     "followersSort": 38000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dannygiannakopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dannygiannakopoulou/",
       "tiktok": "",
@@ -6394,10 +6462,10 @@ window.INFLUENCERS = [
     "followersDisplay": "38K",
     "followersSort": 38000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dkarabassi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dkarabassi/",
       "tiktok": "https://www.tiktok.com/@dkarabassi",
@@ -6409,11 +6477,10 @@ window.INFLUENCERS = [
     "followersDisplay": "38K",
     "followersSort": 38000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evdoxia.vaggelopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evdoxia.vaggelopoulou/",
       "tiktok": "https://www.tiktok.com/@evdoxia.vaggelopoulou",
@@ -6425,11 +6492,10 @@ window.INFLUENCERS = [
     "followersDisplay": "37K",
     "followersSort": 37000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Lifestyle",
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "emmanouela_maina",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/emmanouela_maina/",
       "tiktok": "https://www.tiktok.com/@emmanouelamaina",
@@ -6441,10 +6507,10 @@ window.INFLUENCERS = [
     "followersDisplay": "37K",
     "followersSort": 37000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evangeliamoumouri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evangeliamoumouri/",
       "tiktok": "",
@@ -6456,10 +6522,10 @@ window.INFLUENCERS = [
     "followersDisplay": "37K",
     "followersSort": 37000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "inessa_azoidoy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/inessa_azoidoy/",
       "tiktok": "https://www.tiktok.com/@inessa_azoidoy",
@@ -6471,10 +6537,10 @@ window.INFLUENCERS = [
     "followersDisplay": "37K",
     "followersSort": 37000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lidakontzedaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lidakontzedaki/",
       "tiktok": "https://www.tiktok.com/@lidakontzedaki",
@@ -6486,11 +6552,10 @@ window.INFLUENCERS = [
     "followersDisplay": "37K",
     "followersSort": 37000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "soakr13",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/soakr13/",
       "tiktok": "https://www.tiktok.com/@soakr13",
@@ -6502,10 +6567,10 @@ window.INFLUENCERS = [
     "followersDisplay": "36K",
     "followersSort": 36000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aggelina.kall",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aggelina.kall",
       "tiktok": "https://www.tiktok.com/@mommy.aggelina",
@@ -6517,10 +6582,10 @@ window.INFLUENCERS = [
     "followersDisplay": "36K",
     "followersSort": 36000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenimorantzi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenimorantzi/",
       "tiktok": "https://www.tiktok.com/@elenimorantzi",
@@ -6532,11 +6597,10 @@ window.INFLUENCERS = [
     "followersDisplay": "35K",
     "followersSort": 35000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "argyro_maglary",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/argyro_maglary/",
       "tiktok": "https://www.tiktok.com/@argyro_maglary",
@@ -6548,10 +6612,10 @@ window.INFLUENCERS = [
     "followersDisplay": "35K",
     "followersSort": 35000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dspiliak",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dspiliak/",
       "tiktok": "https://www.tiktok.com/@dspiliak",
@@ -6563,10 +6627,10 @@ window.INFLUENCERS = [
     "followersDisplay": "35K",
     "followersSort": 35000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariatwin",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariatwin/",
       "tiktok": "https://www.tiktok.com/@armario_eshop_",
@@ -6578,10 +6642,10 @@ window.INFLUENCERS = [
     "followersDisplay": "35K",
     "followersSort": 35000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vivian_finou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vivian_finou/",
       "tiktok": "https://www.tiktok.com/@vivian_finou",
@@ -6593,10 +6657,10 @@ window.INFLUENCERS = [
     "followersDisplay": "34K",
     "followersSort": 34000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dimitristratos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dimitristratos/",
       "tiktok": "https://www.tiktok.com/@dimitrisstratosbeauty",
@@ -6608,10 +6672,10 @@ window.INFLUENCERS = [
     "followersDisplay": "34K",
     "followersSort": 34000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ellie_voukouti_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ellie_voukouti_/",
       "tiktok": "https://www.tiktok.com/@ellievoukouti",
@@ -6623,10 +6687,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "andriialambrou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/andriialambrou/",
       "tiktok": "https://www.tiktok.com/@andriialambrou",
@@ -6638,10 +6702,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elenasalabasi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elenasalabasi/",
       "tiktok": "https://www.tiktok.com/@elenasalabasi",
@@ -6653,10 +6717,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioannamparaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioannamparaki/",
       "tiktok": "https://www.tiktok.com/@ioannamparaki",
@@ -6668,10 +6732,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "izabellafulop",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/izabellafulop/",
       "tiktok": "https://www.tiktok.com/@itsizabellafulop",
@@ -6683,10 +6747,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "karolinsofia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/karolinsofia/",
       "tiktok": "https://www.tiktok.com/@karolinsofia3?lang=el-GR",
@@ -6698,10 +6762,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerouka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerouka/",
       "tiktok": "https://www.tiktok.com/@katerouka9",
@@ -6713,10 +6777,10 @@ window.INFLUENCERS = [
     "followersDisplay": "33K",
     "followersSort": 33000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "olga.kotlida",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/olga.kotlida/",
       "tiktok": "",
@@ -6728,10 +6792,10 @@ window.INFLUENCERS = [
     "followersDisplay": "32K",
     "followersSort": 32000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "andrew_sergiou.5",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/andrew_sergiou.5/",
       "tiktok": "https://www.tiktok.com/@_callme_drew",
@@ -6743,10 +6807,10 @@ window.INFLUENCERS = [
     "followersDisplay": "32K",
     "followersSort": 32000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "peggy_trikalioti_official",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/peggy_trikalioti_official/",
       "tiktok": "",
@@ -6758,10 +6822,10 @@ window.INFLUENCERS = [
     "followersDisplay": "32K",
     "followersSort": 32000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "teta_kampoureli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/teta_kampoureli/",
       "tiktok": "",
@@ -6773,10 +6837,10 @@ window.INFLUENCERS = [
     "followersDisplay": "31K",
     "followersSort": 31000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "irene_klgr",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/irene_klgr/",
       "tiktok": "https://www.tiktok.com/@irene_klgr",
@@ -6788,10 +6852,10 @@ window.INFLUENCERS = [
     "followersDisplay": "31K",
     "followersSort": 31000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "its.irene",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/__its.irene/",
       "tiktok": "https://www.tiktok.com/@__its.irenee",
@@ -6803,10 +6867,10 @@ window.INFLUENCERS = [
     "followersDisplay": "31K",
     "followersSort": 31000,
     "topCategory": "ENTERTAINMENT",
-    "tags": [
-      "Content Creator"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mamacanfly_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mamacanfly_/",
       "tiktok": "https://www.tiktok.com/@mamacanfly_",
@@ -6818,10 +6882,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30K",
     "followersSort": 30000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alexiamantzari",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alexiamantzari/",
       "tiktok": "https://www.tiktok.com/@alexiamantzari",
@@ -6833,10 +6897,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30Κ",
     "followersSort": 30000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Celebrity"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "christosnezos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/christosnezos/?hl=el",
       "tiktok": "https://www.tiktok.com/@christosnezos",
@@ -6848,10 +6912,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30K",
     "followersSort": 30000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eleni_makk",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eleni_makk/",
       "tiktok": "https://www.tiktok.com/@elenimakk97",
@@ -6863,11 +6927,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30K",
     "followersSort": 30000,
     "topCategory": "PARENTING",
-    "tags": [
-      "Beauty",
-      "Parenting"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fotiniscorner",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fotiniscorner/",
       "tiktok": "https://www.tiktok.com/@fotiniscorner?is_from_webapp=1&sender_device=pc",
@@ -6879,10 +6942,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30K",
     "followersSort": 30000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lenakidrs",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lenakidrs/?hl=el",
       "tiktok": "",
@@ -6894,11 +6957,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30K",
     "followersSort": 30000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nicky_thom",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nicky_thom/",
       "tiktok": "https://www.tiktok.com/@nickythom?lang=az",
@@ -6910,10 +6972,10 @@ window.INFLUENCERS = [
     "followersDisplay": "30K",
     "followersSort": 30000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "xristina_mg",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/xristina_mg/",
       "tiktok": "https://www.instagram.com/xristina_mg/",
@@ -6925,10 +6987,10 @@ window.INFLUENCERS = [
     "followersDisplay": "29K",
     "followersSort": 29000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "alexia_traiko",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/alexia_traiko/",
       "tiktok": "https://www.tiktok.com/@alexia.traikoo",
@@ -6940,10 +7002,10 @@ window.INFLUENCERS = [
     "followersDisplay": "29K",
     "followersSort": 29000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "athina_georgiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/athina_georgiou/",
       "tiktok": "https://www.tiktok.com/@athinageorgiou86",
@@ -6955,10 +7017,10 @@ window.INFLUENCERS = [
     "followersDisplay": "29K",
     "followersSort": 29000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eleonora_gk",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eleonora_gk/",
       "tiktok": "",
@@ -6970,10 +7032,10 @@ window.INFLUENCERS = [
     "followersDisplay": "29Κ",
     "followersSort": 29000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fotini_zanni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fotini_zanni/",
       "tiktok": "",
@@ -6985,10 +7047,10 @@ window.INFLUENCERS = [
     "followersDisplay": "29K",
     "followersSort": 29000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jo_desylla",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jo_desylla/",
       "tiktok": "https://www.tiktok.com/@jo_desylla",
@@ -7000,10 +7062,10 @@ window.INFLUENCERS = [
     "followersDisplay": "29K",
     "followersSort": 29000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "jo.anania",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/jo.anania/",
       "tiktok": "",
@@ -7015,10 +7077,10 @@ window.INFLUENCERS = [
     "followersDisplay": "28K",
     "followersSort": 28000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "anastasiadarai",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/anastasiadarai/",
       "tiktok": "https://www.tiktok.com/@anastasiadarai",
@@ -7030,10 +7092,10 @@ window.INFLUENCERS = [
     "followersDisplay": "28K",
     "followersSort": 28000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "argysbeautyworld",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/argysbeautyworld/",
       "tiktok": "https://www.tiktok.com/@argysbeautyworld",
@@ -7045,10 +7107,10 @@ window.INFLUENCERS = [
     "followersDisplay": "28K",
     "followersSort": 28000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eiriniiii.__",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eiriniiii.__",
       "tiktok": "",
@@ -7060,10 +7122,10 @@ window.INFLUENCERS = [
     "followersDisplay": "28K",
     "followersSort": 28000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_tsopei",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_tsopei/",
       "tiktok": "",
@@ -7075,10 +7137,10 @@ window.INFLUENCERS = [
     "followersDisplay": "28K",
     "followersSort": 28000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sevastiana_k",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sevastiana_k/",
       "tiktok": "",
@@ -7090,10 +7152,10 @@ window.INFLUENCERS = [
     "followersDisplay": "27K",
     "followersSort": 27000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "beautydiaries",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/beautydiaries/",
       "tiktok": "https://www.tiktok.com/@beautydiaries",
@@ -7105,10 +7167,10 @@ window.INFLUENCERS = [
     "followersDisplay": "27Κ",
     "followersSort": 27000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "craangeld",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/craangeld/",
       "tiktok": "https://www.tiktok.com/@craangeld",
@@ -7120,10 +7182,10 @@ window.INFLUENCERS = [
     "followersDisplay": "27K",
     "followersSort": 27000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fotini_levogianni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fotini_levogianni/",
       "tiktok": "",
@@ -7135,10 +7197,10 @@ window.INFLUENCERS = [
     "followersDisplay": "27K",
     "followersSort": 27000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "riatsiga",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/riatsiga/",
       "tiktok": "",
@@ -7150,10 +7212,10 @@ window.INFLUENCERS = [
     "followersDisplay": "27K",
     "followersSort": 27000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sisterhood.k",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sisterhood.k/",
       "tiktok": "https://www.tiktok.com/@sisterhood.k",
@@ -7165,10 +7227,10 @@ window.INFLUENCERS = [
     "followersDisplay": "27K",
     "followersSort": 27000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vassokaz",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vassokaz/",
       "tiktok": "https://www.tiktok.com/@vassokaz",
@@ -7180,10 +7242,10 @@ window.INFLUENCERS = [
     "followersDisplay": "26K",
     "followersSort": 26000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dionysia_koutri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dionysia_koutri/",
       "tiktok": "https://www.tiktok.com/@dionysia_koutri",
@@ -7195,10 +7257,10 @@ window.INFLUENCERS = [
     "followersDisplay": "26K",
     "followersSort": 26000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eirinaki_irene",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eirinaki_irene/",
       "tiktok": "https://www.tiktok.com/@eirinaki_irene",
@@ -7210,10 +7272,10 @@ window.INFLUENCERS = [
     "followersDisplay": "26K",
     "followersSort": 26000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "petridieva",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/petridieva/",
       "tiktok": "https://www.tiktok.com/@peteva1?lang=en",
@@ -7225,10 +7287,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eirhnhka_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eirhnhka_/",
       "tiktok": "https://www.tiktok.com/@eirhnhka__",
@@ -7240,10 +7302,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iolaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iolaki/",
       "tiktok": "https://www.tiktok.com/@iolaki_tiktok",
@@ -7255,10 +7317,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iro_lepida",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iro_lepida/",
       "tiktok": "https://www.tiktok.com/@iro_lepida",
@@ -7270,10 +7332,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kwnstantina_loca",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kwnstantina_loca/",
       "tiktok": "https://www.tiktok.com/@kwnstantinaloca",
@@ -7285,10 +7347,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marianna_kat",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marianna_kat/",
       "tiktok": "",
@@ -7300,10 +7362,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "thaleinio",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/thaleinio/",
       "tiktok": "https://www.tiktok.com/@thaleinio",
@@ -7315,10 +7377,10 @@ window.INFLUENCERS = [
     "followersDisplay": "25K",
     "followersSort": 25000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vickydede__",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vickydede__/",
       "tiktok": "https://www.tiktok.com/@vickydede__",
@@ -7330,10 +7392,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evita_razi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evita_razi/",
       "tiktok": "https://www.tiktok.com/@evita_razi",
@@ -7345,10 +7407,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "gina_smarianaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/gina_smarianaki/",
       "tiktok": "https://www.tiktok.com/@ginasmarianaki",
@@ -7360,10 +7422,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Blogger"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_bitakou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_bitakou/",
       "tiktok": "",
@@ -7375,10 +7437,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marina_gioti",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marina_gioti/",
       "tiktok": "",
@@ -7390,10 +7452,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marina_katsari",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marina_katsari/",
       "tiktok": "",
@@ -7405,10 +7467,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "natalia_kirikou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/natalia_kirikou/",
       "tiktok": "",
@@ -7420,10 +7482,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofiatsl",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofiatsl/",
       "tiktok": "",
@@ -7435,10 +7497,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "tsekou_sophia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/tsekou_sophia?igsh=OWt0NmJweHg5NG1x&utm_source=qr",
       "tiktok": "https://www.tiktok.com/@sophiatsekou?lang=en",
@@ -7450,10 +7512,10 @@ window.INFLUENCERS = [
     "followersDisplay": "24K",
     "followersSort": 24000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vanesa_choleva",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vanesa_choleva/",
       "tiktok": "https://www.tiktok.com/@vanesacholeva",
@@ -7465,10 +7527,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "afroditiag",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/afroditiag/",
       "tiktok": "",
@@ -7480,10 +7542,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "angelaevripidi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/angelaevripidi/",
       "tiktok": "https://www.tiktok.com/@angelaevripidi",
@@ -7495,10 +7557,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kate_rinaa___",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kate_rinaa___/",
       "tiktok": "https://www.tiktok.com/@kate__rinaa___",
@@ -7510,10 +7572,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "liaigam",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/liaigam/",
       "tiktok": "https://www.tiktok.com/@liaigam",
@@ -7525,10 +7587,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Blogger"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "m.mourka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/m.mourka/",
       "tiktok": "https://www.tiktok.com/@m.mourka",
@@ -7540,10 +7602,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "TV Host"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "menezli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/menezli/",
       "tiktok": "https://www.tiktok.com/@menezli",
@@ -7555,10 +7617,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nicolevlagkouli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nicolevlagkouli/",
       "tiktok": "http://tiktok.com/@nicolevlagkouli",
@@ -7570,10 +7632,10 @@ window.INFLUENCERS = [
     "followersDisplay": "23K",
     "followersSort": 23000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stam_tal",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stam_tal/?hl=el",
       "tiktok": "https://www.tiktok.com/@stam_tal",
@@ -7585,10 +7647,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "despoina_pant",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/despoina_pant/",
       "tiktok": "",
@@ -7600,10 +7662,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "fotini_drosia",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/fotini_drosia/",
       "tiktok": "https://www.tiktok.com/@fotinidrosia",
@@ -7615,10 +7677,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "giota_treli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/giota_treli/",
       "tiktok": "https://www.tiktok.com/@giota_t_",
@@ -7630,10 +7692,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariannitoo0",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariannitoo0/",
       "tiktok": "https://www.tiktok.com/@mariannitoo0",
@@ -7645,10 +7707,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "petroulapapa",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/petroulapapa/",
       "tiktok": "",
@@ -7660,10 +7722,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stamatia_sarri",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stamatia_sarri/",
       "tiktok": "https://www.tiktok.com/@stamatia_sarri_boutique",
@@ -7675,10 +7737,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vasileia_moisidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vasileia_moisidou/",
       "tiktok": "",
@@ -7690,10 +7752,10 @@ window.INFLUENCERS = [
     "followersDisplay": "22K",
     "followersSort": 22000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vivian_zourdou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vivian_zourdou/",
       "tiktok": "https://www.tiktok.com/@vivian_zourdou",
@@ -7705,10 +7767,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aleksandros_divanhsreal",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aleksandros_divanhsreal/",
       "tiktok": "",
@@ -7720,10 +7782,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "artemis_samara",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/artemis_samara/",
       "tiktok": "https://www.tiktok.com/@artemis_samara",
@@ -7735,10 +7797,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "dionysia_protos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/dionysia_protos/",
       "tiktok": "https://www.tiktok.com/@dionysiaprotos",
@@ -7750,10 +7812,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kyvelichatziefstratiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kyvelichatziefstratiou/",
       "tiktok": "",
@@ -7765,10 +7827,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "marytsioka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/marytsioka/",
       "tiktok": "https://www.tiktok.com/@marytsioka",
@@ -7780,11 +7842,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ninatzivanidoy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ninatzivanidoy/?hl=en",
       "tiktok": "http://tiktok.com/@ninatzivanidoy",
@@ -7796,10 +7857,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "simplynclassy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/simplynclassy/",
       "tiktok": "https://www.tiktok.com/@vassiariga1",
@@ -7811,10 +7872,10 @@ window.INFLUENCERS = [
     "followersDisplay": "21K",
     "followersSort": 21000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "terzis.alex",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/terzis.alex/",
       "tiktok": "",
@@ -7826,10 +7887,10 @@ window.INFLUENCERS = [
     "followersDisplay": "20K",
     "followersSort": 20000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "haidistefanidou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/haidistefanidou/",
       "tiktok": "https://www.tiktok.com/@haidistefanidou",
@@ -7841,10 +7902,10 @@ window.INFLUENCERS = [
     "followersDisplay": "20K",
     "followersSort": 20000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "iforgotmycrown",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/iforgotmycrown/",
       "tiktok": "https://www.tiktok.com/@iforgotmycrown",
@@ -7856,10 +7917,10 @@ window.INFLUENCERS = [
     "followersDisplay": "20K",
     "followersSort": 20000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mikaela_iwna",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mikaela_iwna/",
       "tiktok": "https://www.tiktok.com/@mikaelaiwna",
@@ -7871,10 +7932,10 @@ window.INFLUENCERS = [
     "followersDisplay": "20K",
     "followersSort": 20000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "smakropoulos",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/smakropoulos/",
       "tiktok": "https://www.tiktok.com/@smakropoulos?lang=en",
@@ -7886,10 +7947,10 @@ window.INFLUENCERS = [
     "followersDisplay": "20K",
     "followersSort": 20000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "theodorarachel_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/theodorarachel_/?hl=en",
       "tiktok": "",
@@ -7901,10 +7962,10 @@ window.INFLUENCERS = [
     "followersDisplay": "20K",
     "followersSort": 20000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vally__kaniadaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vally__kaniadaki/",
       "tiktok": "https://www.tiktok.com/@vallykaniadaki",
@@ -7916,10 +7977,10 @@ window.INFLUENCERS = [
     "followersDisplay": "19K",
     "followersSort": 19000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "kalogirou_olga",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/kalogirou_olga/",
       "tiktok": "https://www.tiktok.com/@kalogirouolga",
@@ -7931,11 +7992,10 @@ window.INFLUENCERS = [
     "followersDisplay": "18K",
     "followersSort": 18000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "emmaktl_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/_emmaktl_/",
       "tiktok": "https://www.tiktok.com/@_emmaktl_",
@@ -7947,10 +8007,10 @@ window.INFLUENCERS = [
     "followersDisplay": "18K",
     "followersSort": 18000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "evangelie_alp",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/evangelie_alp/",
       "tiktok": "https://www.tiktok.com/@evangeliealp",
@@ -7962,10 +8022,10 @@ window.INFLUENCERS = [
     "followersDisplay": "18K",
     "followersSort": 18000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "lena_papaligoura",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/lena_papaligoura/?hl=el",
       "tiktok": "",
@@ -7977,10 +8037,10 @@ window.INFLUENCERS = [
     "followersDisplay": "18K",
     "followersSort": 18000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "roulakatsarou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/roulakatsarou/",
       "tiktok": "https://www.tiktok.com/@r0ulita",
@@ -7992,10 +8052,10 @@ window.INFLUENCERS = [
     "followersDisplay": "18K",
     "followersSort": 18000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "stela_ag",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/stela_ag/",
       "tiktok": "",
@@ -8007,10 +8067,10 @@ window.INFLUENCERS = [
     "followersDisplay": "17K",
     "followersSort": 17000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "angieandritsopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/angieandritsopoulou/",
       "tiktok": "https://www.tiktok.com/@angieandritsopoul",
@@ -8022,10 +8082,10 @@ window.INFLUENCERS = [
     "followersDisplay": "17K",
     "followersSort": 17000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "missconstantina",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/missconstantina/",
       "tiktok": "https://www.tiktok.com/@missconstantina",
@@ -8037,10 +8097,10 @@ window.INFLUENCERS = [
     "followersDisplay": "16K",
     "followersSort": 16000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "apostolis_mic",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/apostolis_mic/",
       "tiktok": "",
@@ -8052,10 +8112,10 @@ window.INFLUENCERS = [
     "followersDisplay": "16K",
     "followersSort": 16000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "irenestworld97",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/irenestworld97/",
       "tiktok": "https://www.tiktok.com/@irenestworld97",
@@ -8067,10 +8127,10 @@ window.INFLUENCERS = [
     "followersDisplay": "16K",
     "followersSort": 16000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "maria_spanou27",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/maria_spanou27/",
       "tiktok": "",
@@ -8082,10 +8142,10 @@ window.INFLUENCERS = [
     "followersDisplay": "16K",
     "followersSort": 16000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nataliaswiftt",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nataliaswiftt/",
       "tiktok": "https://www.tiktok.com/@nataliaswift4",
@@ -8097,10 +8157,10 @@ window.INFLUENCERS = [
     "followersDisplay": "16K",
     "followersSort": 16000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "panos_georgiou_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/panos_georgiou_/",
       "tiktok": "",
@@ -8112,11 +8172,10 @@ window.INFLUENCERS = [
     "followersDisplay": "15K",
     "followersSort": 15000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "eftichia_alevizaki_",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/eftichia_alevizaki_/",
       "tiktok": "",
@@ -8128,10 +8187,10 @@ window.INFLUENCERS = [
     "followersDisplay": "15K",
     "followersSort": 15000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "elliaggelidaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/elliaggelidaki/",
       "tiktok": "https://www.tiktok.com/@elli_aggelidaki",
@@ -8143,10 +8202,10 @@ window.INFLUENCERS = [
     "followersDisplay": "15K",
     "followersSort": 15000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sissy.toumasi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sissy.toumasi/",
       "tiktok": "",
@@ -8158,10 +8217,10 @@ window.INFLUENCERS = [
     "followersDisplay": "15K",
     "followersSort": 15000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zoi_katsatou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zoi_katsatou/",
       "tiktok": "https://www.tiktok.com/@mamapetounia",
@@ -8173,10 +8232,10 @@ window.INFLUENCERS = [
     "followersDisplay": "14K",
     "followersSort": 14000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "katerinamisichroni",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/katerinamisichroni/?hl=el",
       "tiktok": "",
@@ -8188,10 +8247,10 @@ window.INFLUENCERS = [
     "followersDisplay": "14K",
     "followersSort": 14000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "sofias_bookhome",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/sofias_bookhome/",
       "tiktok": "https://www.tiktok.com/@sofias_bookhome",
@@ -8203,10 +8262,10 @@ window.INFLUENCERS = [
     "followersDisplay": "14K",
     "followersSort": 14000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zeta.mrd",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zeta.mrd/",
       "tiktok": "",
@@ -8218,10 +8277,10 @@ window.INFLUENCERS = [
     "followersDisplay": "13K",
     "followersSort": 13000,
     "topCategory": "CELEBRITIES",
-    "tags": [
-      "Actress"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "errika_bigiou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/errika_bigiou/",
       "tiktok": "",
@@ -8233,10 +8292,10 @@ window.INFLUENCERS = [
     "followersDisplay": "13K",
     "followersSort": 13000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "thanos_kanakis",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/thanos_kanakis/",
       "tiktok": "https://www.tiktok.com/@thanosknk",
@@ -8248,10 +8307,10 @@ window.INFLUENCERS = [
     "followersDisplay": "12K",
     "followersSort": 12000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "aliki_marinaki",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/aliki_marinaki/",
       "tiktok": "",
@@ -8263,10 +8322,10 @@ window.INFLUENCERS = [
     "followersDisplay": "12K",
     "followersSort": 12000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "georgia_stigka",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/georgia_stigka/",
       "tiktok": "",
@@ -8278,11 +8337,10 @@ window.INFLUENCERS = [
     "followersDisplay": "12K",
     "followersSort": 12000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion",
-      "Beauty"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "mariana_tsirigot",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/mariana_tsirigot/",
       "tiktok": "",
@@ -8294,10 +8352,10 @@ window.INFLUENCERS = [
     "followersDisplay": "12K",
     "followersSort": 12000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "vivianchatzeli",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/vivianchatzeli/",
       "tiktok": "https://www.tiktok.com/@vivianchatzeli",
@@ -8309,10 +8367,10 @@ window.INFLUENCERS = [
     "followersDisplay": "11K",
     "followersSort": 11000,
     "topCategory": "BEAUTY_FASHION",
-    "tags": [
-      "Fashion"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "efi_stefanoy",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/efi_stefanoy/",
       "tiktok": "",
@@ -8324,10 +8382,10 @@ window.INFLUENCERS = [
     "followersDisplay": "11K",
     "followersSort": 11000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "emili_inathens",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/emili_inathens/",
       "tiktok": "https://www.tiktok.com/@evi_mili",
@@ -8339,10 +8397,10 @@ window.INFLUENCERS = [
     "followersDisplay": "11K",
     "followersSort": 11000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "ioanna_limberopoulou",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/ioanna_limberopoulou/",
       "tiktok": "",
@@ -8354,10 +8412,10 @@ window.INFLUENCERS = [
     "followersDisplay": "11K",
     "followersSort": 11000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Blogger"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "nouazeta_efi",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/nouazeta_efi/",
       "tiktok": "",
@@ -8369,10 +8427,10 @@ window.INFLUENCERS = [
     "followersDisplay": "11K",
     "followersSort": 11000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "tsig0s",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/tsig0s/",
       "tiktok": "",
@@ -8384,10 +8442,10 @@ window.INFLUENCERS = [
     "followersDisplay": "11K",
     "followersSort": 11000,
     "topCategory": "LIFESTYLE",
-    "tags": [
-      "Lifestyle"
-    ],
+    "tags": [],
+    "filterTags": [],
     "imageSeed": "zafiramaskini",
+    "photoUrl": "Photo",
     "links": {
       "instagram": "https://www.instagram.com/zafiramaskini/",
       "tiktok": "",
