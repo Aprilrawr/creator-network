@@ -76,6 +76,78 @@ if (scrollTopBtn) {
     });
 }
 
+/* Helper to normalize categories coming from influencers-data.js
+   Handles things like:
+   - "Comedy", "COMEDY"
+   - "Sports", "Fitness", "Sports & Fitness"
+   - "Gaming", "Technology", "Gaming & Technology"
+   - Already mapped keys like "SPORTS_FITNESS"
+*/
+
+function normalizeCategory(value) {
+    if (!value) {
+        return "LIFESTYLE";
+    }
+
+    const raw = value.toString().trim();
+    const upper = raw.toUpperCase();
+    const lower = raw.toLowerCase();
+
+    const mapDirect = {
+        "ENTERTAINMENT": "ENTERTAINMENT",
+        "COMEDY": "COMEDY",
+        "SPORTS_FITNESS": "SPORTS_FITNESS",
+        "BEAUTY_FASHION": "BEAUTY_FASHION",
+        "GAMING_TECHNOLOGY": "GAMING_TECHNOLOGY",
+        "COOKING": "COOKING",
+        "PARENTING": "PARENTING",
+        "CELEBRITIES": "CELEBRITIES",
+        "LIFESTYLE": "LIFESTYLE"
+    };
+
+    if (mapDirect[upper]) {
+        return mapDirect[upper];
+    }
+
+    const hasAny = (...words) => words.some(w => lower.includes(w));
+
+    if (hasAny("parent", "mom", "mum", "dad", "family", "kids", "baby")) {
+        return "PARENTING";
+    }
+
+    if (hasAny("beauty", "fashion", "make up", "makeup", "hair", "nails")) {
+        return "BEAUTY_FASHION";
+    }
+
+    if (hasAny("sport", "sports", "fitness", "fit ", "gym", "athlete", "trainer", "coach")) {
+        return "SPORTS_FITNESS";
+    }
+
+    if (hasAny("gaming", "gamer", "game", "stream", "twitch", "esport", "tech", "technology")) {
+        return "GAMING_TECHNOLOGY";
+    }
+
+    if (hasAny("chef", "cook", "cooking", "recipe", "food", "restaurant", "baker", "baking")) {
+        return "COOKING";
+    }
+
+    if (hasAny("tv host", "tv hostess", "anchor", "actress", "actor", "celebrity",
+               "singer", "artist", "musician", "band")) {
+        return "CELEBRITIES";
+    }
+
+    if (hasAny("comed", "stand up", "stand-up", "sketch", "satire")) {
+        return "COMEDY";
+    }
+
+    if (hasAny("entertainment", "entertainer", "digital creator", "content creator",
+               "media", "show", "radio host")) {
+        return "ENTERTAINMENT";
+    }
+
+    return "LIFESTYLE";
+}
+
 /* Card creation from window.INFLUENCERS */
 
 function createCard(inf) {
@@ -176,9 +248,7 @@ function createCard(inf) {
 }
 
 /* Render influencers into the grids
-   Assumes Python has already mapped topCategory to one of:
-   ENTERTAINMENT, COMEDY, SPORTS_FITNESS, BEAUTY_FASHION,
-   GAMING_TECHNOLOGY, COOKING, PARENTING, CELEBRITIES, LIFESTYLE.
+   Uses normalizeCategory so it is resilient to whatever the Excel or Python produced.
 */
 
 (function renderInfluencers() {
@@ -189,7 +259,7 @@ function createCard(inf) {
     const byCategory = {};
 
     window.INFLUENCERS.forEach(inf => {
-        const catKey = inf.topCategory || "LIFESTYLE";
+        const catKey = normalizeCategory(inf.topCategory || inf.category || "");
         if (!byCategory[catKey]) {
             byCategory[catKey] = [];
         }
@@ -204,14 +274,17 @@ function createCard(inf) {
         });
     });
 
-    document.querySelectorAll(".cards-grid[data-category]").forEach(grid => {
-        const catKey = grid.getAttribute("data-category");
-        const list = byCategory[catKey] || [];
-        list.forEach(inf => {
-            const card = createCard(inf);
-            grid.appendChild(card);
-        });
+  document.querySelectorAll(".cards-grid[data-category]").forEach(grid => {
+    const catAttr = grid.getAttribute("data-category") || "";
+    const catKey = normalizeCategory(catAttr);   // <- normalize the grid value too
+    const list = byCategory[catKey] || [];
+    list.forEach(inf => {
+        const card = createCard(inf);
+        grid.appendChild(card);
     });
+});
+
+
 })();
 
 /* Tag based filtering inside each category */
