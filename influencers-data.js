@@ -13,9 +13,9 @@ window.INFLUENCERS = [
     "imageSeed": "tech_test",
     "photoUrl": "assets/creators/stefan-stefancik-QXevDflbl8A-unsplash.jpg",
     "links": {
-      "instagram": "",
-      "tiktok": "",
-      "youtube": ""
+      "instagram": "https://www.instagram.com/test/",
+      "tiktok": "https://www.tiktok.com/@test",
+      "youtube": "https://www.youtube.com/@test"
     }
   },
   {
@@ -32,9 +32,9 @@ window.INFLUENCERS = [
     "imageSeed": "sports_test",
     "photoUrl": "assets/creators/jurica-koletic-7YVZYZeITc8-unsplash.jpg",
     "links": {
-      "instagram": "",
-      "tiktok": "",
-      "youtube": ""
+      "instagram": "https://www.instagram.com/test/",
+      "tiktok": "https://www.tiktok.com/@test",
+      "youtube": "https://www.youtube.com/@test"
     }
   },
   {
@@ -51,9 +51,9 @@ window.INFLUENCERS = [
     "imageSeed": "fitness_test",
     "photoUrl": "assets/creators/aiony-haust-3TLl_97HNJo-unsplash.jpg",
     "links": {
-      "instagram": "",
-      "tiktok": "",
-      "youtube": ""
+      "instagram": "https://www.instagram.com/test/",
+      "tiktok": "https://www.tiktok.com/@test",
+      "youtube": "https://www.youtube.com/@test"
     }
   },
   {
@@ -70,9 +70,9 @@ window.INFLUENCERS = [
     "imageSeed": "gaming_test",
     "photoUrl": "assets/creators/michael-dam-mEZ3PoFGs_k-unsplash.jpg",
     "links": {
-      "instagram": "",
-      "tiktok": "",
-      "youtube": ""
+      "instagram": "https://www.instagram.com/test/",
+      "tiktok": "https://www.tiktok.com/@test",
+      "youtube": "https://www.youtube.com/@test"
     }
   },
   {
@@ -89,9 +89,9 @@ window.INFLUENCERS = [
     "imageSeed": "cooking_test",
     "photoUrl": "assets/creators/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
     "links": {
-      "instagram": "",
-      "tiktok": "",
-      "youtube": ""
+      "instagram": "https://www.instagram.com/test/",
+      "tiktok": "https://www.tiktok.com/@test",
+      "youtube": "https://www.youtube.com/@test"
     }
   },
   {
