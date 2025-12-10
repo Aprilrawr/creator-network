@@ -301,15 +301,21 @@
             color: #ffffff;
         }
 
+      /* followers pill with gradient border */
         .followers-pill {
             padding: 0.35rem 1.4rem;
-            background: #ffffff;
             border-radius: 999px;
-            font-size: 0.95rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #04111c;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-            border: 2px solid #e11d48;
+
+            border: 2px solid transparent;
+            background-image:
+                linear-gradient(#ffffff, #ffffff),
+                linear-gradient(to right, var(--card-red), var(--card-petrol));
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
         }
 
         /* Tags at top */

@@ -65,47 +65,51 @@ def map_top_category(category_raw):
     Map the Excel Category string to one of the fixed site categories:
     ENT, COMEDY, SPORTS_FITNESS, BEAUTY_FASHION, GAMING_TECHNOLOGY,
     COOKING, PARENTING, CELEBRITIES, LIFESTYLE.
+    Works even if Category is just 'Sports', 'Fitness', 'Gaming', 'Technology', etc.
     """
     if not isinstance(category_raw, str):
         return "LIFESTYLE"
 
-    cat_lower = category_raw.lower()
+    cat_lower = category_raw.strip().lower()
 
-    if "parent" in cat_lower:
+    def has_any(*words):
+        return any(w in cat_lower for w in words)
+
+    # Parenting first, since "family lifestyle" could exist
+    if has_any("parent", "mom", "mum", "dad", "family", "kids", "baby"):
         return "PARENTING"
 
-    if "beauty" in cat_lower or "fashion" in cat_lower or "make up" in cat_lower or "makeup" in cat_lower:
+    # Beauty / fashion
+    if has_any("beauty", "fashion", "make up", "makeup", "hair", "nails"):
         return "BEAUTY_FASHION"
 
-    if "sport" in cat_lower or "fitness" in cat_lower or "athlete" in cat_lower:
+    # Sports and fitness
+    if has_any("sport", "sports", "fitness", "fit ", "gym", "athlete", "trainer", "coach"):
         return "SPORTS_FITNESS"
 
-    if "gamer" in cat_lower or "gaming" in cat_lower or "stream" in cat_lower or "tech" in cat_lower:
+    # Gaming / technology
+    if has_any("gaming", "gamer", "game", "stream", "twitch", "esport", "tech", "technology"):
         return "GAMING_TECHNOLOGY"
 
-    if "chef" in cat_lower or "cook" in cat_lower or "recipe" in cat_lower or "food" in cat_lower:
+    # Cooking / food
+    if has_any("chef", "cook", "cooking", "recipe", "food", "restaurant", "baker", "baking"):
         return "COOKING"
 
-    if (
-        "tv host" in cat_lower
-        or "tv hostess" in cat_lower
-        or "actress" in cat_lower
-        or "celebrity" in cat_lower
-        or "singer" in cat_lower
-    ):
+    # Celebrities, high profile
+    if has_any("tv host", "tv hostess", "anchor", "actress", "actor", "celebrity",
+               "singer", "artist", "musician", "band"):
         return "CELEBRITIES"
 
-    if "comed" in cat_lower:
+    # Comedy
+    if has_any("comed", "stand up", "stand-up", "sketch", "satire"):
         return "COMEDY"
 
-    if (
-        "entertainment" in cat_lower
-        or "digital creator" in cat_lower
-        or "content creator" in cat_lower
-    ):
+    # Entertainment / generic creators
+    if has_any("entertainment", "entertainer", "digital creator", "content creator",
+               "media", "show", "radio host"):
         return "ENTERTAINMENT"
 
-    # default
+    # Default bucket
     return "LIFESTYLE"
 
 
