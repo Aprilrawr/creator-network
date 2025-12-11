@@ -12,9 +12,61 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <link rel="stylesheet" href="tag-variables.css">
+    <script defer src="main.js"></script>
+
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <header class="site-header">
+    <div class="header-inner">
+        <div class="brand-block">
+            <!-- replace with your logo later -->
+            <div class="brand-logo-placeholder">AMG</div>
+            <span class="brand-title">Creator Network</span>
+        </div>
+
+        <nav class="main-nav">
+            <a href="#top" class="nav-link nav-link-active">AMG Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="top">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="hero-kicker">AMG Media</p>
+            <h1 class="hero-title">
+                Match brands with the right creators.
+            </h1>
+            <p class="hero-subtitle">
+                Browse vetted influencers by category, reach and platform inside a single internal tool.
+            </p>
+            <div class="hero-actions">
+                <a href="#entertainment" class="hero-btn hero-btn-primary">
+                    Explore categories
+                </a>
+                <a href="#contact" class="hero-btn hero-btn-ghost">
+                    Talk to our team
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <!-- simple visual using the same card colors -->
+            <div class="hero-pill hero-pill-top">TV, Radio, Stage</div>
+            <div class="hero-card-stack">
+                <div class="hero-card hero-card-main"></div>
+                <div class="hero-card hero-card-offset hero-card-left"></div>
+                <div class="hero-card hero-card-offset hero-card-right"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="page">
 
     <!-- Vertical category rail -->
@@ -246,10 +298,17 @@
     </main>
 </div>
 
+<section id="contact" class="contact-section">
+    <div class="contact-inner">
+        <h2>Contact AMG</h2>
+        <p>Drop us a line at <strong>info@example.com</strong> or reach out through your usual AMG contact.</p>
+    </div>
+</section>
+
+
 <button class="scroll-top-btn" type="button">Jump to top</button>
 
 <!-- data file from Excel, or use the sample below -->
 <script src="influencers-data.js"></script>
-<script src="main.js"></script>
 </body>
 </html>

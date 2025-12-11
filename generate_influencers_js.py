@@ -1,170 +1,207 @@
 import json
 import math
 import os
-
+import hashlib
 import pandas as pd
 
-
-EXCEL_FILE = "Influencers .xlsx"   # adjust if the file name changes
+# -------------------------------------
+# CONFIG
+# -------------------------------------
+EXCEL_FILE = "Influencers .xlsx"
 SHEET_NAME = "Sheet3"
+
 OUTPUT_JS = "influencers-data.js"
-
-# Hard coded list of creators to ignore
-# Use the exact text from the "Content Creator " column in Excel
-IGNORED_HANDLES = {
-    # "Name Surname",
-    # "Another Creator",
-}
+TAG_CSS_OUTPUT = "tag-variables.css"
+IGNORE_FILE = "ignore_list.txt"   # optional external blocklist
 
 
+# -------------------------------------
+# Helpers
+# -------------------------------------
 def normalize_text(s):
     if not isinstance(s, str):
         return None
     return s.strip()
 
 
-def parse_manual_tags(raw):
-    """
-    Read the Tags column.
-    Expected format in Excel: "TV, Radio, Stage"
-    Returns: ["TV", "Radio", "Stage"]
-    """
+def slugify(tag):
+    return tag.lower().replace(" ", "-").replace("/", "-")
+
+
+def color_from_text(text):
+    """Generate stable color from tag text via MD5 hash."""
+    h = hashlib.md5(text.encode()).hexdigest()
+    r = int(h[0:2], 16)
+    g = int(h[2:4], 16)
+    b = int(h[4:6], 16)
+    return f"#{r:02x}{g:02x}{b:02x}"
+
+
+def parse_followers(val):
+    """Convert strings like '1.2M', '320K', '300,000', '300000' into sortable integers."""
+    if val is None:
+        return 0
+
+    s = str(val).strip().replace(",", "")  # remove commas
+
+    if s.endswith(("M", "m")):
+        try:
+            return int(float(s[:-1]) * 1_000_000)
+        except:
+            return 0
+
+    if s.endswith(("K", "k")):
+        try:
+            return int(float(s[:-1]) * 1_000)
+        except:
+            return 0
+
+    try:
+        return int(float(s))
+    except:
+        return 0
+
+
+# -------------------------------------
+# Tag extraction
+# -------------------------------------
+def build_tags(raw):
+    """Extract tags from Excel row. Comma or slash delimited."""
     if not isinstance(raw, str):
         return []
 
-    parts = [p.strip() for p in raw.replace(";", ",").split(",")]
-    tags = [p for p in parts if p]
+    raw = raw.replace("/", ",")
+    parts = [p.strip() for p in raw.split(",") if p.strip()]
     out = []
-    for t in tags:
-        if t not in out:
+
+    for t in parts:
+        if t and t not in out:
             out.append(t)
+
     return out
 
 
+# -------------------------------------
+# Category mapping
+# -------------------------------------
 def map_top_category(category_raw):
-    """
-    Map the Excel Category string to one of the fixed site categories:
-    ENTERTAINMENT, COMEDY, SPORTS_FITNESS, BEAUTY_FASHION,
-    GAMING_TECHNOLOGY, COOKING, PARENTING, CELEBRITIES, LIFESTYLE.
-    """
     if not isinstance(category_raw, str):
         return "LIFESTYLE"
 
-    cat_lower = category_raw.lower()
+    cat = category_raw.lower()
 
-    if "parent" in cat_lower:
+    if "parent" in cat:
         return "PARENTING"
 
-    if "beauty" in cat_lower or "fashion" in cat_lower or "make up" in cat_lower or "makeup" in cat_lower:
+    if any(x in cat for x in ["beauty", "fashion", "makeup", "make up", "hair", "skin"]):
         return "BEAUTY_FASHION"
 
-    if "sport" in cat_lower or "fitness" in cat_lower or "athlete" in cat_lower:
+    if any(x in cat for x in ["sport", "fitness", "gym", "athlete", "coach"]):
         return "SPORTS_FITNESS"
 
-    if "gamer" in cat_lower or "gaming" in cat_lower or "stream" in cat_lower or "tech" in cat_lower:
+    if any(x in cat for x in ["game", "gamer", "gaming", "tech", "technology", "stream"]):
         return "GAMING_TECHNOLOGY"
 
-    if "chef" in cat_lower or "cook" in cat_lower or "recipe" in cat_lower or "food" in cat_lower:
+    if any(x in cat for x in ["chef", "cook", "recipe", "food"]):
         return "COOKING"
 
-    if (
-        "tv host" in cat_lower
-        or "tv hostess" in cat_lower
-        or "actress" in cat_lower
-        or "celebrity" in cat_lower
-        or "singer" in cat_lower
-    ):
+    if any(x in cat for x in ["tv host", "actress", "actor", "celebrity", "singer"]):
         return "CELEBRITIES"
 
-    if "comed" in cat_lower:
+    if "comed" in cat:
         return "COMEDY"
 
-    if (
-        "entertainment" in cat_lower
-        or "digital creator" in cat_lower
-        or "content creator" in cat_lower
-    ):
+    if "entertain" in cat or "creator" in cat:
         return "ENTERTAINMENT"
 
     return "LIFESTYLE"
 
 
-def is_row_ignored(row, col_handle):
-    """Return True if this row should be skipped based on the IGNORED_HANDLES set."""
-    handle_raw = row.get(col_handle)
-    handle_norm = normalize_text(handle_raw) or ""
-    return handle_norm in IGNORED_HANDLES
-
-
+# -------------------------------------
+# Main
+# -------------------------------------
 def main():
-    if not os.path.exists(EXCEL_FILE):
-        raise SystemExit(f"Excel file not found: {EXCEL_FILE}")
+    # Load ignore list (optional)
+    ignore = set()
+    if os.path.exists(IGNORE_FILE):
+        with open(IGNORE_FILE, "r", encoding="utf8") as f:
+            for line in f:
+                name = line.strip()
+                if name:
+                    ignore.add(name.lower())
 
     df = pd.read_excel(EXCEL_FILE, sheet_name=SHEET_NAME)
 
-    # Exact column names from your sheet
+    # Column definitions
     col_total = "Total Followers "
-    col_sort = "Sort"
     col_handle = "Content Creator "
+    col_sort = "Sort"
+    col_category = "Category "
+    col_photo = "Photo"  # user said they already have this column
     col_instagram = "Instagram "
     col_tiktok = "Tiktok "
     col_youtube = "Youtube "
-    col_category = "Category "
-    col_tags = "Tags"     # manual tags column
-    col_photo = "Photo"   # photo column from Excel (change to "Photo " if your header has a trailing space)
+    col_tags = "Tags"  # new optional column
 
     influencers = []
+    ALL_TAGS = set()
 
     for idx, row in df.iterrows():
-        # skip if in hard coded ignore list
-        if is_row_ignored(row, col_handle):
-            continue
 
+        # Handle
         handle_raw = row.get(col_handle)
         handle = normalize_text(handle_raw)
         if not handle:
             continue
 
-        followers_display = row.get(col_total)
-        if isinstance(followers_display, float) and not math.isnan(followers_display):
-            followers_display = str(int(followers_display))
-        followers_display = str(followers_display).strip() if followers_display is not None else ""
+        # Skip ignored creators
+        if handle.lower() in ignore:
+            continue
 
-        sort_val = row.get(col_sort)
-        try:
-            followers_sort = int(sort_val) if not pd.isna(sort_val) else 0
-        except Exception:
-            followers_sort = 0
+        # Display followers
+        followers_display = str(row.get(col_total)).strip()
 
+        # Sort followers
+        followers_sort = parse_followers(row.get(col_sort))
+
+        # Category
         cat_raw = row.get(col_category)
         top_category = map_top_category(cat_raw)
 
-        manual_tags = parse_manual_tags(row.get(col_tags))
-
+        # Links
         insta = normalize_text(row.get(col_instagram))
         tiktok = normalize_text(row.get(col_tiktok))
         youtube = normalize_text(row.get(col_youtube))
 
-        photo_raw = normalize_text(row.get(col_photo))
+        # Photo
+        photo_value = normalize_text(row.get(col_photo))
+        if photo_value and not photo_value.lower().startswith(("http://", "https://")):
+            # make local image path
+            photo_url = f"photos/{photo_value}"
+        else:
+            photo_url = photo_value or ""
 
-        inf = {
-            "handle": handle,  # without @, renderer adds @ for display
+        # Tags coming from new Excel column
+        tag_raw = row.get(col_tags)
+        tags = build_tags(tag_raw)
+        for t in tags:
+            ALL_TAGS.add(t)
+
+        influencers.append({
+            "handle": handle,
             "followersDisplay": followers_display,
             "followersSort": followers_sort,
             "topCategory": top_category,
-            "tags": manual_tags,        # chips shown on the card
-            "filterTags": manual_tags,  # used by main.js for filtering
-            "imageSeed": handle,        # fallback seed
-            "photoUrl": photo_raw or "",  # new field for real photo link
+            "tags": tags,
+            "imageUrl": photo_url,
             "links": {
                 "instagram": insta or "",
                 "tiktok": tiktok or "",
                 "youtube": youtube or "",
-            },
-        }
+            }
+        })
 
-        influencers.append(inf)
-
+    # Write JS file
     js_content = "window.INFLUENCERS = " + json.dumps(
         influencers, ensure_ascii=False, indent=2
     ) + ";\n"
@@ -172,7 +209,34 @@ def main():
     with open(OUTPUT_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
 
-    print(f"Written {len(influencers)} influencers to " + OUTPUT_JS)
+    print(f"Written {len(influencers)} influencers → {OUTPUT_JS}")
+
+    # ----------------------------------
+    # Generate tag color CSS
+    # ----------------------------------
+    css_lines = [":root {"]
+
+    for tag in sorted(ALL_TAGS):
+        slug = slugify(tag)
+        bg = color_from_text(tag)
+        text_color = "#ffffff"
+        css_lines.append(f"  --tag-{slug}-bg: {bg};")
+        css_lines.append(f"  --tag-{slug}-text: {text_color};")
+
+    css_lines.append("}")
+
+    # Auto selectors
+    css_lines.append("\n/* Auto selectors: card chip colors */")
+    for tag in sorted(ALL_TAGS):
+        slug = slugify(tag)
+        css_lines.append(
+            f'.card-tag-chip[data-tag="{slug}"] {{ background: var(--tag-{slug}-bg); color: var(--tag-{slug}-text); }}'
+        )
+
+    with open(TAG_CSS_OUTPUT, "w", encoding="utf-8") as f:
+        f.write("\n".join(css_lines))
+
+    print(f"Generated {len(ALL_TAGS)} tag styles → {TAG_CSS_OUTPUT}")
 
 
 if __name__ == "__main__":

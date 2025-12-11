@@ -1,4 +1,6 @@
-// Scroll rail logic and jump to top
+// ===============================
+// Scroll rail logic and Jump-to-top
+// ===============================
 
 const sections = document.querySelectorAll("section.category");
 const pills = document.querySelectorAll(".cat-pill");
@@ -76,15 +78,9 @@ if (scrollTopBtn) {
     });
 }
 
-/*
- Helper to normalize categories coming from influencers-data.js
-
- Handles things like:
- - "Comedy", "COMEDY"
- - "Sports", "Fitness", "Sports & Fitness"
- - "Gaming", "Technology", "Gaming & Technology"
- - Already mapped keys like "SPORTS_FITNESS"
-*/
+// ===============================
+// Category normalization
+// ===============================
 
 function normalizeCategory(value) {
     if (!value) {
@@ -150,7 +146,23 @@ function normalizeCategory(value) {
     return "LIFESTYLE";
 }
 
-/* Card creation from window.INFLUENCERS */
+// Utility to slugify tag labels consistently
+function slugifyTag(text) {
+    if (!text) {
+        return "";
+    }
+    return text
+        .toString()
+        .trim()
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
+// ===============================
+// Card creation
+// ===============================
 
 function createCard(inf) {
     const article = document.createElement("article");
@@ -161,7 +173,7 @@ function createCard(inf) {
         article.dataset.filterTags = filterTags.join(",");
     }
 
-    // top tags on the card
+    // Tags at top
     const tagsDiv = document.createElement("div");
     tagsDiv.className = "card-tags";
     (inf.tags || []).forEach(tag => {
@@ -179,24 +191,21 @@ function createCard(inf) {
     });
     article.appendChild(tagsDiv);
 
-    // image
+    // Image with fallback to placeholder
     const imageWrap = document.createElement("div");
     imageWrap.className = "card-image";
     const img = document.createElement("img");
 
-    let imageSrc = "";
+    const hasPhotoUrl =
+        typeof inf.photoUrl === "string" &&
+        inf.photoUrl.trim().length > 0;
 
-    // use real photo if provided from Excel
-    if (inf.photoUrl && typeof inf.photoUrl === "string" && inf.photoUrl.trim().length > 5) {
-        imageSrc = inf.photoUrl.trim();
+    if (hasPhotoUrl) {
+        img.src = inf.photoUrl.trim();
     } else {
-        // fallback placeholder
         const seed = inf.imageSeed || inf.handle || Math.random().toString(36).slice(2);
-        imageSrc = "https://picsum.photos/seed/" + encodeURIComponent(seed) + "/400/260";
+        img.src = "https://picsum.photos/seed/" + encodeURIComponent(seed) + "/400/260";
     }
-
-    img.src = imageSrc;
-    img.loading = "lazy";
 
     const handleForAlt = inf.handle && !inf.handle.startsWith("@")
         ? "@" + inf.handle
@@ -206,7 +215,7 @@ function createCard(inf) {
     imageWrap.appendChild(img);
     article.appendChild(imageWrap);
 
-    // footer
+    // Footer
     const footer = document.createElement("div");
     footer.className = "card-footer";
 
@@ -263,10 +272,9 @@ function createCard(inf) {
     return article;
 }
 
-/*
- Render influencers into the grids
- Uses normalizeCategory so it is resilient to whatever the Excel or Python produced.
-*/
+// ===============================
+// Render influencers into grids
+// ===============================
 
 (function renderInfluencers() {
     if (!window.INFLUENCERS || !Array.isArray(window.INFLUENCERS)) {
@@ -302,35 +310,40 @@ function createCard(inf) {
     });
 })();
 
-/* Tag based filtering inside each category */
+// ===============================
+// Tag-based filtering per category
+// ===============================
 
 sections.forEach(section => {
-    const tagPills = section.querySelectorAll(".tag-pill[data-tag]");
-    const cards = section.querySelectorAll(".cards-grid .card");
+    const tagPills = section.querySelectorAll(".tag-pill");
+    const grid = section.querySelector(".cards-grid");
 
-    if (!tagPills.length || !cards.length) {
+    if (!tagPills.length || !grid) {
         return;
     }
 
     tagPills.forEach(pill => {
         pill.addEventListener("click", () => {
-            const tag = pill.dataset.tag;
+            const tagSlug = slugifyTag(pill.dataset.tag || pill.textContent);
             const isActive = pill.classList.contains("active");
 
-            // reset everything
+            const cards = grid.querySelectorAll(".card");
+
+            // reset all pills and cards
             tagPills.forEach(p => p.classList.remove("active"));
             cards.forEach(card => card.classList.remove("is-hidden"));
 
-            if (!isActive) {
+            if (!isActive && tagSlug) {
                 pill.classList.add("active");
 
                 cards.forEach(card => {
                     const raw = card.dataset.filterTags || "";
-                    const cardTags = raw.split(",")
-                        .map(t => t.trim())
+                    const cardTags = raw
+                        .split(",")
+                        .map(t => slugifyTag(t))
                         .filter(t => t.length > 0);
 
-                    if (!cardTags.includes(tag)) {
+                    if (!cardTags.includes(tagSlug)) {
                         card.classList.add("is-hidden");
                     }
                 });

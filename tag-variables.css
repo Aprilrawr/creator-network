@@ -1,0 +1,31 @@
+:root {
+  --tag-actress-bg: #3a51b9;
+  --tag-actress-text: #ffffff;
+  --tag-deserts-bg: #55592f;
+  --tag-deserts-text: #ffffff;
+  --tag-food-bg: #0a38e7;
+  --tag-food-text: #ffffff;
+  --tag-mma-figher-bg: #5b979f;
+  --tag-mma-figher-text: #ffffff;
+  --tag-reviewer-bg: #8e58cd;
+  --tag-reviewer-text: #ffffff;
+  --tag-streamer-bg: #9cbc4c;
+  --tag-streamer-text: #ffffff;
+  --tag-tv-host-bg: #d9ec3f;
+  --tag-tv-host-text: #ffffff;
+  --tag-trainer-bg: #6a637f;
+  --tag-trainer-text: #ffffff;
+  --tag-travel-bg: #1fb0f9;
+  --tag-travel-text: #ffffff;
+}
+
+/* Auto selectors: card chip colors */
+.card-tag-chip[data-tag="actress"] { background: var(--tag-actress-bg); color: var(--tag-actress-text); }
+.card-tag-chip[data-tag="deserts"] { background: var(--tag-deserts-bg); color: var(--tag-deserts-text); }
+.card-tag-chip[data-tag="food"] { background: var(--tag-food-bg); color: var(--tag-food-text); }
+.card-tag-chip[data-tag="mma-figher"] { background: var(--tag-mma-figher-bg); color: var(--tag-mma-figher-text); }
+.card-tag-chip[data-tag="reviewer"] { background: var(--tag-reviewer-bg); color: var(--tag-reviewer-text); }
+.card-tag-chip[data-tag="streamer"] { background: var(--tag-streamer-bg); color: var(--tag-streamer-text); }
+.card-tag-chip[data-tag="tv-host"] { background: var(--tag-tv-host-bg); color: var(--tag-tv-host-text); }
+.card-tag-chip[data-tag="trainer"] { background: var(--tag-trainer-bg); color: var(--tag-trainer-text); }
+.card-tag-chip[data-tag="travel"] { background: var(--tag-travel-bg); color: var(--tag-travel-text); }
