@@ -1,31 +1,143 @@
 :root {
+  --tag-actor-bg: #1cc846;
+  --tag-actor-text: #ffffff;
   --tag-actress-bg: #3a51b9;
   --tag-actress-text: #ffffff;
-  --tag-deserts-bg: #55592f;
-  --tag-deserts-text: #ffffff;
-  --tag-food-bg: #0a38e7;
-  --tag-food-text: #ffffff;
-  --tag-mma-figher-bg: #5b979f;
-  --tag-mma-figher-text: #ffffff;
-  --tag-reviewer-bg: #8e58cd;
-  --tag-reviewer-text: #ffffff;
-  --tag-streamer-bg: #9cbc4c;
-  --tag-streamer-text: #ffffff;
-  --tag-tv-host-bg: #d9ec3f;
-  --tag-tv-host-text: #ffffff;
-  --tag-trainer-bg: #6a637f;
-  --tag-trainer-text: #ffffff;
+  --tag-artist-bg: #4047c5;
+  --tag-artist-text: #ffffff;
+  --tag-athlete-bg: #3e200b;
+  --tag-athlete-text: #ffffff;
+  --tag-beauty-bg: #7a7f3a;
+  --tag-beauty-text: #ffffff;
+  --tag-blogger-bg: #e4c2a5;
+  --tag-blogger-text: #ffffff;
+  --tag-cars-bg: #f2b545;
+  --tag-cars-text: #ffffff;
+  --tag-celebrity-bg: #0867a3;
+  --tag-celebrity-text: #ffffff;
+  --tag-coach-bg: #a8cbab;
+  --tag-coach-text: #ffffff;
+  --tag-comedy-bg: #e6b99f;
+  --tag-comedy-text: #ffffff;
+  --tag-content-creator-bg: #ecb4bb;
+  --tag-content-creator-text: #ffffff;
+  --tag-cooking-bg: #3b9625;
+  --tag-cooking-text: #ffffff;
+  --tag-dancer-bg: #a4e7ab;
+  --tag-dancer-text: #ffffff;
+  --tag-decor-bg: #e953e8;
+  --tag-decor-text: #ffffff;
+  --tag-digital-creator-bg: #ec6f54;
+  --tag-digital-creator-text: #ffffff;
+  --tag-digital-creator-bg: #1f233d;
+  --tag-digital-creator-text: #ffffff;
+  --tag-doctor-bg: #cbb67c;
+  --tag-doctor-text: #ffffff;
+  --tag-education-bg: #de7a22;
+  --tag-education-text: #ffffff;
+  --tag-entertainment-bg: #336fdc;
+  --tag-entertainment-text: #ffffff;
+  --tag-entrepreneur-bg: #188431;
+  --tag-entrepreneur-text: #ffffff;
+  --tag-extreme-sports-bg: #aa44bf;
+  --tag-extreme-sports-text: #ffffff;
+  --tag-fashion-bg: #93e002;
+  --tag-fashion-text: #ffffff;
+  --tag-fitness-bg: #5fdc39;
+  --tag-fitness-text: #ffffff;
+  --tag-gaming-bg: #9eed85;
+  --tag-gaming-text: #ffffff;
+  --tag-home-designer-bg: #e7b44b;
+  --tag-home-designer-text: #ffffff;
+  --tag-hostess-bg: #d3ba9f;
+  --tag-hostess-text: #ffffff;
+  --tag-journalist-bg: #d7e422;
+  --tag-journalist-text: #ffffff;
+  --tag-kids-bg: #eb73ee;
+  --tag-kids-text: #ffffff;
+  --tag-lifestyle-bg: #5549cf;
+  --tag-lifestyle-text: #ffffff;
+  --tag-lifestyle-bg: #1efd5a;
+  --tag-lifestyle-text: #ffffff;
+  --tag-make-up-artist-bg: #40d0fb;
+  --tag-make-up-artist-text: #ffffff;
+  --tag-model-bg: #a559b8;
+  --tag-model-text: #ffffff;
+  --tag-music-bg: #47dcbd;
+  --tag-music-text: #ffffff;
+  --tag-parenting-bg: #ac22e7;
+  --tag-parenting-text: #ffffff;
+  --tag-photography-bg: #a2a5c3;
+  --tag-photography-text: #ffffff;
+  --tag-pianist-bg: #3a0c93;
+  --tag-pianist-text: #ffffff;
+  --tag-psychologist-bg: #7c4329;
+  --tag-psychologist-text: #ffffff;
+  --tag-singer-bg: #a730b4;
+  --tag-singer-text: #ffffff;
+  --tag-stylist-bg: #3ff3eb;
+  --tag-stylist-text: #ffffff;
+  --tag-tech-bg: #575e0d;
+  --tag-tech-text: #ffffff;
   --tag-travel-bg: #1fb0f9;
   --tag-travel-text: #ffffff;
+  --tag-tv-host-bg: #d9ec3f;
+  --tag-tv-host-text: #ffffff;
+  --tag-tv-hostess-bg: #a939dc;
+  --tag-tv-hostess-text: #ffffff;
+  --tag-tv-hostess-bg: #a670af;
+  --tag-tv-hostess-text: #ffffff;
+  --tag-tv-presenter-bg: #d0710c;
+  --tag-tv-presenter-text: #ffffff;
+  --tag-video-creator-bg: #7f6eaa;
+  --tag-video-creator-text: #ffffff;
 }
 
 /* Auto selectors: card chip colors */
+/* Use data-tag="<slug>" in your markup/JS to apply these */
+.card-tag-chip[data-tag="actor"] { background: var(--tag-actor-bg); color: var(--tag-actor-text); }
 .card-tag-chip[data-tag="actress"] { background: var(--tag-actress-bg); color: var(--tag-actress-text); }
-.card-tag-chip[data-tag="deserts"] { background: var(--tag-deserts-bg); color: var(--tag-deserts-text); }
-.card-tag-chip[data-tag="food"] { background: var(--tag-food-bg); color: var(--tag-food-text); }
-.card-tag-chip[data-tag="mma-figher"] { background: var(--tag-mma-figher-bg); color: var(--tag-mma-figher-text); }
-.card-tag-chip[data-tag="reviewer"] { background: var(--tag-reviewer-bg); color: var(--tag-reviewer-text); }
-.card-tag-chip[data-tag="streamer"] { background: var(--tag-streamer-bg); color: var(--tag-streamer-text); }
-.card-tag-chip[data-tag="tv-host"] { background: var(--tag-tv-host-bg); color: var(--tag-tv-host-text); }
-.card-tag-chip[data-tag="trainer"] { background: var(--tag-trainer-bg); color: var(--tag-trainer-text); }
+.card-tag-chip[data-tag="artist"] { background: var(--tag-artist-bg); color: var(--tag-artist-text); }
+.card-tag-chip[data-tag="athlete"] { background: var(--tag-athlete-bg); color: var(--tag-athlete-text); }
+.card-tag-chip[data-tag="beauty"] { background: var(--tag-beauty-bg); color: var(--tag-beauty-text); }
+.card-tag-chip[data-tag="blogger"] { background: var(--tag-blogger-bg); color: var(--tag-blogger-text); }
+.card-tag-chip[data-tag="cars"] { background: var(--tag-cars-bg); color: var(--tag-cars-text); }
+.card-tag-chip[data-tag="celebrity"] { background: var(--tag-celebrity-bg); color: var(--tag-celebrity-text); }
+.card-tag-chip[data-tag="coach"] { background: var(--tag-coach-bg); color: var(--tag-coach-text); }
+.card-tag-chip[data-tag="comedy"] { background: var(--tag-comedy-bg); color: var(--tag-comedy-text); }
+.card-tag-chip[data-tag="content-creator"] { background: var(--tag-content-creator-bg); color: var(--tag-content-creator-text); }
+.card-tag-chip[data-tag="cooking"] { background: var(--tag-cooking-bg); color: var(--tag-cooking-text); }
+.card-tag-chip[data-tag="dancer"] { background: var(--tag-dancer-bg); color: var(--tag-dancer-text); }
+.card-tag-chip[data-tag="decor"] { background: var(--tag-decor-bg); color: var(--tag-decor-text); }
+.card-tag-chip[data-tag="digital-creator"] { background: var(--tag-digital-creator-bg); color: var(--tag-digital-creator-text); }
+.card-tag-chip[data-tag="digital-creator"] { background: var(--tag-digital-creator-bg); color: var(--tag-digital-creator-text); }
+.card-tag-chip[data-tag="doctor"] { background: var(--tag-doctor-bg); color: var(--tag-doctor-text); }
+.card-tag-chip[data-tag="education"] { background: var(--tag-education-bg); color: var(--tag-education-text); }
+.card-tag-chip[data-tag="entertainment"] { background: var(--tag-entertainment-bg); color: var(--tag-entertainment-text); }
+.card-tag-chip[data-tag="entrepreneur"] { background: var(--tag-entrepreneur-bg); color: var(--tag-entrepreneur-text); }
+.card-tag-chip[data-tag="extreme-sports"] { background: var(--tag-extreme-sports-bg); color: var(--tag-extreme-sports-text); }
+.card-tag-chip[data-tag="fashion"] { background: var(--tag-fashion-bg); color: var(--tag-fashion-text); }
+.card-tag-chip[data-tag="fitness"] { background: var(--tag-fitness-bg); color: var(--tag-fitness-text); }
+.card-tag-chip[data-tag="gaming"] { background: var(--tag-gaming-bg); color: var(--tag-gaming-text); }
+.card-tag-chip[data-tag="home-designer"] { background: var(--tag-home-designer-bg); color: var(--tag-home-designer-text); }
+.card-tag-chip[data-tag="hostess"] { background: var(--tag-hostess-bg); color: var(--tag-hostess-text); }
+.card-tag-chip[data-tag="journalist"] { background: var(--tag-journalist-bg); color: var(--tag-journalist-text); }
+.card-tag-chip[data-tag="kids"] { background: var(--tag-kids-bg); color: var(--tag-kids-text); }
+.card-tag-chip[data-tag="lifestyle"] { background: var(--tag-lifestyle-bg); color: var(--tag-lifestyle-text); }
+.card-tag-chip[data-tag="lifestyle"] { background: var(--tag-lifestyle-bg); color: var(--tag-lifestyle-text); }
+.card-tag-chip[data-tag="make-up-artist"] { background: var(--tag-make-up-artist-bg); color: var(--tag-make-up-artist-text); }
+.card-tag-chip[data-tag="model"] { background: var(--tag-model-bg); color: var(--tag-model-text); }
+.card-tag-chip[data-tag="music"] { background: var(--tag-music-bg); color: var(--tag-music-text); }
+.card-tag-chip[data-tag="parenting"] { background: var(--tag-parenting-bg); color: var(--tag-parenting-text); }
+.card-tag-chip[data-tag="photography"] { background: var(--tag-photography-bg); color: var(--tag-photography-text); }
+.card-tag-chip[data-tag="pianist"] { background: var(--tag-pianist-bg); color: var(--tag-pianist-text); }
+.card-tag-chip[data-tag="psychologist"] { background: var(--tag-psychologist-bg); color: var(--tag-psychologist-text); }
+.card-tag-chip[data-tag="singer"] { background: var(--tag-singer-bg); color: var(--tag-singer-text); }
+.card-tag-chip[data-tag="stylist"] { background: var(--tag-stylist-bg); color: var(--tag-stylist-text); }
+.card-tag-chip[data-tag="tech"] { background: var(--tag-tech-bg); color: var(--tag-tech-text); }
 .card-tag-chip[data-tag="travel"] { background: var(--tag-travel-bg); color: var(--tag-travel-text); }
+.card-tag-chip[data-tag="tv-host"] { background: var(--tag-tv-host-bg); color: var(--tag-tv-host-text); }
+.card-tag-chip[data-tag="tv-hostess"] { background: var(--tag-tv-hostess-bg); color: var(--tag-tv-hostess-text); }
+.card-tag-chip[data-tag="tv-hostess"] { background: var(--tag-tv-hostess-bg); color: var(--tag-tv-hostess-text); }
+.card-tag-chip[data-tag="tv-presenter"] { background: var(--tag-tv-presenter-bg); color: var(--tag-tv-presenter-text); }
+.card-tag-chip[data-tag="video-creator"] { background: var(--tag-video-creator-bg); color: var(--tag-video-creator-text); }
