@@ -12,7 +12,8 @@
     --tag-host-text: #ffffff;
 
     /* category filter tag colors */
-    --tag-tv-bg: #0ea5e9;
+
+    /* --tag-tv-bg: #0ea5e9;
     --tag-tv-text: #ffffff;
     --tag-radio-bg: #f97316;
     --tag-radio-text: #111827;
@@ -74,6 +75,8 @@
     --tag-home-text: #ffffff;
     --tag-daily-life-bg: #f59e0b;
     --tag-daily-life-text: #111827;
+
+    */
 
     --card-border-color: rgba(255, 255, 255, 0.18);
 }

@@ -1,8 +1,8 @@
 import json
 import math
 import os
-import hashlib
 import re
+import hashlib
 import pandas as pd
 
 # -------------------------------------
@@ -15,130 +15,94 @@ OUTPUT_JS = "influencers-data.js"
 TAG_CSS_OUTPUT = "tag-variables.css"
 IGNORE_FILE = "ignore_list.txt"   # optional external blocklist
 
-# If Photo column is empty, use this pattern:
-DEFAULT_PHOTO_BASE = "assets/creators"   # relative to site root
-DEFAULT_PHOTO_EXT = ".jpg"
-
+# If you want ONE identical placeholder for all missing photos:
+PLACEHOLDER_IMAGE = "assets/creators/placeholder.jpg"
 
 # -------------------------------------
 # Helpers
 # -------------------------------------
-def normalize_text(s):
-    if s is None:
-        return None
-    if isinstance(s, float) and math.isnan(s):
-        return None
-    return str(s).strip()
+def normalize_text(v):
+    if v is None:
+        return ""
+    if isinstance(v, float) and math.isnan(v):
+        return ""
+    return str(v).strip()
 
+def get_col(df, preferred_name):
+    # Makes column matching robust, even if Excel has trailing spaces
+    cols = {str(c).strip().lower(): c for c in df.columns}
+    key = preferred_name.strip().lower()
+    return cols.get(key, preferred_name)
 
-def slugify(tag):
-    tag = tag.strip().lower()
-    tag = re.sub(r"\s+", "-", tag)
-    tag = tag.replace("/", "-")
-    tag = re.sub(r"[^a-z0-9\-]", "", tag)
-    tag = re.sub(r"-{2,}", "-", tag).strip("-")
-    return tag
+def slugify_tag(tag: str) -> str:
+    s = tag.strip().lower()
+    s = s.replace("&", "and")
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    s = s.strip("-")
+    return s
 
-
-def color_from_text(text):
-    """Generate stable color from tag text via MD5 hash."""
+def color_from_text(text: str) -> str:
     h = hashlib.md5(text.encode("utf-8")).hexdigest()
-    r = int(h[0:2], 16)
-    g = int(h[2:4], 16)
-    b = int(h[4:6], 16)
-    return f"#{r:02x}{g:02x}{b:02x}"
+    hue = int(h[0:4], 16) % 360
+    sat = 70
+    lig = 55
+
+    # HSL to RGB
+    import colorsys
+    r, g, b = colorsys.hls_to_rgb(hue / 360.0, lig / 100.0, sat / 100.0)
+    return f"#{int(r*255):02x}{int(g*255):02x}{int(b*255):02x}"
 
 
-def parse_followers(val):
-    """
-    Convert strings like:
-    '1.2M', '1,2M', '320K', '300,000', '300000', 300000
-    into sortable integers.
-    """
-    if val is None:
+def readable_text_color(bg_hex: str) -> str:
+    # Simple luminance check for readable text
+    bg_hex = bg_hex.lstrip("#")
+    r = int(bg_hex[0:2], 16)
+    g = int(bg_hex[2:4], 16)
+    b = int(bg_hex[4:6], 16)
+    luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b)
+    return "#111827" if luminance > 170 else "#ffffff"
+
+def parse_followers_sort(val):
+    # Handles: 2.5M, 257K, 300000, 300,000
+    s = normalize_text(val).replace(",", "")
+    if not s:
         return 0
-    if isinstance(val, float) and math.isnan(val):
+
+    m = re.match(r"^(\d+(?:\.\d+)?)\s*([kKmM]?)$", s)
+    if m:
+        num = float(m.group(1))
+        suf = m.group(2).lower()
+        if suf == "m":
+            return int(num * 1_000_000)
+        if suf == "k":
+            return int(num * 1_000)
+        return int(num)
+
+    try:
+        return int(float(s))
+    except Exception:
         return 0
 
-    s = str(val).strip()
-
-    # handle european decimal comma: 1,2M
-    s = s.replace(" ", "")
-    s = s.replace(",", ".") if ("M" in s.upper() or "K" in s.upper()) else s
-    s = s.replace(",", "")  # remaining commas as thousand separators
-
-    m = re.match(r"^([0-9]*\.?[0-9]+)([MmKk])?$", s)
-    if not m:
-        # last attempt: strip non numeric
-        s2 = re.sub(r"[^0-9\.]", "", s)
-        try:
-            return int(float(s2))
-        except:
-            return 0
-
-    num = float(m.group(1))
-    suffix = m.group(2)
-
-    if suffix in ("M", "m"):
-        return int(num * 1_000_000)
-    if suffix in ("K", "k"):
-        return int(num * 1_000)
-
-    return int(num)
-
-
-def looks_like_url_or_path(v: str) -> bool:
-    if not v:
-        return False
-    low = v.lower()
-    if low.startswith(("http://", "https://")):
-        return True
-    # treat these as valid paths:
-    if low.startswith(("assets/", "./", "../")):
-        return True
-    # also accept simple relative filenames like "name.jpg"
-    if "/" in v or "\\" in v:
-        return True
-    if low.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif")):
-        return True
-    return False
-
-
-def normalize_slashes(v: str) -> str:
-    # Convert windows backslashes to web slashes
-    return v.replace("\\", "/")
-
-
-# -------------------------------------
-# Tag extraction
-# -------------------------------------
 def build_tags(raw):
-    """
-    Extract tags from Excel row. Comma or slash delimited.
-    If there are NO tags, return [].
-    """
-    raw = normalize_text(raw)
-    if not raw:
+    # Comma or slash separated, keeps original labels
+    s = normalize_text(raw)
+    if not s:
         return []
-
-    raw = raw.replace("/", ",")
-    parts = [p.strip() for p in raw.split(",") if p.strip()]
+    s = s.replace("/", ",")
+    parts = [p.strip() for p in s.split(",") if p.strip()]
     out = []
     for t in parts:
         if t and t not in out:
             out.append(t)
     return out
 
-
 # -------------------------------------
-# Category mapping
+# Category mapping (tags do NOT affect this)
 # -------------------------------------
 def map_top_category(category_raw):
-    category_raw = normalize_text(category_raw)
-    if not category_raw:
+    cat = normalize_text(category_raw).lower()
+    if not cat:
         return "LIFESTYLE"
-
-    cat = category_raw.lower()
 
     if "parent" in cat:
         return "PARENTING"
@@ -166,12 +130,10 @@ def map_top_category(category_raw):
 
     return "LIFESTYLE"
 
-
 # -------------------------------------
 # Main
 # -------------------------------------
 def main():
-    # Load ignore list (optional)
     ignore = set()
     if os.path.exists(IGNORE_FILE):
         with open(IGNORE_FILE, "r", encoding="utf8") as f:
@@ -185,25 +147,21 @@ def main():
 
     df = pd.read_excel(EXCEL_FILE, sheet_name=SHEET_NAME)
 
-    # IMPORTANT: normalize column names so trailing spaces don't break lookups
-    df.columns = [str(c).strip() for c in df.columns]
-
-    # Column definitions (match trimmed headers)
-    col_total = "Total Followers"
-    col_handle = "Content Creator"
-    col_sort = "Sort"
-    col_category = "Category"
-    col_photo = "Photo"
-    col_instagram = "Instagram"
-    col_tiktok = "Tiktok"
-    col_youtube = "Youtube"
-    col_tags = "Tags"  # optional column with filter tags
+    # Robust column picks
+    col_total = get_col(df, "Total Followers")
+    col_handle = get_col(df, "Content Creator")
+    col_sort = get_col(df, "Sort")
+    col_category = get_col(df, "Category")
+    col_photo = get_col(df, "Photo")
+    col_instagram = get_col(df, "Instagram")
+    col_tiktok = get_col(df, "Tiktok")
+    col_youtube = get_col(df, "Youtube")
+    col_tags = get_col(df, "Tags")
 
     influencers = []
-    ALL_TAGS = set()
+    all_tag_labels_by_slug = {}  # slug -> preferred label
 
     for _, row in df.iterrows():
-        # Handle
         handle = normalize_text(row.get(col_handle))
         if not handle:
             continue
@@ -211,50 +169,41 @@ def main():
         if handle.lower() in ignore:
             continue
 
-        # followers display
-        followers_display = normalize_text(row.get(col_total)) or ""
+        followers_display = normalize_text(row.get(col_total))
+        followers_sort = parse_followers_sort(row.get(col_sort))
 
-        # sort followers
-        sort_raw = row.get(col_sort)
-        followers_sort = parse_followers(sort_raw)
-        if followers_sort == 0:
-            # fallback to Total Followers if Sort is empty or wrong
-            followers_sort = parse_followers(row.get(col_total))
-
-        # category (only from Category column, tags do not affect this)
         top_category = map_top_category(row.get(col_category))
 
-        # links
-        insta = normalize_text(row.get(col_instagram)) or ""
-        tiktok = normalize_text(row.get(col_tiktok)) or ""
-        youtube = normalize_text(row.get(col_youtube)) or ""
+        insta = normalize_text(row.get(col_instagram))
+        tiktok = normalize_text(row.get(col_tiktok))
+        youtube = normalize_text(row.get(col_youtube))
 
-        # tags (filter + overlay), do NOT influence category
+        # Photo: accept relative site paths like assets/creators/x.jpg
+        photo_url = normalize_text(row.get(col_photo))
+        if not photo_url:
+            photo_url = PLACEHOLDER_IMAGE
+
         tags = build_tags(row.get(col_tags))
-        for t in tags:
-            ALL_TAGS.add(t)
 
-        # photo
-        photo_value = normalize_text(row.get(col_photo)) or ""
-        photo_value = normalize_slashes(photo_value)
-
-        if photo_value and looks_like_url_or_path(photo_value):
-            image_url = photo_value
-        elif photo_value:
-            # If they typed something like "asimina.jpg" with no folder,
-            # assume it belongs in DEFAULT_PHOTO_BASE
-            image_url = f"{DEFAULT_PHOTO_BASE}/{photo_value}"
-        else:
-            # no photo in excel, fallback to predictable local path
-            image_url = f"{DEFAULT_PHOTO_BASE}/{handle}{DEFAULT_PHOTO_EXT}"
+        # Slugs for filtering and styling, derived only from Tags column
+        filter_slugs = []
+        for label in tags:
+            slug = slugify_tag(label)
+            if not slug:
+                continue
+            if slug not in all_tag_labels_by_slug:
+                all_tag_labels_by_slug[slug] = label
+            if slug not in filter_slugs:
+                filter_slugs.append(slug)
 
         influencers.append({
             "handle": handle,
             "followersDisplay": followers_display,
             "followersSort": followers_sort,
             "topCategory": top_category,
-            "tags": tags,
-            "imageUrl": image_url,
+            "tags": tags,                 # original labels for display
+            "filterTags": filter_slugs,   # slugs for filtering/styling
+            "imageUrl": photo_url,
             "links": {
                 "instagram": insta,
                 "tiktok": tiktok,
@@ -262,44 +211,39 @@ def main():
             }
         })
 
-    # Write JS file
-    js_content = "window.INFLUENCERS = " + json.dumps(
-        influencers, ensure_ascii=False, indent=2
-    ) + ";\n"
-
+    # Write influencers-data.js
+    js_content = "window.INFLUENCERS = " + json.dumps(influencers, ensure_ascii=False, indent=2) + ";\n"
     with open(OUTPUT_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
 
     print(f"Written {len(influencers)} influencers → {OUTPUT_JS}")
 
-    # ----------------------------------
-    # Generate tag color CSS
-    # ----------------------------------
+    # Write tag-variables.css (used by BOTH pills and overlay chips)
     css_lines = [":root {"]
 
-    for tag in sorted(ALL_TAGS, key=lambda x: x.lower()):
-        slug = slugify(tag)
-        bg = color_from_text(tag)
-        text_color = "#ffffff"
+    for slug, label in sorted(all_tag_labels_by_slug.items(), key=lambda x: x[0]):
+        bg = color_from_text(slug)
+        text = readable_text_color(bg)
         css_lines.append(f"  --tag-{slug}-bg: {bg};")
-        css_lines.append(f"  --tag-{slug}-text: {text_color};")
+        css_lines.append(f"  --tag-{slug}-text: {text};")
 
     css_lines.append("}")
 
-    css_lines.append("")
-    css_lines.append("/* Auto selectors: card chip colors */")
-    css_lines.append("/* Use data-tag=\"<slug>\" in your markup/JS to apply these */")
-    for tag in sorted(ALL_TAGS, key=lambda x: x.lower()):
-        slug = slugify(tag)
-        css_lines.append(
-            f'.card-tag-chip[data-tag="{slug}"] {{ background: var(--tag-{slug}-bg); color: var(--tag-{slug}-text); }}'
-        )
+   css_lines.append("")
+    css_lines.append("/* Auto styling for BOTH filter pills and card overlay chips */")
+for slug in sorted(all_tag_labels_by_slug.keys()):
+    css_lines.append(
+        f'.tag-pill[data-tag="{slug}"], .card-tag-chip[data-tag="{slug}"] {{ '
+        f'background: var(--tag-{slug}-bg) !important; '
+        f'color: var(--tag-{slug}-text) !important; '
+        f'border-color: transparent !important; }}'
+    )
+
 
     with open(TAG_CSS_OUTPUT, "w", encoding="utf-8") as f:
         f.write("\n".join(css_lines))
 
-    print(f"Generated {len(ALL_TAGS)} tag styles → {TAG_CSS_OUTPUT}")
-
+    print(f"Generated {len(all_tag_labels_by_slug)} tag styles → {TAG_CSS_OUTPUT}")
 
 if __name__ == "__main__":
     main()

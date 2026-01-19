@@ -17,3 +17,5 @@ CreatorsNetworkLandingPageAssets.ai
 
 # Local data or cache you never want online
 *.log
+
+*.xlsx
